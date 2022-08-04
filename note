@@ -1,2 +1,4 @@
 1. features section stops working properly at around 900px width 
 2. If I really want to stop rerendeing on form input. then I have to use useRef or formData
+3. way of making label show up only when someone starts typing 
+4. decrease form fonts in sm devices so it fits on iphone se

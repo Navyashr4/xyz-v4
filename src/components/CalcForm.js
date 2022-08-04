@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { calcFormPlaceholders } from "../data/calcForm";
+import AnalysisResult from "./AnalysisResult";
 
 const CalcForm = () => {
   const [placeholderIdx, setPlaceholderIdx] = useState(0);
@@ -37,7 +38,9 @@ const CalcForm = () => {
     interestPlaceholder,
   } = calcFormPlaceholders[placeholderIdx];
 
-
+  const [showPrincipalLabel, setShowPrincipalLabel] = useState(false);
+  console.log("showPrincipalLabel", showPrincipalLabel);
+  console.log("principal", principal);
 
   return (
     <div
@@ -48,7 +51,7 @@ const CalcForm = () => {
     >
       <form className="flex flex-col items-center space-y-12">
         <select 
-          className="select w-[60%] max-w-[450px] text-center"
+          className="select w-[90%] max-w-[300px] text-center text-[16px] md:text-md"
           value={invType}
           onChange={(e) => setInvType(e.target.value)}>
           <option value="default">I have invested in</option>
@@ -58,51 +61,45 @@ const CalcForm = () => {
           <option value="Guaranteed Income Plan">Guaranteed Income Plan</option>
         </select>
         
-        <div className="text-center w-[60%] max-w-[450px] placeholder:text-darkblue placeholder:text-center">
+        {showInputs &&
+        <div className="text-center w-[90%] max-w-[300px] placeholder:text-darkblue placeholder:text-center">
           <label className="text-sm text-indigo-600">Principal Amount</label>
           <input 
-            className="input text-center"
+            className="input text-center placeholder:text-[16px] md:placeholder:text-md"
             type="number"
             value={principal}
             placeholder={amountPlaceholder}
             onChange={(e) => setPrincipal(e.target.value)}>
           </input>
-        </div>
+        </div>}
 
-        <input
-          className="input text-center placeholder:text-darkblue placeholder:text-center"
-          type="text"
-          value={principal}
-          placeholder={amountPlaceholder}
-          onChange={(e) => setPrincipal(e.target.value)}
-        ></input>
+        {showInputs &&
+        <div className="text-center w-[90%] max-w-[300px] placeholder:text-darkblue placeholder:text-center">
+          <label className="text-sm text-indigo-600">Interest (%)</label>
+          <input 
+            className="input text-center placeholder:text-[16px] md:placeholder:text-md"
+            type="number"
+            value={interest}
+            placeholder={interestPlaceholder}
+            onChange={(e) => setInterest(e.target.value)}>
+          </input>
+        </div>}
 
-
-        {/* {showInputs && <input
-          className="input text-center placeholder:text-darkblue placeholder:text-center"
-          type="number"
-          value={principal}
-          placeholder={amountPlaceholder}
-          onChange={(e) => setPrincipal(e.target.value)}
-        ></input>} */}
-
-        {showInputs && <input
-          className="input text-center placeholder:text-darkblue placeholder:text-center"
-          type="number"
-          placeholder={periodPlaceholder}
-          onChange={(e) => setPeriod(e.target.value)}
-        ></input>}
-
-        {showInputs && <input
-          className="input text-center placeholder:text-darkblue placeholder:text-center"
-          type="number"
-          placeholder={interestPlaceholder}
-          onChange={(e) => setInterest(e.target.value)}
-        ></input>}
+        {showInputs &&
+        <div className="text-center w-[90%] max-w-[300px] placeholder:text-darkblue placeholder:text-center">
+          <label className="text-sm text-indigo-600">Investment Period (years)</label>
+          <input 
+            className="input text-center placeholder:text-[16px] lg:placeholder:text-md"
+            type="number"
+            value={period}
+            placeholder={periodPlaceholder}
+            onChange={(e) => setPeriod(e.target.value)}>
+          </input>
+        </div>}
 
         {showInputs && 
         <select 
-          className="select w-[60%] max-w-[450px] text-center"
+          className="select w-[90%] max-w-[300px] text-center text-[16px] lg:text-md"
           onChange={(e) => setInvObjective(e.target.value)}>
           <option value="default">Investment objective</option>
           <option value="saving for retirement">Saving for retirement</option>
@@ -117,16 +114,9 @@ const CalcForm = () => {
 
       </form>
       {/* text */}
-      <div className="mt-24">
-        <div className="text-blue font-medium mb-4">
-          ESTIMATED 36 HOUR REVENUE:
-        </div>
-        <div className="text-[32px] font-bold mb-3">
-          0.055 130 59 ETH <span className="text-blue">($1275)</span>
-        </div>
-        <div className="text-gray-500 tracking-[1%]">
-          Revenue will change based on mining difficulty and Ethereum price.
-        </div>
+      <div className="mt-24 py-6 rounded-2xl border-2 border-indigo-600">
+        <AnalysisResult />
+        
       </div>
     </div>
   );
