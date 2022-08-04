@@ -3,7 +3,8 @@ module.exports = {
   theme: {
     container: {
       padding: {
-        DEFAULT: '1rem',      
+        DEFAULT: '1rem', 
+        md: '2rem'     
       },
     },
     fontFamily: {

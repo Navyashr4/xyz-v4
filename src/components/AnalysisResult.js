@@ -46,7 +46,6 @@ const Parameters = ({principal, interestEarned, interest, period, earningsNeeded
 
 const AnalysisResult = ({principal, period, interest, invType, invObjective}) => {
   const result = formula(principal, period, interest, invType);
-  console.log("result", result);
 
   return (
     <div className="px-4">

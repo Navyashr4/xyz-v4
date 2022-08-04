@@ -1,29 +1,32 @@
 import React from 'react';
 import CalcForm from './CalcForm';
 
-const Calculate = () => {
+const Calculate = ({handleInvTypeApp, handleAnalyseApp}) => {
   return (
     <section className='section'>
       <div className='container mx-auto'>
         {/* text */}
-        <div className='text-center'>
+        <div 
+          className='text-center'
+          data-aos='fade-in'
+          data-aos-offset='100'>
           <h2
-            className='section-title'
-            data-aos='fade-up'
-            data-aos-offset='400'
+            className='section-title md:text-3xl'
+            data-aos='fade-in'
+            data-aos-offset='100'
           >
-            Check how much you can earn
+            Is your investment growing your wealth?
           </h2>
           <p
             className='section-subtitle text-lg mb-16 max-w-[622px] mx-auto'
             data-aos='fade-up'
             data-aos-offset='450'
           >
-            Let's check your hash rate to see how much you will earn today.
+            Our investment x-ray tool objectively analyses your investment and evaluates on 4 parameters : Growth, Risk, Liquidity and Matching your investment objective
           </p>
         </div>
         {/* form */}
-        <CalcForm />
+        <CalcForm handleInvTypeApp={handleInvTypeApp} handleAnalyseApp={handleAnalyseApp}/>
       </div>
     </section>
   );

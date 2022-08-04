@@ -8,14 +8,26 @@ import Stats from "./components/Stats.js";
 import Fact from "./components/Fact.js";
 import Calculate from "./components/Calculate.js";
 import Trade from "./components/Trade.js";
+import GoodBadUgly from "./components/GoodBadUgly"
 import Features from "./components/Features.js";
 import Newsletter from "./components/Newsletter.js";
 import Footer from "./components/Footer.js";
+import SupportingData from "./components/SupportingData.js";
 
 import { facts } from "./data/data";
 
 const App = () => {
   const [navMobile, setNavMobile] = useState(false);
+  const [invType, setInvType] = useState();
+  const [analyse, setAnalyse] = useState(false);
+
+  const handleInvTypeApp = (inv) => {
+    setInvType(inv);
+  }
+
+  const handleAnalyseApp = (analyse) => {
+    setAnalyse(analyse);
+  }
 
   useEffect(() => {
     Aos.init({
@@ -38,12 +50,13 @@ const App = () => {
       <Stats />
       <Fact orderImage={1} orderText={2} fact={facts[0].fact1} fadeDirection={'fade-right'}/>
       <Fact orderImage={2} orderText={1} fact={facts[0].fact2} fadeDirection={'fade-left'}/>
-      <Calculate />
-      {/* <Trade />
-      <Features />
+      <Calculate handleInvTypeApp = {handleInvTypeApp} handleAnalyseApp={handleAnalyseApp}/>
+      {analyse && <GoodBadUgly invType={invType}/>}
+      {analyse && <SupportingData invType={invType}/>}
+      {/* <Features />
       <Newsletter />
       <Footer /> */}
-      <div className="py-[2000px]"></div>
+      <div className="py-[200px]"></div>
     </div>
   );
 };

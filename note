@@ -2,3 +2,14 @@
 2. If I really want to stop rerendeing on form input. then I have to use useRef or formData
 3. way of making label show up only when someone starts typing 
 4. decrease form fonts in sm devices so it fits on iphone se
+
+
+
+5. make default values read-only
+6. make labels also dynamic based on formuale provided 
+7. making everything inside form even more dynamic and modular
+8. make error messages show up below the form instead of on top as is the case right now
+
+9.switch idx as key for pros with an actual id passed into the object array
+
+
