@@ -10,6 +10,9 @@
 7. making everything inside form even more dynamic and modular
 8. make error messages show up below the form instead of on top as is the case right now
 
-9.switch idx as key for pros with an actual id passed into the object array
+9. switch idx as key for pros with an actual id passed into the object array
+10. The specified value cannot be parsed.. error
+11. indicate that results have been calculated by auto scrolling to results section or writing scroll to view results
+12. make all the animations uniform in terms of time 
 
 

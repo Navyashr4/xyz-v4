@@ -105,10 +105,7 @@ const CalcForm = ({handleInvTypeApp, handleAnalyseApp}) => {
   return (
     <div
       className="w-full bg-white max-w-[942px] mx-auto rounded-2xl text-darkblue
-      p-12 shadow-primary"
-      data-aos="fade-up"
-      data-aos-offset="300"
-    >
+      p-12 shadow-primary">
       <p className="text-gray-900 text-3xl font-semibold mb-8 text-center">
         Enter your investment's details
       </p>

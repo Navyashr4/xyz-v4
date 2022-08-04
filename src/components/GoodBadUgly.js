@@ -187,8 +187,7 @@ const GoodBadUgly = ({ invType }) => {
       className="section  text-darkblue lg:pt-[320px] lg:-mt-[320px]">
       <div 
         className="container mx-auto"
-        data-aos="fade-up"
-        data-aos-offset="200">
+        data-aos="fade-up">
         {/* Section Heading */}
         <div>
           <p
