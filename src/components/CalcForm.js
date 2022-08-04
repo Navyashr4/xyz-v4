@@ -12,14 +12,6 @@ const CalcForm = () => {
   const [invObjective, setInvObjective] = useState();
   const [analyse, setAnalyse] = useState(false);
 
-  console.log("invType", invType);
-  console.log("principal", principal);
-  console.log("period", period);
-  console.log("interest", interest);
-  console.log("invObjective", invObjective);
-
-
-
   // customising placeholder text based on inv type chosen
 
   useEffect(() => {
@@ -42,9 +34,9 @@ const CalcForm = () => {
     event.preventDefault();
     setAnalyse(false);
     setInvType('I have invested in');
-    setPrincipal(0);
-    setPeriod(0);
-    setInterest(0);
+    setPrincipal(amountPlaceholder);
+    setPeriod(periodPlaceholder);
+    setInterest(interestPlaceholder);
     setInvObjective();
   }
 
@@ -78,16 +70,12 @@ const CalcForm = () => {
     }
   }
 
-  const [showPrincipalLabel, setShowPrincipalLabel] = useState(false);
-  console.log("showPrincipalLabel", showPrincipalLabel);
-  console.log("principal", principal);
-
   return (
     <div
       className="w-full bg-white max-w-[942px] mx-auto rounded-2xl text-darkblue
       p-12 shadow-primary"
       data-aos="fade-up"
-      data-aos-offset="500"
+      data-aos-offset="200"
     >
       <form className="flex flex-col items-center space-y-12">
         <select
@@ -155,14 +143,14 @@ const CalcForm = () => {
             Calculate
           </button>}
 
-        {showInputs &&
+      </form>
+
+      {showInputs &&
           <button
-            className="btn text-white px-8 flex justify-center w-[60vw] max-w-[300px]"
+            className="mx-auto mt-6 btn text-centre bg-white text-blue border-[1.5px] border-gray-400 hover:border-none hover:text-white hover:bg-blue px-8 flex justify-center w-[60vw] max-w-[300px]"
             onClick={(event) => resetState(event)}>
             Reset values
           </button>}
-
-      </form>
 
       {/* analysis result */}
       {analyse && <div className="mt-24 py-6 rounded-2xl border-2 border-indigo-600">
