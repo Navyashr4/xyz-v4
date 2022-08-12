@@ -1,5 +1,5 @@
 import React from "react";
-import formula from '../Functions/formula.js'
+import getCalculatedValues from '../Functions/getCalculatedValues.js'
 
 
 const ResultDeclaration = ({loss, invType, invObjective}) => {
@@ -45,7 +45,7 @@ const Parameters = ({principal, interestEarned, interest, period, earningsNeeded
 };
 
 const AnalysisResult = ({principal, period, interest, invType, invObjective}) => {
-  const result = formula(principal, period, interest, invType);
+  const result = getCalculatedValues(principal, period, interest, invType);
 
   return (
     <div className="px-4">

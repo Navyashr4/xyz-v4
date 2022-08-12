@@ -2,7 +2,7 @@ import BitconImg from "../assets/img/bitcon.png";
 import EthereumImg from "../assets/img/ethereum.png";
 import LitecoinImg from "../assets/img/litecoin.png";
 
-const invFacts = (invType) => {
+const getInvFacts = (invType) => {
     let content = [];
     switch (invType) {
       case "Bank Fixed Deposit": {
@@ -173,6 +173,6 @@ const invFacts = (invType) => {
     return content;
   };
 
-  export default invFacts;
+  export default getInvFacts;
   
   

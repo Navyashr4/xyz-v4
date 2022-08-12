@@ -1,4 +1,4 @@
-const formula = (principal, period, interest, invType) => {
+const getCalculatedValues = (principal, period, interest, invType) => {
     const reportObj = {
         interestEarned : 0,
         maturityValue : 0,  
@@ -52,4 +52,4 @@ const formula = (principal, period, interest, invType) => {
     return reportObj;
 }
 
-export default formula;
+export default getCalculatedValues;

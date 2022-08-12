@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import { IoIosArrowForward } from "react-icons/io";
-import invFacts from "../Functions/getInvFacts"
+import getInvFacts from "../Functions/getInvFacts"
 
 
 const GoodBadUgly = ({ invType }) => {
   const [itemName, setItemName] = useState("Bitcoin");
-  const goodBadUglyContent = invFacts(invType);
+  const goodBadUglyContent = getInvFacts(invType);
 
   return (
     <section
