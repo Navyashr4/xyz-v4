@@ -1,5 +1,5 @@
 import React from "react";
-import formula from './Formula.js'
+import formula from '../Functions/formula.js'
 
 
 const ResultDeclaration = ({loss, invType, invObjective}) => {

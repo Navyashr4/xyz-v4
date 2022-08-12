@@ -16,3 +16,22 @@
 12. make all the animations uniform in terms of time 
 
 
+
+
+
+
+
+
+HEADER
+1. make mobile nav glide into screen smoothly
+
+HERO SECTION
+1. clicking on alayze investment has to take a person to analysis section directly 
+(in-page navigation)
+
+
+PLACEHOLDERS
+1. I wanted to create it more dynamically where it would not depend on index but instead directly use the invType as a key 
+
+
+

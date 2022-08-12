@@ -1,20 +1,19 @@
 import React, { useEffect, useState } from "react";
 import Aos from "aos";
 import "aos/dist/aos.css";
+
 import Header from "./components/Header.js";
 import Hero from "./components/Hero.js";
 import NavMobile from "./components/NavMobile.js";
 import Stats from "./components/Stats.js";
-import Fact from "./components/Fact.js";
-import Calculate from "./components/Calculate.js";
-import Trade from "./components/Trade.js";
-import GoodBadUgly from "./components/GoodBadUgly"
-import Features from "./components/Features.js";
-import Newsletter from "./components/Newsletter.js";
-import Footer from "./components/Footer.js";
-import SupportingData from "./components/SupportingData.js";
+import FactSection from "./components/FactSection";
 
-import { facts } from "./data/data";
+import CalculateSection from "./components/CalculateSection.js";
+import GoodBadUgly from "./components/GoodBadUgly"
+import SupportingData from "./components/SupportingData.js";
+import Resources from "./components/Resources.js";
+
+import Footer from "./components/Footer.js";
 
 const App = () => {
   const [navMobile, setNavMobile] = useState(false);
@@ -46,17 +45,17 @@ const App = () => {
       >
         <NavMobile setNavMobile={setNavMobile} />
       </div>
+
       <Hero />
       <Stats />
-      <Fact orderImage={1} orderText={2} fact={facts[0].fact1} fadeDirection={'fade-right'}/>
-      <Fact orderImage={2} orderText={1} fact={facts[0].fact2} fadeDirection={'fade-left'}/>
-      <Calculate handleInvTypeApp = {handleInvTypeApp} handleAnalyseApp={handleAnalyseApp}/>
+      <FactSection />
+
+      <CalculateSection handleInvTypeApp = {handleInvTypeApp} handleAnalyseApp={handleAnalyseApp}/>
       {analyse && <GoodBadUgly invType={invType}/>}
       {analyse && <SupportingData invType={invType}/>}
-      {/* <Features />
-      <Newsletter />
-      <Footer /> */}
-      <div className="py-[200px]"></div>
+      {analyse && <Resources invType={invType}/>}
+
+      <Footer />
     </div>
   );
 };

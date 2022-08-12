@@ -1,7 +1,5 @@
 import React from 'react';
-import Logo from '../assets/img/logo.svg';
 import Nav from './Nav';
-import AccountBtns from './AccountBtns';
 import { CgMenuRight } from 'react-icons/cg';
 import { CgOpenCollective } from 'react-icons/cg';
 

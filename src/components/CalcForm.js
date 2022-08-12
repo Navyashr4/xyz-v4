@@ -1,21 +1,37 @@
-import { type } from "@testing-library/user-event/dist/type";
 import React, { useEffect, useState } from "react";
-import { calcFormPlaceholders } from "../data/calcForm";
+import { calcFormPlaceholders } from "../data/calcFormPlaceholders";
 import AnalysisResult from "./AnalysisResult";
-import GoodBadUgly from "./GoodBadUgly";
 
-const CalcForm = ({handleInvTypeApp, handleAnalyseApp}) => {
+const CalcForm = ({ handleInvTypeApp, handleAnalyseApp }) => {
+  const [invType, setInvType] = useState("default");
   const [placeholderIdx, setPlaceholderIdx] = useState(0);
   const [showInputs, setShowInputs] = useState(false);
-  const [invType, setInvType] = useState();
   const [principal, setPrincipal] = useState();
   const [period, setPeriod] = useState();
   const [interest, setInterest] = useState();
   const [invObjective, setInvObjective] = useState();
   const [analyse, setAnalyse] = useState(false);
 
-  // customising placeholder text based on inv type chosen
+  //receiving the type of investment to analyse and sending info to App.js to communicate with all other sibling components
+  const handleInvChange = (e) => {
+    setInvType(e.target.value);
+    handleInvTypeApp(e.target.value);
+  };
 
+  //handling submission of form and calculating results by setting analysis section to show up
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    if (isValid()) {
+      setAnalyse(true);
+    }
+  };
+
+  //letting App.js know that sibling components are to be displayed upon analysis
+  useEffect(() => {
+    handleAnalyseApp(analyse);
+  }, [analyse]);
+
+  // customising placeholder text based on inv type chosen
   useEffect(() => {
     switch (invType) {
       case "Bank Fixed Deposit": {
@@ -53,6 +69,7 @@ const CalcForm = ({handleInvTypeApp, handleAnalyseApp}) => {
   const { amountPlaceholder, periodPlaceholder, interestPlaceholder } =
     calcFormPlaceholders[placeholderIdx];
 
+  //handling resetting all the fields in the form 
   const resetState = (event) => {
     event.preventDefault();
     setAnalyse(false);
@@ -86,26 +103,11 @@ const CalcForm = ({handleInvTypeApp, handleAnalyseApp}) => {
     return isValid;
   };
 
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    if (isValid()) {
-      setAnalyse(true);
-    }
-  };
-
-  const handleInvChange = (e) => {
-    setInvType(e.target.value);
-    handleInvTypeApp(e.target.value);
-  };
-
-  useEffect(() => {
-    handleAnalyseApp(analyse);
-  }, [analyse]);
-
   return (
     <div
       className="w-full bg-white max-w-[942px] mx-auto rounded-2xl text-darkblue
-      p-12 shadow-primary">
+      p-12 shadow-primary"
+    >
       <p className="text-gray-900 text-3xl font-semibold mb-8 text-center">
         Enter your investment's details
       </p>

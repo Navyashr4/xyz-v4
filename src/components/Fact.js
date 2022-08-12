@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "../assets/img/why-img.png";
+import { facts } from "../data/facts";
 
 const Fact1 = ({orderImage, orderText, fact, fadeDirection}) => {
   return (
