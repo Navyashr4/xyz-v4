@@ -8,8 +8,9 @@ const AnalysisParameters = ({ invType }) => {
   const invParameters = getInvParameters(invType);
 
   return (
-    <section className="section  text-darkblue lg:pt-[320px] lg:-mt-[320px]">
-      <div className="container mx-auto" data-aos="fade-up">
+    <section className="section mx-2 lg:mx-0  text-darkblue">
+      <div 
+      className="container mx-auto">
         {/* Section Heading */}
         <div>
           <p className="section-title text-center mb-16 text-white md:text-3xl">
@@ -18,7 +19,7 @@ const AnalysisParameters = ({ invType }) => {
         </div>
 
         {/* items */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-[45px]">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-[45px] text-center">
           {invParameters &&
             invParameters.map((item, index) => {
               const { name, content, score } = item;
@@ -40,7 +41,7 @@ const AnalysisParameters = ({ invType }) => {
                         <div className = {`${textColor}`}>{score} / 10</div>
                       </div>
                       <div className="flex mb-4 items-center gap-x-2">
-                        <p className={`text-[32px] font-bold`}>{name}</p>
+                        <p className={`text-[24px] lg:text-[32px] font-bold`}>{name}</p>
                       </div>
                       {content &&
                         item.content.map((content, idx) => {

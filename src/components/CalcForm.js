@@ -15,11 +15,18 @@ const CalcForm = ({ handleInvTypeApp, handleAnalyseApp }) => {
   const analysisResults = useRef(null);
 
   const scrollToResults = (elementRef) => {
-    window.scrollTo({
-      top : elementRef.current.offsetTop - 50,
-      behavior: "smooth"
-    })
-  }
+    if(analyse){
+      window.scrollTo({
+        top: elementRef.current.offsetTop - 50,
+        behavior: "smooth",
+      });
+    }else{
+      window.scrollTo({
+        top: elementRef.current.offsetTop + 300,
+        behavior: "smooth",
+      });
+    }
+  };
 
   //receiving the type of investment to analyse and sending info to App.js to communicate with all other sibling components
   const handleInvChange = (e) => {
@@ -31,9 +38,11 @@ const CalcForm = ({ handleInvTypeApp, handleAnalyseApp }) => {
   const handleSubmit = (event) => {
     event.preventDefault();
     if (isValid()) {
-      setAnalyse(true);
+      setAnalyse(true)
+      scrollToResults(analysisResults);
     }
   };
+
 
   //letting App.js know that sibling components are to be displayed upon analysis
   useEffect(() => {
@@ -78,7 +87,7 @@ const CalcForm = ({ handleInvTypeApp, handleAnalyseApp }) => {
   const { amountPlaceholder, periodPlaceholder, interestPlaceholder } =
     calcFormPlaceholders[placeholderIdx];
 
-  //handling resetting all the fields in the form 
+  //handling resetting all the fields in the form
   const resetState = (event) => {
     event.preventDefault();
     setAnalyse(false);
@@ -115,7 +124,7 @@ const CalcForm = ({ handleInvTypeApp, handleAnalyseApp }) => {
   return (
     <div
       className="w-full bg-white max-w-[942px] mx-auto rounded-2xl text-darkblue
-      p-12 shadow-primary"
+      px-6 py-12 lg:p-12 shadow-primary"
     >
       <p className="text-gray-900 text-3xl font-semibold mb-8 text-center">
         Enter your investment's details
@@ -192,8 +201,9 @@ const CalcForm = ({ handleInvTypeApp, handleAnalyseApp }) => {
         {showInputs && (
           <button
             className="btn text-white px-8 flex justify-center w-[60vw] max-w-[300px]"
-            onClick={(event) => {handleSubmit(event)
-            scrollToResults(analysisResults)}}
+            onClick={(event) => {
+              handleSubmit(event);
+            }}
           >
             Calculate
           </button>
@@ -211,7 +221,9 @@ const CalcForm = ({ handleInvTypeApp, handleAnalyseApp }) => {
 
       {/* analysis result */}
       {analyse && (
-        <div ref={analysisResults} className="mt-24 py-6 rounded-2xl border-2 border-indigo-600">
+        <div
+          className="mt-24 py-6 rounded-2xl border-2 border-indigo-600"
+        >
           <AnalysisResult
             principal={principal}
             interest={interest}
@@ -221,6 +233,8 @@ const CalcForm = ({ handleInvTypeApp, handleAnalyseApp }) => {
           />
         </div>
       )}
+
+      <div ref={analysisResults}></div>
     </div>
   );
 };

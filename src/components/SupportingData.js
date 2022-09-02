@@ -5,9 +5,7 @@ const SupportingData = ({invType}) => {
   const images = getImages(invType);
   return(
     <section 
-      className='pt-12 lg:pt-24 px-6 pb-16 lg:pb-28'
-      data-aos='fade-in'
-      data-aos-offset='300'>
+      className='pt-12 lg:pt-24 px-6 pb-16 lg:pb-28 mx-2 lg:mx-0 '>
       <div 
         className='container mx-auto'>
         <div className='text-center max-w-[758px] mx-auto mb-24'>

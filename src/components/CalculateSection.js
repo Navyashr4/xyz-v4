@@ -3,12 +3,15 @@ import CalcForm from './CalcForm';
 
 const Calculate = ({handleInvTypeApp, handleAnalyseApp}) => {
   return (
-    <section className='section'>
+    <section 
+    className='section'
+    data-aos='fade-in'
+    data-aos-delay='900'>
       <div 
-        className='container mx-auto'>
+        className='container mx-auto mt-16'>
         {/* text */}
         <div 
-          className='text-center'>
+          className='text-center px-6 lg:px-0'>
           <h2
             className='section-title md:text-3xl'
           >

@@ -5,18 +5,19 @@ const InvestmentInfo = ({ invType }) => {
   const invInfo = getInvInfo(invType);
 
   return (
-    <section className="section pb-2">
+    <section 
+    className="section pb-2 mx-4 lg:mx-0 ">
       <div className="container mx-auto">
         {/* text */}
         <div className="text-center">
-          <p className="section-title mb-16">
+          <p className="section-title md:text-3xl mb-16">
             Information to learn about {invType.toLowerCase()} investments
           </p>
           <div>
             {invInfo.map((item, idx) => {
                 return(
                     <div className="mb-16">
-                    <h2 className="section-title md:text-3xl">
+                    <h2 className="section-title lg:text-2xl">
                       {item.title}
                     </h2>
                     {

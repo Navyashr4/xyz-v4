@@ -3,7 +3,10 @@ import {HiChartBar, HiUser, HiGlobe} from 'react-icons/hi';
 
 const Stats = () => {
   return (
-    <section className='pt-24' data-aos='fade-in' data-aos-delay='800'>
+    <section 
+    className='pt-24' 
+    data-aos='fade-in' 
+    data-aos-delay='900'>
       <div className='container mx-auto'>
         <div className='flex flex-col gap-y-6 lg:flex-row lg:justify-between items-center'>
           {/* stat 1 */}
@@ -23,8 +26,8 @@ const Stats = () => {
               <HiUser />
             </div>
             <div>
-              <p className='text-2xl font-bold lg:text-[40px] lg:mb-2'> $10M+</p>
-              <p className='text-gray'>Second interesting stat</p>
+              <p className='text-2xl font-bold lg:text-[40px] lg:mb-2'>$10M+</p>
+              <p className='text-gray'>First interesting stat</p>
             </div>
           </div>
 
@@ -34,8 +37,8 @@ const Stats = () => {
               <HiGlobe />
             </div>
             <div>
-              <p className='text-2xl font-bold lg:text-[40px] lg:mb-2'>195</p>
-              <p className='text-gray'>Third interesting stat</p>
+              <p className='text-2xl font-bold lg:text-[40px] lg:mb-2'>$195+</p>
+              <p className='text-gray'>First interesting stat</p>
             </div>
           </div>
 

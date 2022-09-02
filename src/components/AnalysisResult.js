@@ -17,7 +17,7 @@ const ResultDeclaration = ({loss, invType, invObjective}) => {
         Rs. {loss * multiplier}
       </div>
       {(loss !== 0) ? loss > 0 ? <div className="text-gray-500 px-10 text-centre tracking-[1%]">
-      As the supporting data below shows, inflation rates have been much higher than bank interest rates historically. Hence its not advisable to put money in {invType} if your objective is {invObjective}.
+      As the supporting data below shows, inflation rates have been much higher than bank interest rates historically. Hence its not advisable to put money in {invType.toLowerCase()} if your objective is {invObjective}.
       </div> : <div className="text-gray-500 px-10 text-centre tracking-[1%]">You made a <span className="text-indigo-600">profit!</span> Great investment! </div> : <div className="text-gray-500 px-10 text-centre tracking-[1%]">No loss! Good investment.</div>}
     </div>
   );

@@ -6,10 +6,7 @@ import Header from "./components/Header.js";
 import Hero from "./components/Hero.js";
 import NavMobile from "./components/NavMobile.js";
 import Stats from "./components/Stats.js";
-// import FactSection from "./components/FactSection";
-
 import CalculateSection from "./components/CalculateSection.js";
-// import GoodBadUgly from "./components/GoodBadUgly"
 import SupportingData from "./components/SupportingData.js";
 import Resources from "./components/Resources.js";
 
@@ -50,14 +47,13 @@ const App = () => {
 
       <Hero />
       <Stats />
-      {/* <FactSection /> */}
 
       <CalculateSection handleInvTypeApp = {handleInvTypeApp} handleAnalyseApp={handleAnalyseApp}/>
       {analyse && <AnalysisParameters invType={invType}/>}
       {analyse && <SupportingData invType={invType}/>}
       {analyse && <InvestmentInfo invType={invType}/>}
       {analyse && <Resources invType={invType}/>}
-      
+
       <Footer />
     </div>
   );

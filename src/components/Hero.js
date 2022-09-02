@@ -5,14 +5,14 @@ import {IoIosArrowDroprightCircle} from "react-icons/io"
 const Hero = () => {
   return(
     <section className='mt-6'>
-      <div className='container mx-auto'>
+      <div className='container mx-auto px-6 lg:px-0'>
         <div className='flex flex-col items-center'>
           {/* left-side hero content */}            
             {/* hero text */}
             <h1 
               className='text-[32px] lg:text-[64px] font-bold leading-tight mb-6 text-center'
               data-aos='fade-down'
-              data-aps-delay='500'>
+              data-aps-delay='800'>
               Some catchy investment content in 50 chars
             </h1>
             {/* paragraph text */}
@@ -34,8 +34,6 @@ const Hero = () => {
           <div className='flex-1' data-aos='fade-up' data-aos-delay='600'>
             <img src={Image} alt='hero-img'/>
           </div> */}
-
-
         </div>
       </div>
     </section>

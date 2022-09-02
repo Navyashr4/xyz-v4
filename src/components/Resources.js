@@ -6,13 +6,12 @@ const Resources = ({invType}) => {
   const resourcesArray = getResources(invType);
 
   return(
-    <section className='pt-12 lg:pt-24'>
+    <section className='pt-12 lg:pt-24 mx-4 lg:mx-0'>
       <div className='container mx-auto'>
         <div 
-          className='text-center max-w-[758px] mx-auto mb-24'
-          data-aos='fade-up'>
+          className='text-center max-w-[758px] mx-auto mb-24'>
           <p
-            className='section-title'>
+            className='section-title md:text-3xl'>
               Further resources to learn about {invType.toLowerCase()} investments
           </p>
           {
