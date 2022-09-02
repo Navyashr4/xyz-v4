@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { calcFormPlaceholders } from "../data/calcFormPlaceholders";
 import AnalysisResult from "./AnalysisResult";
 
@@ -11,6 +11,15 @@ const CalcForm = ({ handleInvTypeApp, handleAnalyseApp }) => {
   const [interest, setInterest] = useState();
   const [invObjective, setInvObjective] = useState();
   const [analyse, setAnalyse] = useState(false);
+
+  const analysisResults = useRef(null);
+
+  const scrollToResults = (elementRef) => {
+    window.scrollTo({
+      top : elementRef.current.offsetTop - 50,
+      behavior: "smooth"
+    })
+  }
 
   //receiving the type of investment to analyse and sending info to App.js to communicate with all other sibling components
   const handleInvChange = (e) => {
@@ -183,7 +192,8 @@ const CalcForm = ({ handleInvTypeApp, handleAnalyseApp }) => {
         {showInputs && (
           <button
             className="btn text-white px-8 flex justify-center w-[60vw] max-w-[300px]"
-            onClick={(event) => handleSubmit(event)}
+            onClick={(event) => {handleSubmit(event)
+            scrollToResults(analysisResults)}}
           >
             Calculate
           </button>
@@ -201,7 +211,7 @@ const CalcForm = ({ handleInvTypeApp, handleAnalyseApp }) => {
 
       {/* analysis result */}
       {analyse && (
-        <div className="mt-24 py-6 rounded-2xl border-2 border-indigo-600">
+        <div ref={analysisResults} className="mt-24 py-6 rounded-2xl border-2 border-indigo-600">
           <AnalysisResult
             principal={principal}
             interest={interest}

@@ -1,7 +1,6 @@
 import React from "react";
 import getCalculatedValues from '../Functions/getCalculatedValues.js'
 
-
 const ResultDeclaration = ({loss, invType, invObjective}) => {
   let word = 'LOSS';
   let multiplier = 1;

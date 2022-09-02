@@ -1,10 +1,5 @@
 import React from 'react';
 
-import Logo from '../assets/img/logo.svg';
-import VisaImg from '../assets/img/visa.png';
-import MastercardImg from '../assets/img/mastercard.png';
-import BitcoinImg from '../assets/img/bitcoin.png';
-
 import {
   IoLogoYoutube,
   IoLogoInstagram,
@@ -14,7 +9,7 @@ import {
 
 const Footer = () => {
   return (
-    <footer className='lg:pt-24 pt-0'  data-aos='fade-in'>
+    <footer className='lg:pt-24 pt-0'>
 
       {/* copy & social */}
       <div className='py-12'>

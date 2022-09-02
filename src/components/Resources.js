@@ -10,8 +10,7 @@ const Resources = ({invType}) => {
       <div className='container mx-auto'>
         <div 
           className='text-center max-w-[758px] mx-auto mb-24'
-          data-aos='fade-up'
-          data-aos-offset='400'>
+          data-aos='fade-up'>
           <p
             className='section-title'>
               Further resources to learn about {invType.toLowerCase()} investments
