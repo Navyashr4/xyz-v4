@@ -16,14 +16,14 @@ const InvestmentInfo = ({ invType }) => {
           <div>
             {invInfo.map((item, idx) => {
                 return(
-                    <div className="mb-16">
-                    <h2 className="section-title lg:text-2xl">
+                    <div key={idx} className="mb-16">
+                    <h2 className="section-title text-xl lg:text-2xl text-indigo-300">
                       {item.title}
                     </h2>
                     {
                         item.text.map((text, idx) => {
                             return(
-                                <p className="section-subtitle text-lg mb-4 max-w-[622px] mx-auto">
+                                <p key={idx} className={`section-subtitle lg:text-lg mb-4 max-w-[622px] mx-auto`}>
                                     {text}
                               </p>
                             )
@@ -40,3 +40,5 @@ const InvestmentInfo = ({ invType }) => {
 };
 
 export default InvestmentInfo;
+
+

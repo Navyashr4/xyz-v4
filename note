@@ -33,5 +33,14 @@ HERO SECTION
 PLACEHOLDERS
 1. I wanted to create it more dynamically where it would not depend on index but instead directly use the invType as a key 
 
+THINGS REMAINING
+1. Add total score button
+2. color and font size of information on investment section. size needs to be fixed for mobile devices. color of headings made purple. 
+3. buttons calculate and reset need to be resized for mobile view
+4. error checking for form needs to be implemented and on pressing e-> no input to be shown
+5. have to fix further resources section
+6. Fix heights of the parameter sections
+
+
 
 

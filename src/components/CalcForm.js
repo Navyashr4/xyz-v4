@@ -17,12 +17,7 @@ const CalcForm = ({ handleInvTypeApp, handleAnalyseApp }) => {
   const scrollToResults = (elementRef) => {
     if(analyse){
       window.scrollTo({
-        top: elementRef.current.offsetTop - 50,
-        behavior: "smooth",
-      });
-    }else{
-      window.scrollTo({
-        top: elementRef.current.offsetTop + 300,
+        top: elementRef.current.offsetTop,
         behavior: "smooth",
       });
     }
@@ -48,6 +43,11 @@ const CalcForm = ({ handleInvTypeApp, handleAnalyseApp }) => {
   useEffect(() => {
     handleAnalyseApp(analyse);
   }, [analyse]);
+
+  //scrolling to the results of the analysis 
+  useEffect(()=> {
+    scrollToResults(analysisResults);
+  }, [analyse])
 
   // customising placeholder text based on inv type chosen
   useEffect(() => {
@@ -200,7 +200,7 @@ const CalcForm = ({ handleInvTypeApp, handleAnalyseApp }) => {
 
         {showInputs && (
           <button
-            className="btn text-white px-8 flex justify-center w-[60vw] max-w-[300px]"
+            className="btn text-white px-8 flex justify-center w-[60vw] max-w-[200px] lg:text-lg lg:w-[60vw] text-base lg:max-w-[300px]"
             onClick={(event) => {
               handleSubmit(event);
             }}
@@ -212,7 +212,7 @@ const CalcForm = ({ handleInvTypeApp, handleAnalyseApp }) => {
 
       {showInputs && (
         <button
-          className="mx-auto mt-6 btn text-centre bg-white text-blue border-[1.5px] border-gray-400 hover:border-none hover:text-white hover:bg-blue px-8 flex justify-center w-[60vw] max-w-[300px]"
+          className="mx-auto mt-6 btn text-centre bg-white text-blue border-[1.5px] border-gray-400 hover:border-none hover:text-white hover:bg-blue px-8 flex justify-center w-[60vw] max-w-[200px] lg:text-lg lg:w-[60vw] text-base lg:max-w-[300px]"
           onClick={(event) => resetState(event)}
         >
           Reset values
