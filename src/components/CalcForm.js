@@ -3,15 +3,14 @@ import { calcFormPlaceholders } from "../data/calcFormPlaceholders";
 import AnalysisResult from "./AnalysisResult";
 
 const CalcForm = ({ handleInvTypeApp, handleAnalyseApp }) => {
-  const [invType, setInvType] = useState("default");
+  const [invType, setInvType] = useState("Bank Fixed Deposit");
   const [placeholderIdx, setPlaceholderIdx] = useState(0);
-  const [showInputs, setShowInputs] = useState(false);
-  const [principal, setPrincipal] = useState();
-  const [period, setPeriod] = useState();
-  const [interest, setInterest] = useState();
-  const [invObjective, setInvObjective] = useState();
+  const [principal, setPrincipal] = useState(100000);
+  const [period, setPeriod] = useState(6);
+  const [interest, setInterest] = useState(5);
+  const [invObjective, setInvObjective] = useState("saving to buy house");
   const [analyse, setAnalyse] = useState(false);
-
+  
   const analysisResults = useRef(null);
 
   const scrollToResults = (elementRef) => {
@@ -49,32 +48,31 @@ const CalcForm = ({ handleInvTypeApp, handleAnalyseApp }) => {
     scrollToResults(analysisResults);
   }, [analyse])
 
+  //!!!!!GET RID OF THIS
   // customising placeholder text based on inv type chosen
   useEffect(() => {
     switch (invType) {
       case "Bank Fixed Deposit": {
         setPlaceholderIdx(1);
-        setShowInputs(true);
+        // setShowInputs(true);
         break;
       }
       case "Gold": {
         setPlaceholderIdx(2);
-        setShowInputs(true);
+        // setShowInputs(true);
         break;
       }
       case "Real Estate": {
         setPlaceholderIdx(3);
-        setShowInputs(true);
+        // setShowInputs(true);
         break;
       }
       case "Guaranteed Income Plan": {
         setPlaceholderIdx(4);
-        setShowInputs(true);
         break;
       }
       default: {
         setPlaceholderIdx(0);
-        setShowInputs(false);
         setAnalyse(false);
         setPrincipal(amountPlaceholder);
         setPeriod(periodPlaceholder);
@@ -91,11 +89,11 @@ const CalcForm = ({ handleInvTypeApp, handleAnalyseApp }) => {
   const resetState = (event) => {
     event.preventDefault();
     setAnalyse(false);
-    setInvType("I have invested in");
+    setInvType("default");
     setPrincipal(amountPlaceholder);
     setPeriod(periodPlaceholder);
     setInterest(interestPlaceholder);
-    setInvObjective();
+    setInvObjective("default");
   };
 
   const isValid = () => {
@@ -135,17 +133,18 @@ const CalcForm = ({ handleInvTypeApp, handleAnalyseApp }) => {
           value={invType}
           onChange={(e) => handleInvChange(e)}
         >
-          <option value="default">I have invested in</option>
+          <option value="default" disabled>I have invested in</option>
           <option value="Bank Fixed Deposit">Bank Fixed Deposit</option>
           <option value="Gold">Gold</option>
           <option value="Real Estate">Real estate</option>
           <option value="Guaranteed Income Plan">Guaranteed Income Plan</option>
         </select>
 
-        {showInputs && (
+        {(
           <div className="text-center w-[90%] max-w-[300px] placeholder:text-darkblue placeholder:text-center">
             <label className="text-sm text-indigo-600">Principal Amount</label>
             <input
+              id=""
               className="input text-center placeholder:text-[16px] md:placeholder:text-md"
               type="number"
               value={principal}
@@ -155,7 +154,7 @@ const CalcForm = ({ handleInvTypeApp, handleAnalyseApp }) => {
           </div>
         )}
 
-        {showInputs && (
+        {(
           <div className="text-center w-[90%] max-w-[300px] placeholder:text-darkblue placeholder:text-center">
             <label className="text-sm text-indigo-600">Interest (%)</label>
             <input
@@ -168,7 +167,7 @@ const CalcForm = ({ handleInvTypeApp, handleAnalyseApp }) => {
           </div>
         )}
 
-        {showInputs && (
+        {(
           <div className="text-center w-[90%] max-w-[300px] placeholder:text-darkblue placeholder:text-center">
             <label className="text-sm text-indigo-600">
               Investment Period (years)
@@ -183,12 +182,13 @@ const CalcForm = ({ handleInvTypeApp, handleAnalyseApp }) => {
           </div>
         )}
 
-        {showInputs && (
+        {(
           <select
             className="select w-[90%] max-w-[300px] text-center text-[16px] lg:text-md"
+            value={invObjective}
             onChange={(e) => setInvObjective(e.target.value)}
           >
-            <option value="default">Investment objective</option>
+            <option value="default" disabled>Investment objective</option>
             <option value="saving for retirement">Saving for retirement</option>
             <option value="saving for your kids' education">
               My kids education
@@ -198,7 +198,7 @@ const CalcForm = ({ handleInvTypeApp, handleAnalyseApp }) => {
           </select>
         )}
 
-        {showInputs && (
+        {(
           <button
             className="btn text-white px-8 flex justify-center w-[60vw] max-w-[200px] lg:text-lg lg:w-[60vw] text-base lg:max-w-[300px]"
             onClick={(event) => {
@@ -210,7 +210,7 @@ const CalcForm = ({ handleInvTypeApp, handleAnalyseApp }) => {
         )}
       </form>
 
-      {showInputs && (
+      {(
         <button
           className="mx-auto mt-6 btn text-centre bg-white text-blue border-[1.5px] border-gray-400 hover:border-none hover:text-white hover:bg-blue px-8 flex justify-center w-[60vw] max-w-[200px] lg:text-lg lg:w-[60vw] text-base lg:max-w-[300px]"
           onClick={(event) => resetState(event)}
@@ -220,7 +220,7 @@ const CalcForm = ({ handleInvTypeApp, handleAnalyseApp }) => {
       )}
 
       {/* analysis result */}
-      {analyse && (
+      {(
         <div
           className="mt-24 py-6 rounded-2xl border-2 border-indigo-600"
         >

@@ -1,9 +1,8 @@
 import React from "react";
-import { useRef } from "react";
-import Image from "../assets/img/hero-img.png";
 import { IoIosArrowDroprightCircle } from "react-icons/io";
 
-const Hero = () => {
+const Hero = ({calculator, scrollToCalculator}) => {
+  console.log(calculator);
   return (
     <section className="mt-6">
       <div className="container mx-auto px-6 lg:px-0">
@@ -27,14 +26,15 @@ const Hero = () => {
             different investment options.
           </p>
           {/* call to action button */}
-          {/* <button
+          <button
             className="btn gap-x-6 pl-6 text-sm lg:h-16 lg:text-base text-center"
             data-aos="fade-down"
             data-aps-delay="700"
+            onClick={() => scrollToCalculator(calculator)}
           >
             Analyze your investment
             <IoIosArrowDroprightCircle className="text-2xl lg:text-3xl" />
-          </button> */}
+          </button>
           {/* right-side hero image
           <div className='flex-1' data-aos='fade-up' data-aos-delay='600'>
             <img src={Image} alt='hero-img'/>

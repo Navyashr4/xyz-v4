@@ -1,13 +1,16 @@
-import React, { useState } from "react";
-import { IoIosArrowForward } from "react-icons/io";
+import React from "react";
 import getInvParameters from "../Functions/getInvParameters";
 import getBgBorderColors from "../Functions/getBgBorderColors";
 
 const AnalysisParameters = ({ invType }) => {
-  const [itemName, setItemName] = useState("Bitcoin");
+  console.log("Inv Type from analysis parameters",invType)
   const invParameters = getInvParameters(invType);
+  console.log("Analysis parameters", invParameters);
 
-  const totalScore = invParameters.reduce((acc, item) => acc + item.score, 0);
+  let totalScore;
+  if(invParameters) {
+    totalScore = invParameters.reduce((acc, item) => acc + item.score, 0);
+  }
 
   return (
     <section className="section mx-2 lg:mx-0  text-darkblue">
@@ -34,7 +37,6 @@ const AnalysisParameters = ({ invType }) => {
               return (
                 <div>
                   <div
-                    onClick={() => setItemName(name)}
                     className={`bg-white
                 w-full rounded-2xl py-12 px-6 shadow-primary cursor-pointer 
                 transition duration-300 border-8 ${borderColor} h-full`}
@@ -61,24 +63,6 @@ const AnalysisParameters = ({ invType }) => {
                             </div>
                           );
                         })}
-                      <button
-                        className={`${
-                          name === itemName
-                            ? "text-white bg-violet hover:bg-indigo-900 border-none pl-8 mt-4 pr-6 gap-x-3"
-                            : "text-indigo-800 w-16 mt-4"
-                        }  border-2 border-gray-300 rounded-full h-16 
-                    flex justify-center items-center`}
-                      >
-                        {name === itemName && (
-                          <div className="text-lg font-medium">Learn more </div>
-                        )}
-
-                        <IoIosArrowForward
-                          className={`${
-                            name === itemName ? "text-2xl" : "text-3xl"
-                          }`}
-                        />
-                      </button>
                     </div>
                   </div>
                 </div>

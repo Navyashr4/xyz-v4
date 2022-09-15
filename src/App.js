@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState,useRef } from "react";
 import Aos from "aos";
 import "aos/dist/aos.css";
 
@@ -16,7 +16,7 @@ import InvestmentInfo from "./components/InvestmentInfo.js";
 
 const App = () => {
   const [navMobile, setNavMobile] = useState(false);
-  const [invType, setInvType] = useState();
+  const [invType, setInvType] = useState("Bank Fixed Deposit");
   const [analyse, setAnalyse] = useState(false);
 
   const handleInvTypeApp = (inv) => {
@@ -34,6 +34,15 @@ const App = () => {
     });
   });
 
+  const calculator = useRef(null);
+
+  const scrollToCalculator = (calculator) => {
+      window.scrollTo({
+        top: calculator.current.offsetTop + 100,
+        behavior: "smooth",
+      });
+  };
+
   return (
     <div className="overflow-hidden">
       <Header setNavMobile={setNavMobile} />
@@ -45,9 +54,10 @@ const App = () => {
         <NavMobile setNavMobile={setNavMobile} />
       </div>
 
-      <Hero />
+      <Hero calculator={calculator} scrollToCalculator={scrollToCalculator}/>
       <Stats />
 
+      <div ref={calculator}></div>
       <CalculateSection handleInvTypeApp = {handleInvTypeApp} handleAnalyseApp={handleAnalyseApp}/>
       {analyse && <AnalysisParameters invType={invType}/>}
       {analyse && <SupportingData invType={invType}/>}
