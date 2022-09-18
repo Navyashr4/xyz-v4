@@ -40,6 +40,22 @@ const getCalculatedValues = (principal, period, interest, invType) => {
             break;
         }
 
+        case "Public Provident Fund": {
+            reportObj.maturityValue = Math.round(principal * (Math.pow((1 + (interest / 100)), (period))));
+            reportObj.interestEarned = Math.round(reportObj.maturityValue - principal);
+            reportObj.earningsNeeded = Math.round(principal * (Math.pow((1 + (7 / 100)), (period))));
+            reportObj.loss = Math.round(reportObj.earningsNeeded - reportObj.maturityValue);
+            break;
+        }
+
+        case "ULIP": {
+            reportObj.maturityValue = Math.round(principal * (Math.pow((1 + (interest / 100)), (period))));
+            reportObj.interestEarned = Math.round(reportObj.maturityValue - principal);
+            reportObj.earningsNeeded = Math.round(principal * (Math.pow((1 + (7 / 100)), (period))));
+            reportObj.loss = Math.round(reportObj.earningsNeeded - reportObj.maturityValue);
+            break;
+        }
+
         default : {
             reportObj.interestEarned = 0;
             reportObj.maturityValue = 0;

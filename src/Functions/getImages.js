@@ -40,6 +40,24 @@ const getImages = (invType) => {
       break;
     }
 
+    case "Public Provident Fund" : {
+      images = [
+        Image1, 
+        Image2, 
+        Image1
+      ]
+      break;
+    }
+
+    case "ULIP" : {
+      images = [
+        Image1, 
+        Image2, 
+        Image1
+      ]
+      break;
+    }
+
     default : {
       images = [];
     }

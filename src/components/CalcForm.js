@@ -71,6 +71,14 @@ const CalcForm = ({ handleInvTypeApp, handleAnalyseApp }) => {
         setPlaceholderIdx(4);
         break;
       }
+      case "Public Provident Fund": {
+        setPlaceholderIdx(5);
+        break;
+      }
+      case "ULIP": {
+        setPlaceholderIdx(5);
+        break;
+      }
       default: {
         setPlaceholderIdx(0);
         setAnalyse(false);
@@ -138,6 +146,8 @@ const CalcForm = ({ handleInvTypeApp, handleAnalyseApp }) => {
           <option value="Gold">Gold</option>
           <option value="Real Estate">Real estate</option>
           <option value="Guaranteed Income Plan">Guaranteed Income Plan</option>
+          <option value="Public Provident Fund">Public Provident Fund</option>
+          <option value="ULIP">ULIP</option>
         </select>
 
         {(
@@ -220,7 +230,7 @@ const CalcForm = ({ handleInvTypeApp, handleAnalyseApp }) => {
       )}
 
       {/* analysis result */}
-      {(
+      {analyse && (
         <div
           className="mt-24 py-6 rounded-2xl border-2 border-indigo-600"
         >
