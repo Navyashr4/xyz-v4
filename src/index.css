@@ -13,6 +13,10 @@
     @apply bg-blue h-[60px] px-4 rounded-full hover:bg-blue-hover 
     transition flex items-center text-lg font-medium outline-none;
   }
+  .btnCards {
+    @apply bg-blue h-[40px] px-4 rounded-full hover:bg-blue-hover 
+    transition flex items-center text-lg font-medium outline-none;
+  }
   .section {
     @apply py-12 lg:py-24;
   }
@@ -34,3 +38,23 @@
     @apply lg:max-w-[200px] cursor-pointer;
   }
 }
+
+/* .gd-carousel-wrapper {
+  position:relative;
+}
+
+.gd-carousel {
+    position:unset;
+}
+
+.react-multiple-carousel__arrow {
+    position:absolute;
+}
+
+.react-multiple-carousel__arrow--left {
+    left: calc(-3% + 500px)
+}
+
+.react-multiple-carousel__arrow--right {
+    right: calc(-3% + 100px)
+} */

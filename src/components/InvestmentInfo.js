@@ -17,7 +17,7 @@ const InvestmentInfo = ({ invType }) => {
             {invInfo.map((item, idx) => {
                 return(
                     <div key={idx} className={item.title==="Trivia"  
-                      ? `mb-16 max-w-[622px] mx-auto p-6 border-2 border-indigo-400 bg-white rounded-xl`
+                      ? `mb-16 max-w-[622px] mx-auto p-6 border-2 border-darkblue bg-white rounded-xl`
                       : `mb-16 max-w-[622px] mx-auto p-6 border-2 border-white rounded-xl` }>
                     <h2 className={item.title==="Trivia" 
                       ? `section-title text-xl text-left lg:text-2xl text-indigo-600`

@@ -34,7 +34,7 @@ const getInvInfo = (invType) => {
                         time country's inflation is at 7%.`,
                         `2. As per the SEBI survey, 95% of the Indian families prefer investing in bank FDs as they are not market-linked
                         instruments & perceived to be safe.`,
-                        `3. Fixed deposit rates have been as high as around 13% during 1994 -1999`,
+                        `3. Fixed deposit rates have been as high as around 13% during 1994 to 1999`,
                         `4. In the last 20 years’ FD rates in India, have had a downhill journey.`,
                         `5. In 2003-04, it fell to 5.25%, which was a historical low in the fixed deposit interest rates until then.`,
                         `6. Senior Citizens get a slightly higher fixed interest rate compared to non-senior citizen fixed deposit.`

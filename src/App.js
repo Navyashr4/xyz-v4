@@ -4,6 +4,7 @@ import "aos/dist/aos.css";
 
 import Header from "./components/Header.js";
 import Hero from "./components/Hero.js";
+import InvCarousel from "./components/InvCarousel.js";
 import NavMobile from "./components/NavMobile.js";
 import Stats from "./components/Stats.js";
 import CalculateSection from "./components/CalculateSection.js";
@@ -56,6 +57,7 @@ const App = () => {
 
       <Hero calculator={calculator} scrollToCalculator={scrollToCalculator}/>
       <Stats />
+      <InvCarousel />
 
       <div ref={calculator}></div>
       <CalculateSection handleInvTypeApp = {handleInvTypeApp} handleAnalyseApp={handleAnalyseApp}/>
