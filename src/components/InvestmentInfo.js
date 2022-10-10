@@ -16,14 +16,21 @@ const InvestmentInfo = ({ invType }) => {
           <div>
             {invInfo.map((item, idx) => {
                 return(
-                    <div key={idx} className="mb-16 max-w-[622px] mx-auto">
-                    <h2 className="section-title text-xl text-left lg:text-2xl text-indigo-300">
+                    <div key={idx} className={item.title==="Trivia"  
+                      ? `mb-16 max-w-[622px] mx-auto p-6 border-2 border-indigo-400 bg-white rounded-xl`
+                      : `mb-16 max-w-[622px] mx-auto p-6 border-2 border-white rounded-xl` }>
+                    <h2 className={item.title==="Trivia" 
+                      ? `section-title text-xl text-left lg:text-2xl text-indigo-600`
+                      : `section-title text-xl text-left lg:text-2xl text-indigo-300`
+                    }>
                       {item.title}
                     </h2>
                     {
                         item.text.map((text, idx) => {
                             return(
-                                <p key={idx} className={`section-subtitle text-left lg:text-lg mb-4 max-w-[622px] mx-auto`}>
+                                <p key={idx} className={item.title==="Trivia"  
+                                  ? `section-subtitle text-left lg:text-lg mb-4 max-w-[622px] mx-auto text-darkblue`
+                                  : `section-subtitle text-left lg:text-lg mb-4 max-w-[622px] mx-auto`}>
                                     {text}
                               </p>
                             )
