@@ -103,7 +103,9 @@ const InvCarousel = () => {
       };
 
   return (
-    <section>
+    <section
+    data-aos='fade-up'
+    data-aos-delay='400'>
         <div className="container mx-auto mt-10 bg-darkblue p-10">
             <Carousel 
             responsive={responsive} 
