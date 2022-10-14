@@ -14,6 +14,9 @@ import Resources from "./components/Resources.js";
 import Footer from "./components/Footer.js";
 import AnalysisParameters from "./components/AnalysisParameters.js";
 import InvestmentInfo from "./components/InvestmentInfo.js";
+import BarChart from "./components/BarChart.js";
+import UserData from "./data/sampleChartData.js";
+import NiftyCalculator from "./components/NiftyCalculator.js";
 
 const App = () => {
   const [navMobile, setNavMobile] = useState(false);
@@ -44,6 +47,23 @@ const App = () => {
       });
   };
 
+  //barChart
+  const [userData, setUserData] = useState({
+    labels: ["Return on investment"],
+    datasets: [{
+      label: "Users Gained",
+      data: [50000],
+      backgroundColor: ["red"],
+      borderColor: ["white"],
+      borderWidth: 2
+    },
+    {
+      label: "Users Lost",
+      data: [678],
+      backgroundColor: ["blue"]
+    }]
+  })
+
   return (
     <div className="overflow-hidden">
       <Header setNavMobile={setNavMobile} />
@@ -58,6 +78,7 @@ const App = () => {
       <Hero calculator={calculator} scrollToCalculator={scrollToCalculator}/>
       <Stats />
       <InvCarousel />
+      {/* <BarChart chartData={userData} /> */}
 
       <div ref={calculator}></div>
       <CalculateSection handleInvTypeApp = {handleInvTypeApp} handleAnalyseApp={handleAnalyseApp}/>

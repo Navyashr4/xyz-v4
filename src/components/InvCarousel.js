@@ -115,7 +115,7 @@ const InvCarousel = () => {
             arrows={true}
             infinite={true}
             className="text-black">
-                {samples.map((sample) => {
+                {samples.map((sample, idx) => {
                     const returnColor = borderColor(sample.return).text;
                     const liquidityColor = borderColor(sample.liquidity).text;
                     const safetyColor = borderColor(sample.safety).text;
@@ -125,7 +125,7 @@ const InvCarousel = () => {
                     const totalScoreColor = borderColor(Math.round(totalScore/4)).text;
 
                     return(
-                    <div className="tracking-wide h-full mx-auto md:mx-4 border-2 rounded-2xl border-darkblue
+                    <div key={idx} className="tracking-wide h-full mx-auto md:mx-4 border-2 rounded-2xl border-darkblue
                      text-white bg-white p-10 text-center flex flex-col justify-between max-w-[345px]">
                         <div className="text-xl font-semibold text-darkblue min-h-[56px]">{sample.invName}</div>
                         <div className={`flex justify-between mt-5 ${returnColor}`}>

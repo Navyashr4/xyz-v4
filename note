@@ -1,3 +1,40 @@
+1. Make money appear in indian form
+2. Warings need to come within the form 
+3. Fix message for when loss is zero 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 1. features section stops working properly at around 900px width 
 2. If I really want to stop rerendeing on form input. then I have to use useRef or formData
 3. way of making label show up only when someone starts typing 

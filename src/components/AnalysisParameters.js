@@ -3,9 +3,9 @@ import getInvParameters from "../Functions/getInvParameters";
 import getBgBorderColors from "../Functions/getBgBorderColors";
 
 const AnalysisParameters = ({ invType }) => {
-  console.log("Inv Type from analysis parameters",invType)
+  // console.log("Inv Type from analysis parameters",invType)
   const invParameters = getInvParameters(invType);
-  console.log("Analysis parameters", invParameters);
+  // console.log("Analysis parameters", invParameters);
 
   let totalScore;
   if(invParameters) {

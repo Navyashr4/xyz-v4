@@ -1,5 +1,6 @@
 import React from 'react';
 import CalcForm from './CalcForm';
+import NiftyCalculator from './NiftyCalculator';
 
 const Calculate = ({handleInvTypeApp, handleAnalyseApp}) => {
   return (
@@ -24,7 +25,8 @@ const Calculate = ({handleInvTypeApp, handleAnalyseApp}) => {
           </p>
         </div>
         {/* form */}
-        <CalcForm handleInvTypeApp={handleInvTypeApp} handleAnalyseApp={handleAnalyseApp}/>
+        <NiftyCalculator handleInvTypeApp={handleInvTypeApp} handleAnalyseApp={handleAnalyseApp}/>
+        {/* <CalcForm handleInvTypeApp={handleInvTypeApp} handleAnalyseApp={handleAnalyseApp}/> */}
       </div>
     </section>
   );
