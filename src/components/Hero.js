@@ -1,7 +1,7 @@
 import React from "react";
 import { IoIosArrowDroprightCircle } from "react-icons/io";
 
-const Hero = ({calculator, scrollToCalculator}) => {
+const Hero = ({ calculator, scrollToCalculator }) => {
   console.log(calculator);
   return (
     <section className="mt-6">
@@ -14,16 +14,18 @@ const Hero = ({calculator, scrollToCalculator}) => {
             data-aos="fade-down"
             data-aps-delay="800"
           >
-            Some catchy investment content in 50 chars
+            Is your investment growing your wealth?
           </h1>
           {/* paragraph text */}
           <p
-            className="max-w-[440px] leading-relaxed mb-8 text-center"
+            className="max-w-[850px] leading-relaxed mb-8 text-center lg:text-lg"
             data-aos="fade-down"
             data-aps-delay="600"
           >
-            Content to encourage people to understand and analyze their
-            different investment options.
+            Our investment x-ray tool objectively analyses your investment and
+            evaluates on four parameters : 
+            <p className="text-indigo-400 font-semibold"> (a) Growth against inflation, (b) Liquidity, (c) Safety, and 
+            (d) Taxation Benefits</p>
           </p>
           {/* call to action button */}
           {/* <button

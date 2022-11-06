@@ -15,14 +15,14 @@ const Calculate = ({handleInvTypeApp, handleAnalyseApp, invTypeApp}) => {
         <div 
           className='text-center px-6 lg:px-0'>
           <h2
-            className='section-title md:text-3xl'
+            className='section-title md:text-4xl text-indigo-400'
           >
-            Is your investment growing your wealth?
+            Calculator
           </h2>
           <p
             className='section-subtitle text-lg mb-16 max-w-[622px] mx-auto'
           >
-            Our investment x-ray tool objectively analyses your investment and evaluates on 4 parameters : Growth, Risk, Liquidity and Matching your investment objective
+            Evalaute your investment class in comparison to NIFTY50 returns gained for the same principal and tenure 
           </p>
         </div>
         {/* form */}

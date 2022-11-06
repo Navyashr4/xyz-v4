@@ -154,9 +154,9 @@ const CalcForm = ({ handleInvTypeApp, handleAnalyseApp, invTypeApp }) => {
       className="w-full bg-white max-w-[942px] mx-auto rounded-2xl text-darkblue
       px-6 py-12 lg:p-12 shadow-primary"
     >
-      <p className="text-gray-900 text-3xl font-semibold mb-8 text-center">
+      {/* <p className="text-gray-900 text-3xl font-semibold mb-8 text-center">
         Enter your investment's details
-      </p>
+      </p> */}
       <form className="flex flex-col items-center space-y-12">
         <select
           className="select w-[90%] max-w-[300px] text-center text-[16px] md:text-md"

@@ -19,6 +19,7 @@ import UserData from "./data/sampleChartData.js";
 import NiftyCalculator from "./components/NiftyCalculator.js";
 import DomInvPills from "./components/DomInvPills.js";
 import DummyCarousel from "./components/DummyCarousel";
+import Trivia from "./components/Trivia.js";
 
 
 const App = () => {
@@ -26,11 +27,9 @@ const App = () => {
   const [invType, setInvType] = useState("Bank Fixed Deposit");
   const [analyse, setAnalyse] = useState(false);
 
-  let i = 0;
 
   const handleInvTypeApp = (inv) => {
     setInvType(inv);
-    console.log(i, invType);
   }
 
 
@@ -46,6 +45,7 @@ const App = () => {
   });
 
   const calculator = useRef(null);
+  const learnMoreSection = useRef(null);
 
   const scrollToCalculator = (calculator) => {
       window.scrollTo({
@@ -54,22 +54,29 @@ const App = () => {
       });
   };
 
+  const scrollToLearnMoreSection = (learnMoreSection) => {
+    window.scrollTo({
+      top: learnMoreSection.current.offsetTop +50,
+      behavior: "smooth",
+    });
+};
+
   //barChart
-  const [userData, setUserData] = useState({
-    labels: ["Return on investment"],
-    datasets: [{
-      label: "Users Gained",
-      data: [50000],
-      backgroundColor: ["red"],
-      borderColor: ["white"],
-      borderWidth: 2
-    },
-    {
-      label: "Users Lost",
-      data: [678],
-      backgroundColor: ["blue"]
-    }]
-  })
+  // const [userData, setUserData] = useState({
+  //   labels: ["Return on investment"],
+  //   datasets: [{
+  //     label: "Users Gained",
+  //     data: [50000],
+  //     backgroundColor: ["red"],
+  //     borderColor: ["white"],
+  //     borderWidth: 2
+  //   },
+  //   {
+  //     label: "Users Lost",
+  //     data: [678],
+  //     backgroundColor: ["blue"]
+  //   }]
+  // })
 
   return (
     <div className="overflow-hidden">
@@ -81,17 +88,20 @@ const App = () => {
       >
         <NavMobile setNavMobile={setNavMobile} />
       </div>
-
+      
       <Hero calculator={calculator} scrollToCalculator={scrollToCalculator}/>
       <DomInvPills handleInvTypeApp = {handleInvTypeApp}/>
       {/* <Stats /> */}
-      <InvCarousel invType={invType}/>
+      <InvCarousel invType={invType} calculator={calculator} scrollToCalculator={scrollToCalculator}
+      learnMoreSection={learnMoreSection} scrollToLearnMoreSection={scrollToLearnMoreSection}/>
       {/* <BarChart chartData={userData} /> */}
       {/* <DummyCarousel /> */}
+      <Trivia invType={invType}/>
 
       <div ref={calculator}></div>
       <CalculateSection handleInvTypeApp = {handleInvTypeApp} invTypeApp={invType} handleAnalyseApp={handleAnalyseApp}/>
       {analyse && <AnalysisParameters invType={invType}/>}
+      <div ref={learnMoreSection}></div>
       {analyse && <SupportingData invType={invType}/>}
       {analyse && <InvestmentInfo invType={invType}/>}
       {analyse && <Resources invType={invType}/>}
