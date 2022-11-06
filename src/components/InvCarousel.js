@@ -88,7 +88,7 @@ const InvCarousel = ({ invType}) => {
         },
         tablet: {
           breakpoint: { max: 1024, min: 768 },
-          items: 2,
+          items: 1,
         },
         mobile: {
           breakpoint: { max: 768, min: 0 },
