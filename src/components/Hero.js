@@ -26,7 +26,7 @@ const Hero = ({calculator, scrollToCalculator}) => {
             different investment options.
           </p>
           {/* call to action button */}
-          <button
+          {/* <button
             className="btn gap-x-6 pl-6 text-sm lg:h-16 lg:text-base text-center"
             data-aos="fade-down"
             data-aps-delay="700"
@@ -34,7 +34,7 @@ const Hero = ({calculator, scrollToCalculator}) => {
           >
             Analyze your investment
             <IoIosArrowDroprightCircle className="text-2xl lg:text-3xl" />
-          </button>
+          </button> */}
           {/* right-side hero image
           <div className='flex-1' data-aos='fade-up' data-aos-delay='600'>
             <img src={Image} alt='hero-img'/>

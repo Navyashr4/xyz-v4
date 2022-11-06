@@ -17,6 +17,7 @@ import InvestmentInfo from "./components/InvestmentInfo.js";
 import BarChart from "./components/BarChart.js";
 import UserData from "./data/sampleChartData.js";
 import NiftyCalculator from "./components/NiftyCalculator.js";
+import DomInvPills from "./components/DomInvPills.js";
 
 const App = () => {
   const [navMobile, setNavMobile] = useState(false);
@@ -76,7 +77,8 @@ const App = () => {
       </div>
 
       <Hero calculator={calculator} scrollToCalculator={scrollToCalculator}/>
-      <Stats />
+      <DomInvPills />
+      {/* <Stats /> */}
       <InvCarousel />
       {/* <BarChart chartData={userData} /> */}
 
