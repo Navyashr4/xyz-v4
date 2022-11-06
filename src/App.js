@@ -18,15 +18,21 @@ import BarChart from "./components/BarChart.js";
 import UserData from "./data/sampleChartData.js";
 import NiftyCalculator from "./components/NiftyCalculator.js";
 import DomInvPills from "./components/DomInvPills.js";
+import DummyCarousel from "./components/DummyCarousel";
+
 
 const App = () => {
   const [navMobile, setNavMobile] = useState(false);
   const [invType, setInvType] = useState("Bank Fixed Deposit");
   const [analyse, setAnalyse] = useState(false);
 
+  let i = 0;
+
   const handleInvTypeApp = (inv) => {
     setInvType(inv);
+    console.log(i, invType);
   }
+
 
   const handleAnalyseApp = (analyse) => {
     setAnalyse(analyse);
@@ -77,13 +83,14 @@ const App = () => {
       </div>
 
       <Hero calculator={calculator} scrollToCalculator={scrollToCalculator}/>
-      <DomInvPills />
+      <DomInvPills handleInvTypeApp = {handleInvTypeApp}/>
       {/* <Stats /> */}
-      <InvCarousel />
+      <InvCarousel invType={invType}/>
       {/* <BarChart chartData={userData} /> */}
+      {/* <DummyCarousel /> */}
 
       <div ref={calculator}></div>
-      <CalculateSection handleInvTypeApp = {handleInvTypeApp} handleAnalyseApp={handleAnalyseApp}/>
+      <CalculateSection handleInvTypeApp = {handleInvTypeApp} invTypeApp={invType} handleAnalyseApp={handleAnalyseApp}/>
       {analyse && <AnalysisParameters invType={invType}/>}
       {analyse && <SupportingData invType={invType}/>}
       {analyse && <InvestmentInfo invType={invType}/>}

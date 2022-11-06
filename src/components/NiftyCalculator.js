@@ -3,7 +3,8 @@ import { calcFormPlaceholders } from "../data/calcFormPlaceholders";
 import NiftyAnalysisResult from "./NiftyAnalysisResult";
 import {GetInterestValue, GetNiftyInterestValue} from "../Functions/getInterestRate";
 
-const CalcForm = ({ handleInvTypeApp, handleAnalyseApp }) => {
+const CalcForm = ({ handleInvTypeApp, handleAnalyseApp, invTypeApp }) => {
+  console.log("Inv Type received by the NIFTYcalculator", invTypeApp);
   const [invType, setInvType] = useState("Bank Fixed Deposit");
   const [placeholderIdx, setPlaceholderIdx] = useState(0);
   const [principal, setPrincipal] = useState(100000);
@@ -14,6 +15,10 @@ const CalcForm = ({ handleInvTypeApp, handleAnalyseApp }) => {
   const [analyse, setAnalyse] = useState(false);
 
   const analysisResults = useRef(null);
+
+  useEffect(() => {
+    setInvType(invTypeApp);
+  },[invTypeApp])
 
   const scrollToResults = (elementRef) => {
     if (analyse) {
@@ -140,7 +145,11 @@ const CalcForm = ({ handleInvTypeApp, handleAnalyseApp }) => {
     setNiftyInterest(GetNiftyInterestValue(period));
   },[period, invType])
 
-  return (
+  // const updateInvType = () => {
+  //   console.log("Updated Inv Type", invType);
+  // }  
+  
+    return (
     <div
       className="w-full bg-white max-w-[942px] mx-auto rounded-2xl text-darkblue
       px-6 py-12 lg:p-12 shadow-primary"
@@ -151,7 +160,7 @@ const CalcForm = ({ handleInvTypeApp, handleAnalyseApp }) => {
       <form className="flex flex-col items-center space-y-12">
         <select
           className="select w-[90%] max-w-[300px] text-center text-[16px] md:text-md"
-          value={invType}
+          value= {invType}
           onChange={(e) => handleInvChange(e)}
         >
           <option value="default" disabled>

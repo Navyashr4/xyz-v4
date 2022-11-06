@@ -2,7 +2,8 @@ import React from 'react';
 import CalcForm from './CalcForm';
 import NiftyCalculator from './NiftyCalculator';
 
-const Calculate = ({handleInvTypeApp, handleAnalyseApp}) => {
+const Calculate = ({handleInvTypeApp, handleAnalyseApp, invTypeApp}) => {
+  console.log("Inv Type received by the calculator", invTypeApp);
   return (
     <section 
     className='section'
@@ -25,7 +26,7 @@ const Calculate = ({handleInvTypeApp, handleAnalyseApp}) => {
           </p>
         </div>
         {/* form */}
-        <NiftyCalculator handleInvTypeApp={handleInvTypeApp} handleAnalyseApp={handleAnalyseApp}/>
+        <NiftyCalculator handleInvTypeApp={handleInvTypeApp} invTypeApp={invTypeApp} handleAnalyseApp={handleAnalyseApp}/>
         {/* <CalcForm handleInvTypeApp={handleInvTypeApp} handleAnalyseApp={handleAnalyseApp}/> */}
       </div>
     </section>

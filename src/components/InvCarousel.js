@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import borderColor from "../Functions/getBgBorderColors";
@@ -6,36 +6,30 @@ import "../index.css";
 import "../carousel.css"
 
 
+const ButtonGroup = ({ invType, next, previous, goToSlide, ...rest }) => {
+    console.log("received by button group", invType)
+    const {
+      carouselState: { currentSlide }
+    } = rest;
 
-const InvCarousel = () => {
-    // const parameterColor = (score) => {
-    //     let color = "";
-    //     switch(score){
-    //         case score < 2 : {
-    //             color = "text-green-400";
-    //             break;
-    //         }
+    useEffect(() => {
+        console.log("Change in inv type", invType);
+        if(invType == "Bank Fixed Deposit") goToSlide(0);
+        else if(invType == "Gold") goToSlide(1);
+        else if(invType == "Real Estate") goToSlide(2);
+        else if(invType == "Public Provident Fund") goToSlide(3);
+        else if(invType == "ULIP") goToSlide(4);
+        else goToSlide(0);
+    }, [invType])
 
-    //         case score < 5 : {
-    //             color = "text-green-400";
-    //             break;
-    //         }
+    return (
+      <div >
+      </div>
+    );
+  };
 
-    //         case score < 7 : {
-    //             color = "text-green-400";
-    //             break;
-    //         }
 
-    //         case score <= 10 : {
-    //             color = "text-green-400";
-    //             break;
-    //         }
-
-    //         default : color = "text-white"
-    //     }
-
-    //     return color;
-    // }
+const InvCarousel = ({ invType}) => {
 
     const samples = [
         {
@@ -59,13 +53,13 @@ const InvCarousel = () => {
             safety : 10,
             taxation : 6
         },
-        {
-            invName : "Guaranteed Income Plan",
-            return : 2,
-            liquidity : 5,
-            safety : 8,
-            taxation : 3
-        },
+        // {
+        //     invName : "Guaranteed Income Plan",
+        //     return : 2,
+        //     liquidity : 5,
+        //     safety : 8,
+        //     taxation : 3
+        // },
         {
             invName : "Public Provident Fund",
             return : 4,
@@ -101,6 +95,9 @@ const InvCarousel = () => {
           items: 1,
         },
       };
+    
+
+
 
   return (
     <section
@@ -114,6 +111,8 @@ const InvCarousel = () => {
             renderDotsOutside={true}
             arrows={true}
             infinite={true}
+            renderButtonGroupOutside
+            customButtonGroup={<ButtonGroup invType={invType}/>}
             className="text-black">
                 {samples.map((sample, idx) => {
                     const returnColor = borderColor(sample.return).text;
@@ -125,7 +124,7 @@ const InvCarousel = () => {
                     const totalScoreColor = borderColor(Math.round(totalScore/4)).text;
 
                     return(
-                    <div key={idx} className="tracking-wide h-full mx-auto md:mx-4 border-2 rounded-2xl border-darkblue
+                    <div key={idx} className="tracking-wide h-full mx-auto md:min-mx-4 border-2 rounded-2xl border-darkblue
                      text-white bg-white p-10 text-center flex flex-col justify-between max-w-[345px]">
                         <div className="text-xl font-semibold text-darkblue min-h-[56px]">{sample.invName}</div>
                         <div className={`flex justify-between mt-5 ${returnColor}`}>
@@ -150,17 +149,20 @@ const InvCarousel = () => {
                         </div>
                         <button className="btnCards flex justify-center w-full text-base lg:max-w-[300px] border-[1.5px] bg-indigo-600
                          text-white border-indigo-600 hover:text-white hover:bg-indigo-800 hover:border-indigo-800">
-                            Analyze
+                            Calculator
                         </button>
-                        <button className="btnCards mt-5 flex justify-center w-full text-base lg:max-w-[300px] border-[1.5px] bg-white
-                         text-indigo-600 border-indigo-600 hover:bg-indigo-600 hover:text-white">
-                            Learn 
+                        <button 
+                        className="btnCards mt-5 flex justify-center w-full text-base lg:max-w-[300px] border-[1.5px] bg-white
+                         text-indigo-600 border-indigo-600 hover:bg-indigo-600 hover:text-white"
+                         >
+                            Learn More
                         </button>
                     </div>)
                 })}        
-            </Carousel>
+            </Carousel>    
         </div>
     </section>
+    
   );
 };
 
