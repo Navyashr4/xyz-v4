@@ -17,21 +17,21 @@ const Header = ({setNavMobile}) => {
           <div className='flex items-center gap-x-2 lg:gap-x-4'>
             <CgOpenCollective className='text-xl md:text-4xl'/>
             <p className='text-indigo-300 text-[0.875rem] md:text-[1rem] lg:text-[1.25rem] font-normal'>
-              Gryy's jrrjf hfge asug gwinsrtifn ?
+              What's wrong with my investment ?
             </p>
           </div>
         </a>
 
         {/* Nav Menu desktop*/}
-        <div className='hidden lg:flex gap-x-[55px]'>
-          <Nav />
+        {/* <div className='hidden lg:flex gap-x-[55px]'> */}
+          {/* <Nav /> */}
           {/* <AccountBtns /> */}
-        </div>
+        {/* </div> */}
 
         {/* Nav Menu Mobile Open */}
-        <div className='lg:hidden cursor-pointer' onClick={() => setNavMobile(true)}>
+        {/* <div className='lg:hidden cursor-pointer' onClick={() => setNavMobile(true)}>
           <CgMenuRight className='text-xl md:text-2xl' />
-        </div>
+        </div> */}
 
       </div>
     </header>

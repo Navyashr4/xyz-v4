@@ -4,8 +4,8 @@ function DomInvPills() {
   return (
         <section className="mt-6">
           <div className="container mx-auto px-6 lg:px-0">
-            <div className="flex flex-col gap-y-5 items-center">
-              <div className='flex gap-x-2'>
+            {/* <div className="flex flex-col gap-y-5 items-center"> */}
+              <div className='mx-auto flex gap-x-2 flex-wrap gap-y-4 justify-center lg:max-w-[50%]'>
                 <button
                     className="btn gap-x-6 text-sm lg:h-16 lg:text-base text-center
                     bg-darkblue border-2 border-white hover:bg-blue"
@@ -33,8 +33,6 @@ function DomInvPills() {
                 >
                     Guaranteed Income Plan 
                 </button>
-              </div>
-              <div className='flex gap-x-2'>
                 <button
                     className="btn gap-x-6 text-sm lg:h-16 lg:text-base text-center
                     bg-darkblue border-2 border-white hover:bg-blue"
@@ -55,7 +53,7 @@ function DomInvPills() {
                 </button>
               </div>
             </div>
-          </div>
+          {/* </div> */}
         </section>
   )
 }
