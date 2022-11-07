@@ -57,7 +57,7 @@ const AnalysisParameters = ({ invType }) => {
                         item.content.map((content, idx) => {
                           return (
                             <li
-                              className="mb-4 px-2 lg:px-12 md:px-6 text-left md:text-justify list-disc"
+                              className="mb-4 px-2 lg:px-12 md:px-6 text-justify list-disc"
                               key={idx}
                             >
                               {content}
