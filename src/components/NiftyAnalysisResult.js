@@ -84,9 +84,9 @@ const Parameters = ({
       {/* investment class */}
       <div className="text-md mb-4">
         {invType !== "default" ? (
-          <div className="flex justify-between">
-            <div className="text-gray-400">Investment class:</div>
-            <div className="border-2 border-indigo-600 px-2 rounded-md text-center">
+          <div className="flex flex-col md:flex-row justify-between items-center">
+            <div className="text-gray-400">Investment class</div>
+            <div className="border-2 border-indigo-600 px-1 rounded-md text-center w-full md:w-max">
               {invType}
             </div>
           </div>
@@ -114,7 +114,7 @@ const Parameters = ({
         {period ? (
           <div className="flex justify-between">
             <div className="text-gray-400">Investment period:</div>
-            <div className="border-2 border-indigo-600 px-2 rounded-md text-center">
+            <div className="border-2 border-indigo-600 px-1 rounded-md text-center">
               {period==1 ? `${period} year` : `${period} years`}
             </div>
           </div>
@@ -152,7 +152,7 @@ const Parameters = ({
       <div className="text-md mb-4">
         {(principal > 0 && invType) ? (
           <div className="flex justify-between">
-            <div className="text-gray-400">{invType} Maturity Value:</div>
+            <div className="text-gray-400">Maturity Value:</div>
             <div className="border-2 border-indigo-600 px-2 rounded-md text-center">
               {toIndianCurrency(maturityValue)}
             </div>
