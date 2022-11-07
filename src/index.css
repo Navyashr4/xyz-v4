@@ -37,6 +37,9 @@
   .select {
     @apply lg:max-w-[200px] cursor-pointer;
   }
+  /* .ul li {
+    @apply underline;
+ } */
 }
 
 /* .gd-carousel-wrapper {

@@ -6,7 +6,9 @@ const Trivia = ({ invType }) => {
 
   return (
     <section 
-    className="section pb-2 mx-4 lg:mx-0 ">
+    className="section pb-2 mx-4 lg:mx-0"
+    data-aos='fade-in'
+    data-aos-delay='900'>
       <div className="container mx-auto">
         {/* text */}
         <div className="text-center ">

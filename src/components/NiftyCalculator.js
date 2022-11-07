@@ -3,8 +3,8 @@ import { calcFormPlaceholders } from "../data/calcFormPlaceholders";
 import NiftyAnalysisResult from "./NiftyAnalysisResult";
 import {GetInterestValue, GetNiftyInterestValue} from "../Functions/getInterestRate";
 
-const CalcForm = ({ handleInvTypeApp, handleAnalyseApp, invTypeApp }) => {
-  console.log("Inv Type received by the NIFTYcalculator", invTypeApp);
+const CalcForm = ({ handleInvTypeApp, handleAnalyseApp, invTypeApp, resultsSection, scrollToResultsSection }) => {
+
   const [invType, setInvType] = useState("Bank Fixed Deposit");
   const [placeholderIdx, setPlaceholderIdx] = useState(0);
   const [principal, setPrincipal] = useState(100000);
@@ -23,7 +23,7 @@ const CalcForm = ({ handleInvTypeApp, handleAnalyseApp, invTypeApp }) => {
   const scrollToResults = (elementRef) => {
     if (analyse) {
       window.scrollTo({
-        top: elementRef.current.offsetTop,
+        top: elementRef.current.offsetTop + 1300,
         behavior: "smooth",
       });
     }
@@ -35,11 +35,14 @@ const CalcForm = ({ handleInvTypeApp, handleAnalyseApp, invTypeApp }) => {
     handleInvTypeApp(e.target.value);
   };
 
+  // console.log(resultsSection.current.offsetTop)
+
   //handling submission of form and calculating results by setting analysis section to show up
   const handleSubmit = (event) => {
     event.preventDefault();
     if (isValid()) {
       setAnalyse(true);
+      // if(analyse) scrollToResultsSection(resultsSection);
       scrollToResults(analysisResults);
     }
   };
@@ -99,6 +102,8 @@ const CalcForm = ({ handleInvTypeApp, handleAnalyseApp, invTypeApp }) => {
   const { amountPlaceholder, periodPlaceholder, interestPlaceholder } =
     calcFormPlaceholders[placeholderIdx];
 
+
+
   //handling resetting all the fields in the form
   const resetState = (event) => {
     event.preventDefault();
@@ -133,7 +138,19 @@ const CalcForm = ({ handleInvTypeApp, handleAnalyseApp, invTypeApp }) => {
     return isValid;
   };
 
+  const toIndianCurrency = (num) => {
+    const curr = num.toLocaleString("en-IN", {
+      style: "currency",
+      currency: "INR",
+    });
+    return curr;
+  };
 
+  const formatToCurrency = (amount) => {
+    return (amount).toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,'); 
+  }
+
+  // console.log("Indian Rupees", toIndianCurrency(2972939273972))
 
   const handlePeriod = (period) =>{
     setPeriod(period);
@@ -151,12 +168,12 @@ const CalcForm = ({ handleInvTypeApp, handleAnalyseApp, invTypeApp }) => {
   
     return (
     <div
-      className="w-full bg-white max-w-[942px] mx-auto rounded-2xl text-darkblue
+      className="w-full bg-white max-w-[600px] mx-auto rounded-2xl text-darkblue
       px-6 py-12 lg:p-12 shadow-primary"
     >
       <form className="flex flex-col items-center space-y-8">
         <select
-          className="select w-[90%] max-w-[300px] text-center text-[18px] 
+          className="select w-[90%] max-w-[300px] text-center text-[16px] 
           border-2 rounded-lg border-indigo-600 bg-white"
           value= {invType}
           onChange={(e) => handleInvChange(e)}
@@ -173,13 +190,12 @@ const CalcForm = ({ handleInvTypeApp, handleAnalyseApp, invTypeApp }) => {
         </select>
 
         {
-          <div className="text-center w-[90%] max-w-[300px] placeholder:text-darkblue placeholder:text-center
-          ">
+          <div className="text-center w-[90%] max-w-[300px] placeholder:text-darkblue placeholder:text-center">
             <label className="text-md text-indigo-600">Invested Amount (Rs.)</label>
             <input
               id=""
-              className="mt-1 input text-center text-[18px] lg:text-[18px] max-w-[200px]
-              border-2 rounded-lg border-indigo-600 bg-white"
+              className="mt-1 input text-center text-[16px] lg:text-[16px] max-w-[200px]
+              border-2 rounded-lg border-indigo-600 bg-white placeholder:text-[16px]"
               type="number"
               value={principal}
               placeholder={amountPlaceholder}
@@ -194,7 +210,7 @@ const CalcForm = ({ handleInvTypeApp, handleAnalyseApp, invTypeApp }) => {
               Investment Period (years)
             </label>
             <select
-              className="mt-1 select w-[90%] max-w-[150px] text-center text-[18px] 
+              className="mt-1 select w-[90%] max-w-[150px] text-center text-[16px] 
               border-2 rounded-lg border-indigo-600 bg-white"
               value={period}
               onChange={(e) => handlePeriod(e.target.value)}
@@ -212,7 +228,7 @@ const CalcForm = ({ handleInvTypeApp, handleAnalyseApp, invTypeApp }) => {
             <label className="text- mb-1 text-indigo-600">Return % per annum</label>
             <input
               readOnly
-              className="input text-center text-[18px] pl-3
+              className="input text-center text-[16px] pl-3
               border-2 rounded-lg border-indigo-600 bg-white max-w-[150px]"
               type="number"
               value={interest}
@@ -242,7 +258,7 @@ const CalcForm = ({ handleInvTypeApp, handleAnalyseApp, invTypeApp }) => {
 
         {
           <button
-            className="btnCards flex justify-center w-[40%] text-base lg:max-w-[300px] border-[1.5px] bg-indigo-600
+            className="btnCards flex justify-center w-[60%] max-w-[220px] text-base lg:max-w-[300px] border-[1.5px] bg-indigo-600
             text-white border-indigo-600 hover:text-white hover:bg-indigo-800 hover:border-indigo-800"
             onClick={(event) => {
               handleSubmit(event);
@@ -255,7 +271,7 @@ const CalcForm = ({ handleInvTypeApp, handleAnalyseApp, invTypeApp }) => {
 
       {
         <button
-          className="mx-auto btnCards mt-5 flex justify-center w-[40%] text-base lg:max-w-[300px] border-[1.5px] bg-white
+          className="mx-auto btnCards mt-5 flex justify-center w-[60%] max-w-[220px] text-base lg:max-w-[300px] border-[1.5px] bg-white
           text-indigo-600 border-indigo-600 hover:bg-indigo-600 hover:text-white"
           onClick={(event) => resetState(event)}
         >
@@ -265,7 +281,8 @@ const CalcForm = ({ handleInvTypeApp, handleAnalyseApp, invTypeApp }) => {
 
       {/* analysis result */}
       {analyse && (
-        <div className="mt-24 py-6 rounded-2xl border-2 border-indigo-600">
+        <div
+        className="mt-24 py-6 rounded-2xl border-2 border-indigo-600">
           <NiftyAnalysisResult
             principal={principal}
             interest={interest}
@@ -277,7 +294,7 @@ const CalcForm = ({ handleInvTypeApp, handleAnalyseApp, invTypeApp }) => {
         </div>
       )}
 
-      <div ref={analysisResults}></div>
+      <div className="" ref={analysisResults}></div>
     </div>
   );
 };

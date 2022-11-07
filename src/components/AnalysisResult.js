@@ -52,10 +52,10 @@ const Parameters = ({
     <div className="text-center">
       <div className="text-lg mb-4">
         {invType !== "default" ? (
-          <span>
-            <span className="text-gray-400 mr-2">Investment type is</span>{" "}
-            {invType}
-          </span>
+          <div className="flex bg-red-400 justify-between">
+            <div className="text-gray-400 mr-2">Investment type is</div>
+            <div>{invType}</div> 
+          </div>
         ) : (
           <span className="text-red-500">Please select investment type!</span>
         )}

@@ -35,7 +35,7 @@ const getInvFacts = (invType) => {
             `An Investor can do pre-mature withdrawal of a fixed deposit.`,
             `However, Pre-mature withdrawal penalty % is applied on the fixed
             deposit amount on withdrawal.`,
-            `Such penalty ranges from 0.5%-1%. Certain banks charge 0% penalty.`,
+            `Such penalty ranges from 0.5% to 1%. Certain banks charge 0% penalty.`,
             `Within T+1, the amount is received in the savings bank account.`,
             `Conclusion: Easy liquidity facility, thereby helpful in scenario of any
             emergency.`,
@@ -50,11 +50,11 @@ const getInvFacts = (invType) => {
           image: EthereumImg,
           content: [
             `Score: Medium to High [Insured & Guaranteed]`,
-            `Insurance - Fixed deposit + Savings account + Current account are insured to extent of Rs 5,00,000 (Rupees 5 lacs) per depositor by Deposit Insurance and Credit Guarantee Corporation (DICGC), a subsidiary of RBI.`,
+            `Insurance - Fixed deposit + Savings account + Current account are insured to extent of Rs 5,00,000 per depositor by Deposit Insurance and Credit Guarantee Corporation (DICGC), a subsidiary of RBI.`,
             `This guarantee is provided in case Bank fails to pay the Fixed deposit money (Principal + Interest) & on liquidation of the bank.`,
             `Guaranteed Income - Interest rate on Fixed deposit is guaranteed & not subject to any volatility.`,
             `Credit Risk - Choose the Bank or NBFC for placing Fixed deposit based on the credit rating provided by CRISIL/ ICRA or CARE. Lower the rating, higher the risk of the Bank.`,
-            `Conclusion: Safe only to extent of Rs 5lacs per bank. Guarantee of agreed fixed deposit return %`,
+            `Conclusion: Safe only to extent of Rs. 5 lacs per bank. Guarantee of agreed fixed deposit return %`,
           ],
         },
         {
@@ -67,7 +67,7 @@ const getInvFacts = (invType) => {
           content: [
             `Score: Low`,
             `Disadvantage #1: Interest income earned on Fixed deposit is taxed as per your income tax slab. (eg. If in 30% tax slab due to salary or other source of income, interest income on fixed deposit is also taxed at 30%).`,
-            `Disadvanatge #2: No Indexation benefit is provided to income earned in fixed deposit. However in debt mutual funds
+            `Disadvantage #2: No Indexation benefit is provided to income earned in fixed deposit. However in debt mutual funds
             income realized after 3 years is treated as long term capital gain with indexation`,
             `Advantage: 5 year Tax Saver Fixed deposits can be utilized as deduction in 80C of Income tax act to the extent of Rs 1,50,000.`,
             `Conclusion: Net return on fixed deposit is lower post tax, leading to even further negative interest rate (inflation > post tax fixed deposit return)`
@@ -86,11 +86,11 @@ const getInvFacts = (invType) => {
           score: 4,
           content: [
             `Score: Low to Medium`,
-            `Return on Gold acts as a good hedge against increase in currency (dollar to rupee) and inflation %`,
-            `General perception about Gold is:`, 
-            `(a) Equity Stock markets rise -> Price of Gold declines`,
-            `(b) Stock markets declines -> Price of Gold rises`,
-            `Over the last 3, 5, 7 and 10 Years, Gold returns have been mediocre. In last 10years, Gold has given 4.7% compounded annual return.`,
+            `Return on Gold acts as a good hedge against increase in currency (dollar to rupee) and inflation%`,
+            `General perception about Gold is: 
+            (a) when equity stock markets rise, the price of Gold declines
+            (b) when equity stock markets declines, the price of Gold rises`,
+            `Over the last 3, 5, 7 and 10 Years, Gold returns have been mediocre. In the last 10 years, Gold has given 4.7% compounded annual return.`,
             `Conclusion: Over the last 1 year, while inflation around the world has been going up, Gold has not acted as a good hedge against inflation. Returns has been around 6%, which does not beat inflation of approx. 7-8% in current times.`
           ],
         },
@@ -104,7 +104,7 @@ const getInvFacts = (invType) => {
           content: [
             `Score: Medium`,
             `Liquidity in Gold depends on the mode of holding`,
-            `Liquidity of Physical Gold is lower as you need to find a buyer / vendor to purchase the same at the market price with minimal expenses on exchange. Liquidity is lower compared to some asset classes like Stocks and Bond funds, but is better than Real estate.`,
+            `Liquidity of Physical Gold is lower as you need to find a buyer/vendor to purchase the same at the market price with minimal expenses on exchange. Liquidity is lower compared to some asset classes like Stocks and Bond funds, but is better than Real estate.`,
             `Liquidity is high when it comes to Gold ETFs, Gold Mutual funds or Digital Gold`,
             `Liquidity with Sovereign Gold Bonds is very low as the investment is locked-in for 8 years but with pre-mature withdrawal allowed after 5 years via exchange.`
           ],
@@ -305,10 +305,8 @@ const getInvFacts = (invType) => {
           content: [
             "Score: Low ",
             "Highly illiquid since you enter a mandatory lock-in for 15 years from the year of opening the PPF account.",
-            "Premature closure of a PPF account is not permissible. Except for the following scenarios:-",
-            "(a)Death of the account holder",
-            "OR",
-            "(b)After completion of five years, from the end of the financial year in which the account is opened, if the money is required for treatment of a critical illness or to fund higher education. Only partial withdrawal is allowed (upto 50% in a year).",
+            "Premature closure of a PPF account is not permissible except in the following scenarios: (a) Death of the account holder, (b) After completion of five years, from the end of the financial year in which the account is opened, if the money is required for treatment of a critical illness or to fund higher education.", 
+            "Only partial withdrawal is allowed (upto 50% in a year).",
             "Minimum investment of Rs 500 and Maximum of Rs 1.5lacs allowed year financial year.",
             "Conclusion: It’s an exile for 15 years."
           ],
@@ -374,15 +372,10 @@ const getInvFacts = (invType) => {
           image: BitconImg,
           content: [
             `Score: Low`,
-            `First 5 years`,
-            `1. 5 year lock-in: No withdrawals of your investment (net asset value).`,
-            `2. Even if you surrender your ULIP within 5 years, withdrawal would have to wait until the lock-in period is over.`,
-            `Post 5 years:`,
-            `1. Partial Withdrawals allowed to extent of 10% - 20% of Premium paid till date (varied between insurers).`,
-            `On Surrender:`,
-            `1. On policy surrender within 5 years of lock-in, surrender value (NAV less all expenses till date) can only be withdrawn after
-            end of 5 years lock in.`,
-            `2. Also, life cover will cease to exist on surrender.`,
+            `First 5 years: No withdrawals of your investment (net asset value). Even if you surrender your ULIP within 5 years, withdrawal would have to wait until the lock-in period is over.`,
+            `Post 5 years: Partial Withdrawals allowed to extent of 10% - 20% of Premium paid till date (varied between insurers).`,
+            `On Surrender: On policy surrender within 5 years of lock-in, surrender value (NAV less all expenses till date) can only be withdrawn after
+            end of 5 years lock in. Also, life cover will cease to exist on surrender.`,
             `Conclusion: No matter what, you are locked up for 5 years. Even after 5 years, bail is available only on piecemeal basis.`
           ],
         },
@@ -414,12 +407,12 @@ const getInvFacts = (invType) => {
             `Score: Medium`,
             `Premium Invested: Premium paid for investing in ULIP is eligible of deduction from income in a financial year to extent of Rs 1.5lacs under 80C of Income Tax Act.`,
             `Conditional Taxation on Redemption / Withdrawal [for policies issued after 1-Feb-2021]`,
-            `1. When total ULIP premium is more than Rs 2.5 lacs (“High Premium”) in any of the financial year [no matter how many ULIPs you hold].`,
-            `a. The capital gains on consideration received towards maturity or partial withdrawal obtained is taxable like equity or debt instruments based on holding period [short term or long term]. Refer link of Taxmann in reference section to read about taxability.`,
-            `b. Tax of 10% (short term) / 15% (long term) for Equity oriented ULIP plan while Non-Equity oriented ULIP plans would be taxed as per
+            `When total ULIP premium is more than Rs 2.5 lacs (“High Premium”) in any of the financial year [no matter how many ULIPs you hold].`,
+            `The capital gains on consideration received towards maturity or partial withdrawal obtained is taxable like equity or debt instruments based on holding period [short term or long term]. Refer link of Taxmann in reference section to read about taxability.`,
+            `Tax of 10% (short term) / 15% (long term) for Equity oriented ULIP plan while Non-Equity oriented ULIP plans would be taxed as per
             debt instruments.`,
-            `2. When total ULIP premium is less than Rs 2.5 lacs in any of the financial year [no matter how many ULIPs you hold] or Policies issued prior to 1-Feb-2021.`,
-            `a. Capital Gains is tax free`,
+            `When total ULIP premium is less than Rs 2.5 lacs in any of the financial year [no matter how many ULIPs you hold] or Policies issued prior to 1-Feb-2021.`,
+            `Capital Gains is tax free`,
             `Conclusion: Expenses + Lock-in + Lower Return & Now Taxability has made ULIP even more less attractive.`
           ],
         },

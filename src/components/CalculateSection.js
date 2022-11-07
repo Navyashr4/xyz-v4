@@ -2,8 +2,7 @@ import React from 'react';
 import CalcForm from './CalcForm';
 import NiftyCalculator from './NiftyCalculator';
 
-const Calculate = ({handleInvTypeApp, handleAnalyseApp, invTypeApp}) => {
-  console.log("Inv Type received by the calculator", invTypeApp);
+const Calculate = ({handleInvTypeApp, handleAnalyseApp, invTypeApp, resultsSection, scrollToResultsSection}) => {
   return (
     <section 
     className='section'
@@ -15,18 +14,19 @@ const Calculate = ({handleInvTypeApp, handleAnalyseApp, invTypeApp}) => {
         <div 
           className='text-center px-6 lg:px-0'>
           <h2
-            className='section-title md:text-4xl text-indigo-400'
+            className='section-title md:text-3xl text-indigo-400'
           >
             Calculator
           </h2>
           <p
             className='section-subtitle text-lg mb-16 max-w-[622px] mx-auto'
           >
-            Evalaute your investment class in comparison to NIFTY50 returns gained for the same principal and tenure 
+            Evaluate your investment class in comparison to NIFTY50 returns gained for the same principal and tenure 
           </p>
         </div>
         {/* form */}
-        <NiftyCalculator handleInvTypeApp={handleInvTypeApp} invTypeApp={invTypeApp} handleAnalyseApp={handleAnalyseApp}/>
+        <NiftyCalculator handleInvTypeApp={handleInvTypeApp} invTypeApp={invTypeApp} handleAnalyseApp={handleAnalyseApp}
+        resultsSection={resultsSection} scrollToResultsSection={scrollToResultsSection}/>
         {/* <CalcForm handleInvTypeApp={handleInvTypeApp} handleAnalyseApp={handleAnalyseApp}/> */}
       </div>
     </section>

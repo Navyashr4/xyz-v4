@@ -13,7 +13,7 @@ const ButtonGroup = ({ invType, next, previous, goToSlide, ...rest }) => {
     // } = rest;
 
     useEffect(() => {
-        console.log("Change in inv type", invType);
+
         if(invType == "Bank Fixed Deposit") goToSlide(0);
         else if(invType == "Gold") goToSlide(1);
         else if(invType == "Real Estate") goToSlide(2);
@@ -96,7 +96,6 @@ const InvCarousel = ({ invType, calculator, scrollToCalculator, learnMoreSection
         },
       };
     
-    console.log("repsonsive", window.innerWidth)
 
 
 
