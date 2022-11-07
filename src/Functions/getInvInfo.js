@@ -78,7 +78,7 @@ const getInvInfo = (invType) => {
                 {
                     title: "Trivia",
                     text : [
-                        `1.Gold was a medium of exchange and backed by the entire monetary system in various countries (Called the Gold Standard).`,
+                        `1. Gold was a medium of exchange and backed by the entire monetary system in various countries (Called the Gold Standard).`,
                         `2. Currencies used to be backed by Gold in most countries around the world.`,
                         `3. Gold no longer plays a key role in the global monetary system.`,
                         `4. But, it is used as a symbol of wealth and investment since it is a key precious metal.`,

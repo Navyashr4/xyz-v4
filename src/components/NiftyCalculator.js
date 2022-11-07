@@ -228,7 +228,7 @@ const CalcForm = ({ handleInvTypeApp, handleAnalyseApp, invTypeApp, resultsSecti
             <label className="text- mb-1 text-indigo-600">Return % per annum</label>
             <input
               readOnly
-              className="input text-center text-[16px] pl-3
+              className="input text-center text-[16px]
               border-2 rounded-lg border-indigo-600 bg-white max-w-[150px]"
               type="number"
               value={interest}
