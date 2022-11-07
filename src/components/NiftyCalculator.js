@@ -93,13 +93,13 @@ const CalcForm = ({ handleInvTypeApp, handleAnalyseApp, invTypeApp, resultsSecti
         setAnalyse(false);
         setPrincipal(amountPlaceholder);
         setPeriod(periodPlaceholder);
-        setInterest(interestPlaceholder);
+        setInterest(6);
         setInvObjective();
       }
     }
   }, [invType]);
 
-  const { amountPlaceholder, periodPlaceholder, interestPlaceholder } =
+  const { amountPlaceholder, periodPlaceholder} =
     calcFormPlaceholders[placeholderIdx];
 
 
@@ -111,7 +111,7 @@ const CalcForm = ({ handleInvTypeApp, handleAnalyseApp, invTypeApp, resultsSecti
     setInvType("default");
     setPrincipal(amountPlaceholder);
     setPeriod(periodPlaceholder);
-    setInterest(interestPlaceholder);
+    setInterest(6);
     setInvObjective("default");
   };
 
@@ -129,9 +129,9 @@ const CalcForm = ({ handleInvTypeApp, handleAnalyseApp, invTypeApp, resultsSecti
     } else if (interest === 0 || interest === undefined) {
       isValid = false;
       alert("Enter interest rate in %");
-    } else if (invObjective === undefined) {
-      isValid = false;
-      alert("Choose investment objective");
+    // } else if (invObjective === undefined) {
+    //   isValid = false;
+    //   alert("Choose investment objective");
     } else {
       isValid = true;
     }
@@ -232,7 +232,7 @@ const CalcForm = ({ handleInvTypeApp, handleAnalyseApp, invTypeApp, resultsSecti
               border-2 rounded-lg border-indigo-600 bg-white max-w-[150px]"
               type="number"
               value={interest}
-              placeholder={interestPlaceholder}
+              placeholder={6}
               onChange={(e) => setInterest(e.target.value)}
             ></input>
           </div>

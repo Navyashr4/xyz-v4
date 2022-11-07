@@ -135,22 +135,9 @@ const Parameters = ({
         : <></>}
       </div>
 
-      {/* Maturity Value */}
-      <div className="text-md mb-4">
-        {principal > 0 ? (
-          <div className="flex justify-between">
-            <div className="text-gray-400">Maturity Value:</div>
-            <div className="border-2 border-indigo-600 px-2 rounded-md text-center">
-              {toIndianCurrency(maturityValue)}
-            </div>
-          </div>
-        )
-        : <></>}
-      </div>
-
       {/* Return Earned */}
       <div className="text-md mb-4">
-        {principal > 0 ? 
+        {(principal > 0 && invType) ? 
           (<div className="flex justify-between">
             <div className="text-gray-400">Return Earned:</div>
             <div className="border-2 border-indigo-600 px-2 rounded-md text-center">
@@ -159,6 +146,19 @@ const Parameters = ({
             </div>
           </div>)
           : <></>}
+      </div>
+
+      {/* Maturity Value */}
+      <div className="text-md mb-4">
+        {(principal > 0 && invType) ? (
+          <div className="flex justify-between">
+            <div className="text-gray-400">{invType} Maturity Value:</div>
+            <div className="border-2 border-indigo-600 px-2 rounded-md text-center">
+              {toIndianCurrency(maturityValue)}
+            </div>
+          </div>
+        )
+        : <></>}
       </div>
     </div>
   );
@@ -262,6 +262,8 @@ const NiftyAnalysisResult = ({
     invType,
     niftyInterest
   );
+
+  console.log("within resultss", toIndianCurrency(principal))
 
   return (
     <div className="px-4">

@@ -2,50 +2,50 @@ export const calcFormPlaceholders = [
   {
     investmentType: "Default",
     amountPlaceholder: "",
-    periodPlaceholder: "Investment period (in years)",
-    interestPlaceholder: "Interest rate (in %)",
+    periodPlaceholder: 3,
+    interestPlaceholder: 0,
   },
 
   {
     investmentType: "Bank Fixed Deposit",
     amountPlaceholder: "",
-    periodPlaceholder: "For a period of (in years)",
-    interestPlaceholder: "At an interest rate of (in %)",
+    periodPlaceholder: 3,
+    interestPlaceholder: 0,
   },
 
   {
     investmentType: "Gold",
     amountPlaceholder: "",
-    periodPlaceholder: "For a period of (in years)",
-    interestPlaceholder: "At an interest rate of (in %)",
+    periodPlaceholder: 3,
+    interestPlaceholder: 0,
   },
 
   {
     investmentType: "Real Estate",
     amountPlaceholder: "",
-    periodPlaceholder: "For a period of (in years)",
-    interestPlaceholder: "At an interest rate of (in %)",
+    periodPlaceholder: 3,
+    interestPlaceholder: 0,
   },
 
   {
     investmentType: "Guaranteed Income Plan",
     amountPlaceholder: "",
-    periodPlaceholder: "For a period of (in years)",
-    interestPlaceholder: "At an interest rate of (in %)",
+    periodPlaceholder: 3,
+    interestPlaceholder: 0,
   },
 
   {
     investmentType: "Public Provident Fund",
     amountPlaceholder: "",
-    periodPlaceholder: "For a period of (in years)",
-    interestPlaceholder: "At an interest rate of (in %)",
+    periodPlaceholder: 3,
+    interestPlaceholder: 0,
   },
 
   {
     investmentType: "ULIP",
     amountPlaceholder: "An amount of (in rupees)",
-    periodPlaceholder: "For a period of (in years)",
-    interestPlaceholder: "At an interest rate of (in %)",
+    periodPlaceholder: 3,
+    interestPlaceholder: 0,
   },
 ];
 
