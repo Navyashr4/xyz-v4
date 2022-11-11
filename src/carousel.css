@@ -15,8 +15,10 @@
     transition:all .5s;
     border-radius:35px;
     z-index:1000;
-    border:0;
-    background:rgba(0,0,0,0.5);
+    border:2px;
+    border-style: solid;
+    border-color: #fff;
+    background:rgba(0,0,0,0.8);
     min-width:43px;
     min-height:43px;
     opacity:1;

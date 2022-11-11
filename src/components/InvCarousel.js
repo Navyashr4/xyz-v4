@@ -111,7 +111,7 @@ const InvCarousel = ({ invType, calculator, scrollToCalculator, learnMoreSection
             renderDotsOutside={true}
             arrows={true}
             infinite={window.innerWidth >=1215 ? true : false}
-            autoPlay={window.innerWidth >=1215 ? false : true}
+            autoPlay={false}
             renderButtonGroupOutside
             customButtonGroup={<ButtonGroup invType={invType}/>}
             className="text-black">
@@ -158,13 +158,13 @@ const InvCarousel = ({ invType, calculator, scrollToCalculator, learnMoreSection
                         <button className="btnCards flex justify-center w-full text-base lg:max-w-[300px] border-[1.5px] bg-indigo-600
                          text-white border-indigo-600 hover:text-white hover:bg-indigo-800 hover:border-indigo-800"
                          onClick={() => scrollToCalculator(calculator)}>
-                            Calculator
+                            Return Calculator
                         </button>
                         <button 
                         className="btnCards mt-5 flex justify-center w-full text-base lg:max-w-[300px] border-[1.5px] bg-white
                          text-indigo-600 border-indigo-600 hover:bg-indigo-600 hover:text-white"
                          onClick={()=>scrollToLearnMoreSection(learnMoreSection)}>
-                            Learn More
+                            Score Analysis
                         </button>
                     </div>)
                 })}        

@@ -6,19 +6,19 @@ import Header from "./components/Header.js";
 import Hero from "./components/Hero.js";
 import InvCarousel from "./components/InvCarousel.js";
 import NavMobile from "./components/NavMobile.js";
-import Stats from "./components/Stats.js";
+// import Stats from "./components/Stats.js";
 import CalculateSection from "./components/CalculateSection.js";
-import SupportingData from "./components/SupportingData.js";
+// import SupportingData from "./components/SupportingData.js";
 import Resources from "./components/Resources.js";
 
 import Footer from "./components/Footer.js";
 import AnalysisParameters from "./components/AnalysisParameters.js";
 import InvestmentInfo from "./components/InvestmentInfo.js";
-import BarChart from "./components/BarChart.js";
-import UserData from "./data/sampleChartData.js";
-import NiftyCalculator from "./components/NiftyCalculator.js";
+// import BarChart from "./components/BarChart.js";
+// import UserData from "./data/sampleChartData.js";
+// import NiftyCalculator from "./components/NiftyCalculator.js";
 import DomInvPills from "./components/DomInvPills.js";
-import DummyCarousel from "./components/DummyCarousel";
+// import DummyCarousel from "./components/DummyCarousel";
 import Trivia from "./components/Trivia.js";
 
 const App = () => {
@@ -122,8 +122,8 @@ const App = () => {
         scrollToResultsSection={scrollToResultsSection}
       />
       {/* <div className="h-[60px] bg-red-600" ref={resultsSection}></div> */}
-      {<AnalysisParameters invType={invType} />}
       <div ref={learnMoreSection}></div>
+      {<AnalysisParameters invType={invType} />}
       {/* {analyse && <SupportingData invType={invType}/>} */}
       {<InvestmentInfo invType={invType} />}
       {<Resources invType={invType} />}

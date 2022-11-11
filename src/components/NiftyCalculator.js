@@ -23,7 +23,7 @@ const CalcForm = ({ handleInvTypeApp, handleAnalyseApp, invTypeApp, resultsSecti
   const scrollToResults = (elementRef) => {
     if (analyse) {
       window.scrollTo({
-        top: elementRef.current.offsetTop + 1300,
+        top: elementRef.current.offsetTop,
         behavior: "smooth",
       });
     }
@@ -279,6 +279,8 @@ const CalcForm = ({ handleInvTypeApp, handleAnalyseApp, invTypeApp, resultsSecti
         </button>
       }
 
+      <div className="" ref={analysisResults}></div>
+
       {/* analysis result */}
       {analyse && (
         <div
@@ -294,7 +296,7 @@ const CalcForm = ({ handleInvTypeApp, handleAnalyseApp, invTypeApp, resultsSecti
         </div>
       )}
 
-      <div className="" ref={analysisResults}></div>
+      
     </div>
   );
 };

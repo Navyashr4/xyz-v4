@@ -5,9 +5,9 @@ import NiftyCalculator from './NiftyCalculator';
 const Calculate = ({handleInvTypeApp, handleAnalyseApp, invTypeApp, resultsSection, scrollToResultsSection}) => {
   return (
     <section 
-    className='section'
-    data-aos='fade-in'
-    data-aos-delay='900'>
+    className='section'>
+    {/* data-aos='fade-in'
+    data-aos-delay='900' */}
       <div 
         className='container mx-auto mt-16'>
         {/* text */}
