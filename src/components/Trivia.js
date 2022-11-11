@@ -18,7 +18,7 @@ const Trivia = ({ invType }) => {
             {invInfo.map((item, idx) => {
               return item.title === "Trivia" ? (
                 <div
-                  key={idx}
+                  key={item.id}
                   className={`mb-0 pt-10 max-w-[622px] mx-auto p-2 p-6 border-2 border-darkblue bg-white rounded-xl ring ring-indigo-400 ring-offset-2 ring-offset-darkblue`}
                 >
                   <h2

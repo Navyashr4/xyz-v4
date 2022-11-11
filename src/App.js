@@ -25,6 +25,7 @@ const App = () => {
   const [navMobile, setNavMobile] = useState(false);
   const [invType, setInvType] = useState("Bank Fixed Deposit");
   const [analyse, setAnalyse] = useState(false);
+  const [slideToFirst, setSlideToFirst] = useState(true);
 
   const handleInvTypeApp = (inv) => {
     setInvType(inv);
@@ -32,6 +33,10 @@ const App = () => {
 
   const handleAnalyseApp = (analyse) => {
     setAnalyse(analyse);
+  };
+
+  const handleSlideToFirst = (slideBool) =>{
+    setSlideToFirst(slideBool)
   };
 
   useEffect(() => {
@@ -66,8 +71,6 @@ const App = () => {
     });
   };
 
-
-
   //barChart
   // const [userData, setUserData] = useState({
   //   labels: ["Return on investment"],
@@ -97,9 +100,17 @@ const App = () => {
       </div>
 
       <Hero calculator={calculator} scrollToCalculator={scrollToCalculator} />
-      <DomInvPills handleInvTypeApp={handleInvTypeApp} invType={invType} />
+      <DomInvPills
+        slideToFirst={slideToFirst}
+        handleSlideToFirst={handleSlideToFirst}
+        handleInvTypeApp={handleInvTypeApp}
+        invType={invType}
+      />
       {/* <Stats /> */}
       <InvCarousel
+        slideToFirst={slideToFirst}
+        handleSlideToFirst={handleSlideToFirst}
+        handleInvTypeApp={handleInvTypeApp}
         invType={invType}
         calculator={calculator}
         scrollToCalculator={scrollToCalculator}
@@ -115,6 +126,8 @@ const App = () => {
 
       <div ref={calculator}></div>
       <CalculateSection
+        slideToFirst={slideToFirst}
+        handleSlideToFirst={handleSlideToFirst}
         handleInvTypeApp={handleInvTypeApp}
         invTypeApp={invType}
         handleAnalyseApp={handleAnalyseApp}

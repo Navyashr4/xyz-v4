@@ -29,11 +29,13 @@ const ButtonGroup = ({ invType, next, previous, goToSlide, ...rest }) => {
   };
 
 
-const InvCarousel = ({ invType, calculator, scrollToCalculator, learnMoreSection, scrollToLearnMoreSection}) => {
+const InvCarousel = ({ slideToFirst, handleSlideToFirst, handleInvTypeApp, invType, calculator, scrollToCalculator, learnMoreSection, scrollToLearnMoreSection}) => {
+    // const [slideToFirst, setSlideToFirst] = useState(true);
 
     const samples = [
         {
             invName : "Bank Fixed Deposit",
+            id: 1,
             return : 2,
             liquidity : 10,
             safety : 8,
@@ -41,6 +43,7 @@ const InvCarousel = ({ invType, calculator, scrollToCalculator, learnMoreSection
         },
         {
             invName : "Gold",
+            id: 2,
             return : 4,
             liquidity : 6,
             safety : 6,
@@ -48,6 +51,7 @@ const InvCarousel = ({ invType, calculator, scrollToCalculator, learnMoreSection
         },
         {
             invName : "Real Estate",
+            id: 3,
             return : 4,
             liquidity : 2,
             safety : 10,
@@ -62,6 +66,7 @@ const InvCarousel = ({ invType, calculator, scrollToCalculator, learnMoreSection
         // },
         {
             invName : "ULIP",
+            id: 4,
             return : 6,
             liquidity : 2,
             safety : 6,
@@ -69,6 +74,7 @@ const InvCarousel = ({ invType, calculator, scrollToCalculator, learnMoreSection
         },
         {
             invName : "Public Provident Fund",
+            id: 5,
             return : 4,
             liquidity : 2,
             safety : 10,
@@ -96,7 +102,14 @@ const InvCarousel = ({ invType, calculator, scrollToCalculator, learnMoreSection
         },
       };
     
+    
+    const handleCarouselSelection = (invTypeName) => {
+        handleSlideToFirst(false);
+        handleInvTypeApp(invTypeName);
 
+    }
+
+    console.log(slideToFirst);
 
 
   return (
@@ -113,9 +126,9 @@ const InvCarousel = ({ invType, calculator, scrollToCalculator, learnMoreSection
             infinite={window.innerWidth >=1215 ? true : false}
             autoPlay={false}
             renderButtonGroupOutside
-            customButtonGroup={<ButtonGroup invType={invType}/>}
+            customButtonGroup={slideToFirst && <ButtonGroup invType={invType}/>}
             className="text-black">
-                {samples.map((sample, idx) => {
+                {samples.map((sample) => {
                     const returnColor = borderColor(sample.return).text;
                     const liquidityColor = borderColor(sample.liquidity).text;
                     const safetyColor = borderColor(sample.safety).text;
@@ -125,11 +138,14 @@ const InvCarousel = ({ invType, calculator, scrollToCalculator, learnMoreSection
                     const totalScoreColor = borderColor(Math.round(totalScore/4)).text;
 
                     return(
-                    <div key={idx} className={sample.invName === invType ?
+                    <div 
+                    key={sample.id} 
+                    className={sample.invName === invType ?
 `                    tracking-wide mx-auto md:min-mx-4 border-2 rounded-2xl border-white
-                    text-white bg-white p-10 text-center flex flex-col justify-between max-w-[345px]` :
+                    text-white bg-white p-10 text-center flex flex-col justify-between max-w-[345px] cursor-pointer` :
                     `tracking-wide h-full mx-auto md:min-mx-4 border-2 rounded-2xl border-indigo-600
-                    text-white bg-darkblue p-10 text-center flex flex-col justify-between max-w-[345px]`}>
+                    text-white bg-darkblue p-10 text-center flex flex-col justify-between max-w-[345px] cursor-pointer`}
+                    onClick={()=>handleCarouselSelection(sample.invName)}>
                         <div className={sample.invName === invType 
                             ?`text-xl font-semibold text-darkblue min-h-[56px]`
                             :`text-xl font-semibold text-white min-h-[56px]`}>{sample.invName}</div>

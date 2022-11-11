@@ -3,7 +3,7 @@ import { calcFormPlaceholders } from "../data/calcFormPlaceholders";
 import NiftyAnalysisResult from "./NiftyAnalysisResult";
 import {GetInterestValue, GetNiftyInterestValue} from "../Functions/getInterestRate";
 
-const CalcForm = ({ handleInvTypeApp, handleAnalyseApp, invTypeApp, resultsSection, scrollToResultsSection }) => {
+const CalcForm = ({ slideToFirst, handleSlideToFirst, handleInvTypeApp, handleAnalyseApp, invTypeApp, resultsSection, scrollToResultsSection }) => {
 
   const [invType, setInvType] = useState("Bank Fixed Deposit");
   const [placeholderIdx, setPlaceholderIdx] = useState(0);
@@ -31,6 +31,7 @@ const CalcForm = ({ handleInvTypeApp, handleAnalyseApp, invTypeApp, resultsSecti
 
   //receiving the type of investment to analyse and sending info to App.js to communicate with all other sibling components
   const handleInvChange = (e) => {
+    handleSlideToFirst(true);
     setInvType(e.target.value);
     handleInvTypeApp(e.target.value);
   };

@@ -7,10 +7,12 @@ const getInvInfo = (invType) => {
             content = [
                 {
                     title : "Definitions",
+                    id: 0,
                     text : [`A fixed deposit or term deposit, is an investment instrument offered by banks, as well as non-banking financial companies (NBFC) to their customers to help them save money and earn a certain rate of interest on that money.`,]
                 },
                 {
                     title : "Why do people invest in fixed deposits?",
+                    id: 1,
                     text : [
                         `1. To park short to medium term money (period 1 month to 1-3 years)`,
                         `2. Assured committed returns`,
@@ -19,6 +21,7 @@ const getInvInfo = (invType) => {
                 },
                 {
                     title : "What impacts the rates on fixed depsosit?",
+                    id: 2,
                     text : [
                         `1. Economic Scenario – In a recessionary scenario, fixed deposit rates would generally be higher and similarly vice
                         versa. Such rates are influenced by RBI’s policies based on prevailing economic conditions.`,
@@ -29,6 +32,7 @@ const getInvInfo = (invType) => {
                 },
                 {
                     title : "Trivia",
+                    id: 3,
                     text : [
                         `1. Around Rs 154 lac crore as at March 22 has been invested in fixed deposits at interest rate of 5.5%. At the same
                         time country's inflation is at 7%.`,
@@ -48,6 +52,7 @@ const getInvInfo = (invType) => {
             content = [
                 {
                     title : "Definitions",
+                    id: 0,
                     text : [`Gold is a commodity which is treated as an alternative investment class. It is generally perceived by many investors as a way of protecting oneself against inflation and recessions, hence its reputation as a “safe haven” asset.`,
                     `Gold investment can be done in various forms-`,
                     `1. Physical Gold - Physical gold can be purchased as gold coins or gold bricks.`,
@@ -60,6 +65,7 @@ const getInvInfo = (invType) => {
 
                 {
                     title : "Why do people invest in Gold?",
+                    id: 1,
                     text : [
                         `1. Historically India has had high inflation and Gold has successfully acted as a hedge against inflation`,
                         `2. Sense of safety & confidence since Gold can be purchased in physical form, like a real estate investment.`,
@@ -68,6 +74,7 @@ const getInvInfo = (invType) => {
                 },
                 {
                     title : "Drawbacks of Gold as an investment",
+                    id: 2,
                     text : [
                         `1. Gold as an asset class doesn’t produce any cash flow, unlike investing in company stock where the company produces cash flow or Real estate which generates rent or used for agricultural income.`,
                         `2. Gold value can be very volatile depending on global & country’s economy.`,
@@ -77,6 +84,7 @@ const getInvInfo = (invType) => {
                 },
                 {
                     title: "Trivia",
+                    id: 3,
                     text : [
                         `1. Gold was a medium of exchange and backed by the entire monetary system in various countries (Called the Gold Standard).`,
                         `2. Currencies used to be backed by Gold in most countries around the world.`,
@@ -96,6 +104,7 @@ const getInvInfo = (invType) => {
             content = [
                 {
                     title : "Definitions",
+                    id: 0,
                     text : [
                         `Real estate is defined as the land and any permanent structures, like a residential, commercial or improvements attached to the land, whether natural or man-made.`,
                         `Real estate is a form of real property.`
@@ -103,6 +112,7 @@ const getInvInfo = (invType) => {
                 },
                 {
                     title : "Types",
+                    id: 1,
                     text : [
                         `1. Residential real estate: Any property used for residential purposes. Examples include apartments, independent houses, bungalow, etc.`,
                         `2. Commercial real estate: Any property used exclusively for business purposes, such as grocery stores, hospitals, hotels, offices, parking facilities, restaurants, shopping centers,
@@ -114,6 +124,7 @@ const getInvInfo = (invType) => {
                 },
                 {
                     title : "Why do people invest in real estate?",
+                    id: 2,
                     text : [
                         `1. Sense of safety & confidence since Real estate can be purchased in physical form, like Physical Gold.`,
                         `2. Steady cashflow from rental income earned out of leased properties`,
@@ -124,6 +135,7 @@ const getInvInfo = (invType) => {
                 },
                 {
                     title : "What impacts the rates on Real Estate?",
+                    id: 3,
                     text : [
                         `1. Interest rates scenario: Lower the interest rate, Cheaper it is to buy Real estate, which thereby increases the Demand.`,
                         `2. Government Policies: Tax credits, deductions, and subsidies are some of the ways Government can boost demand for real estate.`,
@@ -132,6 +144,7 @@ const getInvInfo = (invType) => {
                 },
                 {
                     title : "Trivia",
+                    id: 4,
                     text : [
                         `1. NITI Aayog expects that the Indian real estate sector will reach a market size of $1 trillion by 2030 and will account for 13 per cent
                         of India’s GDP by 2025.`,
@@ -168,6 +181,7 @@ const getInvInfo = (invType) => {
             content = [
                 {
                     title : "Definitions",
+                    id: 0,
                     text : [
                         "A long term investment instrument (How long – 15 years, due to lock-in features) with guaranteed interest % at the time of investment.",
                         "PPF is a Central government-backed scheme, and the investment is also not market-linked. Due to this, it offers guaranteed returns to protect the investment needs of many people."
@@ -175,6 +189,7 @@ const getInvInfo = (invType) => {
                 },
                 {
                     title : "Why do people invest in public provident funds?",
+                    id: 1,
                     text : [
                         "1. Retirement Corpus",
                         "2. Savings cum Tax saving investment. (Benefit of deduction under Section 80C of Income Tax Act)",
@@ -183,6 +198,7 @@ const getInvInfo = (invType) => {
                 },
                 {
                     title : "What impacts the rates on public provident funds?",
+                    id: 2,
                     text : [
                         "1. PPF scheme was started by Government in 1968 with rate of interest being 4.8%. PPF rates have seen many up and downs such as in 1999-2000 where rates went upto 12%.",
                         "2. PPF returns are fixed by the Central Government. They are set every quarter according to prevailing interest rates on Government Bonds.",
@@ -191,6 +207,7 @@ const getInvInfo = (invType) => {
                 },
                 {
                     title : "Trivia",
+                    id: 3,
                     text : [
                         "1. PPF scheme was launched in 1968 by the Finance Ministry's National Savings Institute.",
                         "2. Eligibility to invest in PPF: You can invest in PPF only if you are a Citizen of India. NRIs, Trust & HUF cannot invest in PPF.",
@@ -207,10 +224,12 @@ const getInvInfo = (invType) => {
             content = [
                 {
                     title : "Definitions",
+                    id: 0,
                     text : [`ULIP (Unit Linked Insurance Plan) is a Life Insurance product which combines Investment (managed by Fund Managers of Insurance company). This asset class is issued by Insurance Companies.`]
                 },
                 {
                     title: "Features of ULIPs",
+                    id: 1,
                     text : [
                         `1. Important things to remember – Life Cover / Sum assured (Insurance), Net Asset Value (Investment) & Death Benefit.`,
                         `2. Insurance - In most ULIPs, the minimum Life Cover offered is 10 times your annual premium amount. You may go as high as 40x or higher, depending on Insurance Company`,
@@ -220,6 +239,7 @@ const getInvInfo = (invType) => {
                 },
                 {
                     title : "Why do people invest in fixed deposits?",
+                    id: 2,
                     text : [
                         `1. Single plan product which includes Life Insurance + Investment`,
                         `2. Tax benefit (i.e Tax deductions on investment & certain tax free conditions on gains made on maturity / redemption)`,
@@ -228,6 +248,7 @@ const getInvInfo = (invType) => {
                 },
                 {
                     title : "What impacts the returns on ULIPs?",
+                    id: 3,
                     text : [
                         `1. Economic Scenario of India along with Global market conditions.`,
                         `2. Fund Manager of your portfolio – Volatility / Risk is dependent on the investment decisions taken by the Fund Managers.`,

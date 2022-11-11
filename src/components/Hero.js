@@ -17,16 +17,15 @@ const Hero = ({ calculator, scrollToCalculator }) => {
             Is your investment growing your wealth?
           </h1>
           {/* paragraph text */}
-          <p
+          <div
             className="max-w-[850px] leading-relaxed mb-8 text-center lg:text-lg"
             data-aos="fade-down"
             data-aps-delay="600"
           >
             Our investment x-ray tool objectively analyses your investment and
-            evaluates on four parameters : 
-            <p className="text-indigo-400 font-semibold"> (a) Growth against inflation, (b) Liquidity, (c) Safety, and 
-            (d) Taxation Benefits</p>
-          </p>
+            evaluates on four parameters: 
+            <p className="text-indigo-400 font-semibold"> Growth against inflation | Liquidity | Safety | Taxation Benefits</p>
+          </div>
           {/* call to action button */}
           {/* <button
             className="btn gap-x-6 pl-6 text-sm lg:h-16 lg:text-base text-center"

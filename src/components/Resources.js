@@ -18,7 +18,7 @@ const Resources = ({ invType }) => {
                   href={resource.link}
                   target="_blank"
                   rel="norefferer"
-                  className="hover:text-blue-400 underline text:text-blue"
+                  className="hover:text-blue-200 underline text-indigo-300"
                 >
                   {resource.text}
                 </a>

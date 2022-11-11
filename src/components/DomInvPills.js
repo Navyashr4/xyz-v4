@@ -1,7 +1,13 @@
 import React from "react";
 
-function DomInvPills({ handleInvTypeApp, invType }) {
+function DomInvPills({ slideToFirst, handleSlideToFirst, handleInvTypeApp, invType }) {
   console.log("Inv Type in DOM Pills", invType);
+
+  const handleDomPillClick = (invType) => {
+    handleInvTypeApp(invType);
+    handleSlideToFirst(true);
+  }
+
   return (
     <section className="mt-6">
       <div
@@ -20,7 +26,7 @@ function DomInvPills({ handleInvTypeApp, invType }) {
             btnCards flex justify-center font-normal text-base lg:max-w-[300px] border-[2px] hover:bg-indigo-700 hover:text-white hover:border-indigo-700`}
             // data-aos="fade-down"
             // data-aps-delay="700"
-            onClick={() => handleInvTypeApp("Bank Fixed Deposit")}
+            onClick={() => handleDomPillClick("Bank Fixed Deposit")}
           >
             Bank Fixed Deposit
           </button>
@@ -37,7 +43,7 @@ function DomInvPills({ handleInvTypeApp, invType }) {
             // text-indigo-600 border-indigo-600 hover:bg-indigo-600 hover:text-white"
             // data-aos="fade-down"
             // data-aps-delay="700"
-            onClick={() => handleInvTypeApp("Gold")}
+            onClick={() => handleDomPillClick("Gold")}
           >
             Gold
           </button>
@@ -52,7 +58,7 @@ function DomInvPills({ handleInvTypeApp, invType }) {
             //         text-white border-white hover:bg-indigo-600 hover:text-white hover:border-indigo-600"
             // data-aos="fade-down"
             // data-aps-delay="700"
-            onClick={() => handleInvTypeApp("Real Estate")}
+            onClick={() => handleDomPillClick("Real Estate")}
           >
             Real Estate
           </button>
@@ -65,7 +71,7 @@ function DomInvPills({ handleInvTypeApp, invType }) {
           btnCards flex justify-center font-normal text-base lg:max-w-[300px] border-[2px] hover:bg-indigo-700 hover:text-white hover:border-indigo-700`}
             //   className="btnCards flex justify-center font-normal text-base lg:max-w-[300px] border-[2px] bg-darkblue
             //  text-white border-white hover:bg-indigo-600 hover:text-white hover:border-indigo-600"
-            onClick={() => handleInvTypeApp("ULIP")}
+            onClick={() => handleDomPillClick("ULIP")}
           >
             ULIP
           </button>
@@ -81,7 +87,7 @@ function DomInvPills({ handleInvTypeApp, invType }) {
             //         text-white border-white hover:bg-indigo-600 hover:text-white hover:border-indigo-600"
             // data-aos="fade-down"
             // data-aps-delay="700"
-            onClick={() => handleInvTypeApp("Public Provident Fund")}
+            onClick={() => handleDomPillClick("Public Provident Fund")}
           >
             Public Provident Fund
           </button>
