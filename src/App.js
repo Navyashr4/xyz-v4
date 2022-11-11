@@ -97,7 +97,7 @@ const App = () => {
       </div>
 
       <Hero calculator={calculator} scrollToCalculator={scrollToCalculator} />
-      <DomInvPills handleInvTypeApp={handleInvTypeApp} />
+      <DomInvPills handleInvTypeApp={handleInvTypeApp} invType={invType} />
       {/* <Stats /> */}
       <InvCarousel
         invType={invType}

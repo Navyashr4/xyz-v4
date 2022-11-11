@@ -1,6 +1,7 @@
 import React from "react";
 
-function DomInvPills({ handleInvTypeApp }) {
+function DomInvPills({ handleInvTypeApp, invType }) {
+  console.log("Inv Type in DOM Pills", invType);
   return (
     <section className="mt-6">
       <div
@@ -11,8 +12,12 @@ function DomInvPills({ handleInvTypeApp }) {
         {/* <div className="flex flex-col gap-y-5 items-center"> */}
         <div className="mx-auto flex gap-x-2 flex-wrap gap-y-4 justify-center max-w-[90%] md:max-w-[400px]">
           <button
-            className="btnCards flex justify-center font-normal text-base lg:max-w-[300px] border-[2px] bg-darkblue
-                    text-white border-white hover:bg-indigo-600 hover:text-white hover:border-indigo-600"
+            className={`${
+              invType === "Bank Fixed Deposit"
+                ? `bg-indigo-600 text-white border-indigo-600`
+                : `bg-darkblue text-white border-white`
+            }
+            btnCards flex justify-center font-normal text-base lg:max-w-[300px] border-[2px] hover:bg-indigo-700 hover:text-white hover:border-indigo-700`}
             // data-aos="fade-down"
             // data-aps-delay="700"
             onClick={() => handleInvTypeApp("Bank Fixed Deposit")}
@@ -20,8 +25,14 @@ function DomInvPills({ handleInvTypeApp }) {
             Bank Fixed Deposit
           </button>
           <button
-            className="btnCards flex justify-center font-normal text-base lg:max-w-[300px] border-[2px] bg-darkblue
-            text-white border-white hover:bg-indigo-600 hover:text-white hover:border-indigo-600"
+            className={`${
+              invType === "Gold"
+                ? `bg-indigo-600 text-white border-indigo-600`
+                : `bg-darkblue text-white border-white`
+            }
+          btnCards flex justify-center font-normal text-base lg:max-w-[300px] border-[2px] hover:bg-indigo-700 hover:text-white hover:border-indigo-700`}
+            // className="btnCards flex justify-center font-normal text-base lg:max-w-[300px] border-[2px] bg-darkblue
+            // text-white border-white hover:bg-indigo-600 hover:text-white hover:border-indigo-600"
             // className="btnCards mt-5 flex justify-center text-base lg:max-w-[300px] border-[1.5px] bg-white
             // text-indigo-600 border-indigo-600 hover:bg-indigo-600 hover:text-white"
             // data-aos="fade-down"
@@ -31,8 +42,14 @@ function DomInvPills({ handleInvTypeApp }) {
             Gold
           </button>
           <button
-            className="btnCards flex justify-center text-base font-normal lg:max-w-[300px] border-[2px] bg-darkblue
-                    text-white border-white hover:bg-indigo-600 hover:text-white hover:border-indigo-600"
+            className={`${
+              invType === "Real Estate"
+                ? `bg-indigo-600 text-white border-indigo-600`
+                : `bg-darkblue text-white border-white`
+            }
+          btnCards flex justify-center font-normal text-base lg:max-w-[300px] border-[2px] hover:bg-indigo-700 hover:text-white hover:border-indigo-700`}
+            // className="btnCards flex justify-center text-base font-normal lg:max-w-[300px] border-[2px] bg-darkblue
+            //         text-white border-white hover:bg-indigo-600 hover:text-white hover:border-indigo-600"
             // data-aos="fade-down"
             // data-aps-delay="700"
             onClick={() => handleInvTypeApp("Real Estate")}
@@ -40,23 +57,34 @@ function DomInvPills({ handleInvTypeApp }) {
             Real Estate
           </button>
           <button
-            className="btnCards flex justify-center font-normal text-base lg:max-w-[300px] border-[2px] bg-darkblue
-           text-white border-white hover:bg-indigo-600 hover:text-white hover:border-indigo-600"
+            className={`${
+              invType === "ULIP"
+                ? `bg-indigo-600 text-white border-indigo-600`
+                : `bg-darkblue text-white border-white`
+            }
+          btnCards flex justify-center font-normal text-base lg:max-w-[300px] border-[2px] hover:bg-indigo-700 hover:text-white hover:border-indigo-700`}
+            //   className="btnCards flex justify-center font-normal text-base lg:max-w-[300px] border-[2px] bg-darkblue
+            //  text-white border-white hover:bg-indigo-600 hover:text-white hover:border-indigo-600"
             onClick={() => handleInvTypeApp("ULIP")}
           >
             ULIP
           </button>
 
           <button
-            className="btnCards flex justify-center text-base font-normal lg:max-w-[300px] border-[2px] bg-darkblue
-                    text-white border-white hover:bg-indigo-600 hover:text-white hover:border-indigo-600"
+            className={`${
+              invType === "Public Provident Fund"
+                ? `bg-indigo-600 text-white border-indigo-600`
+                : `bg-darkblue text-white border-white`
+            }
+          btnCards flex justify-center font-normal text-base lg:max-w-[300px] border-[2px] hover:bg-indigo-700 hover:text-white hover:border-indigo-700`}
+            // className="btnCards flex justify-center text-base font-normal lg:max-w-[300px] border-[2px] bg-darkblue
+            //         text-white border-white hover:bg-indigo-600 hover:text-white hover:border-indigo-600"
             // data-aos="fade-down"
             // data-aps-delay="700"
             onClick={() => handleInvTypeApp("Public Provident Fund")}
           >
             Public Provident Fund
           </button>
-
         </div>
       </div>
       {/* </div> */}
