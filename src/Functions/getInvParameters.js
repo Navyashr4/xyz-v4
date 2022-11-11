@@ -20,7 +20,7 @@ const getInvFacts = (invType) => {
             `Fact: Trailing 6 months Inflation – 6.8% (vs) 1 year FD –
               5.1% to 5.4% & 3 year FD – 5.4% to 5.7%`,
             `Conclusion: If Fixed deposit is your Furniture, then
-              Inflation is the Termite !`,
+              Inflation is the Termite!`,
           ],
         },
         {

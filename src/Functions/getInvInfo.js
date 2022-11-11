@@ -34,14 +34,14 @@ const getInvInfo = (invType) => {
                     title : "Trivia",
                     id: 3,
                     text : [
-                        `1. Around Rs 154 lac crore as at March 22 has been invested in fixed deposits at interest rate of 5.5%. At the same
+                        `Around Rs 154 lac crore as at March 22 has been invested in fixed deposits at interest rate of 5.5%. At the same
                         time country's inflation is at 7%.`,
-                        `2. As per the SEBI survey, 95% of the Indian families prefer investing in bank FDs as they are not market-linked
+                        `As per the SEBI survey, 95% of the Indian families prefer investing in bank FDs as they are not market-linked
                         instruments & perceived to be safe.`,
-                        `3. Fixed deposit rates have been as high as around 13% during 1994 to 1999`,
-                        `4. In the last 20 years’ FD rates in India, have had a downhill journey.`,
-                        `5. In 2003-04, it fell to 5.25%, which was a historical low in the fixed deposit interest rates until then.`,
-                        `6. Senior Citizens get a slightly higher fixed interest rate compared to non-senior citizen fixed deposit.`
+                        `Fixed deposit rates have been as high as around 13% during 1994 to 1999`,
+                        `In the last 20 years’ FD rates in India, have had a downhill journey.`,
+                        `In 2003-04, it fell to 5.25%, which was a historical low in the fixed deposit interest rates until then.`,
+                        `Senior Citizens get a slightly higher fixed interest rate compared to non-senior citizen fixed deposit.`
                     ]
                 }
             ]
@@ -53,7 +53,7 @@ const getInvInfo = (invType) => {
                 {
                     title : "Definitions",
                     id: 0,
-                    text : [`Gold is a commodity which is treated as an alternative investment class. It is generally perceived by many investors as a way of protecting oneself against inflation and recessions, hence its reputation as a “safe haven” asset.`,
+                    text : [`Gold is a commodity which is treated as an alternative investment class. \nIt is generally perceived by many investors as a way of protecting oneself against inflation and recessions, hence its reputation as a “safe haven” asset.`,
                     `Gold investment can be done in various forms-`,
                     `1. Physical Gold - Physical gold can be purchased as gold coins or gold bricks.`,
                     `2. Jewellery – Gold can be purchased in the form of Jewellery`,
@@ -86,14 +86,14 @@ const getInvInfo = (invType) => {
                     title: "Trivia",
                     id: 3,
                     text : [
-                        `1. Gold was a medium of exchange and backed by the entire monetary system in various countries (Called the Gold Standard).`,
-                        `2. Currencies used to be backed by Gold in most countries around the world.`,
-                        `3. Gold no longer plays a key role in the global monetary system.`,
-                        `4. But, it is used as a symbol of wealth and investment since it is a key precious metal.`,
-                        `5. It is the scarcity premium that gives gold its value in the current times.`,
-                        `6. In 2019 the World Gold Council estimated that Indian households owned over 25,000 tonnes of gold, making India the largest holder in the world. The value of this gold was estimated to be $1.1 trillion, which was over 40% of India’s GPD.`,
-                        `7. Middle income households buy 56% of India’s gold and hold around 11% of the world’s gold.`,
-                        `8. India has the 9th largest gold reserve in the world, sitting at 760 tonnes, followed by Japan, sitting at 846 tonnes & USA with 8,133 tonnes.`
+                        `Gold was a medium of exchange and backed by the entire monetary system in various countries (Called the Gold Standard).`,
+                        `Currencies used to be backed by Gold in most countries around the world.`,
+                        `Gold no longer plays a key role in the global monetary system.`,
+                        `But, it is used as a symbol of wealth and investment since it is a key precious metal.`,
+                        `It is the scarcity premium that gives gold its value in the current times.`,
+                        `In 2019 the World Gold Council estimated that Indian households owned over 25,000 tonnes of gold, making India the largest holder in the world. The value of this gold was estimated to be $1.1 trillion, which was over 40% of India’s GPD.`,
+                        `Middle income households buy 56% of India’s gold and hold around 11% of the world’s gold.`,
+                        `India has the 9th largest gold reserve in the world, sitting at 760 tonnes, followed by Japan, sitting at 846 tonnes & USA with 8,133 tonnes.`
                     ]
                 }
             ]
@@ -146,13 +146,13 @@ const getInvInfo = (invType) => {
                     title : "Trivia",
                     id: 4,
                     text : [
-                        `1. NITI Aayog expects that the Indian real estate sector will reach a market size of $1 trillion by 2030 and will account for 13 per cent
+                        `NITI Aayog expects that the Indian real estate sector will reach a market size of $1 trillion by 2030 and will account for 13 per cent
                         of India’s GDP by 2025.`,
-                        `2. The India real estate market is expected to exhibit a CAGR of 9.60% during 2022-2027.`,
-                        `3. The rising cost of construction is likely to push up real estate prices which would thereby have an impact on existing EMIs which
+                        `The India real estate market is expected to exhibit a CAGR of 9.60% during 2022-2027.`,
+                        `The rising cost of construction is likely to push up real estate prices which would thereby have an impact on existing EMIs which
                         will shoot up.`,
-                        `4. Home prices increased by 5 per cent Y-o-Y until December 2021, and continued to do so in January–February 2022.`,
-                        `5. Home loan rates which were at 6.50% in April 2022 which has now inched towards 7.60% in June 2022.`
+                        `Home prices increased by 5 per cent Y-o-Y until December 2021, and continued to do so in January–February 2022.`,
+                        `Home loan rates which were at 6.50% in April 2022 which has now inched towards 7.60% in June 2022.`
                     ]
                 }
             ]
@@ -209,11 +209,11 @@ const getInvInfo = (invType) => {
                     title : "Trivia",
                     id: 3,
                     text : [
-                        "1. PPF scheme was launched in 1968 by the Finance Ministry's National Savings Institute.",
-                        "2. Eligibility to invest in PPF: You can invest in PPF only if you are a Citizen of India. NRIs, Trust & HUF cannot invest in PPF.",
-                        "3. Only 1 PPF account can be opened under your name. No joint ownership of a PPF account allowed (unless a minor).",
-                        "4. You can open the account with (a) Any head post office or general post office (b) Private-sector banks: ICICI Bank, Axis Bank, etc. (c) Branches of nationalized banks: State Bank of India, Bank of Maharashtra, etc.",
-                        "5. One can avail loan via PPF account. Eligible between third financial year and sixth financial year of maintaining PPF account. Loan interest rate is 1% more than current PPF interest rate."
+                        "PPF scheme was launched in 1968 by the Finance Ministry's National Savings Institute.",
+                        "Eligibility to invest in PPF: You can invest in PPF only if you are a Citizen of India. NRIs, Trust & HUF cannot invest in PPF.",
+                        "Only 1 PPF account can be opened under your name. No joint ownership of a PPF account allowed (unless a minor).",
+                        "You can open the account with (a) Any head post office or general post office (b) Private-sector banks: ICICI Bank, Axis Bank, etc. (c) Branches of nationalized banks: State Bank of India, Bank of Maharashtra, etc.",
+                        "One can avail loan via PPF account. Eligible between third financial year and sixth financial year of maintaining PPF account. Loan interest rate is 1% more than current PPF interest rate."
                     ]
                 }
             ]

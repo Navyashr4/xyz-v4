@@ -37,7 +37,7 @@ const AnalysisParameters = ({ invType }) => {
               return (
                 <div>
                   <div
-                    className={`bg-white max-w-[600px] mx-auto
+                    className={`bg-white max-w-[600px] mx-auto pl-10
                 w-full rounded-2xl py-12 px-6 shadow-primary cursor-pointer 
                 transition duration-300 border-8 ${borderColor} h-full`}
                     key={index}
@@ -57,7 +57,7 @@ const AnalysisParameters = ({ invType }) => {
                         item.content.map((content, idx) => {
                           return (
                             <li
-                              className="mb-4 px-2 lg:px-12 md:px-6 text-justify list-disc"
+                              className="mb-4 px-2 lg:px-12 md:px-6 text-left list-disc list-inside indent-[-21px]"
                               key={idx}
                             >
                               {content}

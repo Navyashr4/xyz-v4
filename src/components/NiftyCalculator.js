@@ -186,8 +186,8 @@ const CalcForm = ({ slideToFirst, handleSlideToFirst, handleInvTypeApp, handleAn
           <option value="Gold">Gold</option>
           <option value="Real Estate">Real estate</option>
           {/* <option value="Guaranteed Income Plan">Guaranteed Income Plan</option> */}
-          <option value="Public Provident Fund">Public Provident Fund</option>
           <option value="ULIP">ULIP</option>
+          <option value="Public Provident Fund">Public Provident Fund</option>
         </select>
 
         {

@@ -16,23 +16,17 @@ const InvestmentInfo = ({ invType }) => {
           <div>
             {invInfo.map((item, idx) => {
                 return(
-                    <div key={idx} className={item.title==="Trivia"  
-                      ? <></>
-                      : `mb-16 max-w-[622px] mx-auto p-6 border-2 border-white rounded-xl` }>
-                    <h2 className={item.title==="Trivia" 
-                      ? <></>
-                      : `section-title text-xl text-left lg:text-2xl text-indigo-300`
+                    <div key={idx} className={ `mb-16 max-w-[622px] mx-auto p-6 border-2 border-white rounded-xl pl-12` }>
+                    <h2 className={`section-title text-xl text-left lg:text-2xl text-indigo-300`
                     }>
                       {item.title}
                     </h2>
                     {
                         item.text.map((text, idx) => {
                             return(
-                                <p key={idx} className={item.title==="Trivia"  
-                                  ? <></>
-                                  : `section-subtitle text-left lg:text-lg mb-4 max-w-[622px] mx-auto`}>
-                                    {text}
-                              </p>
+                                <li key={idx} className={`${text[0]==="@" ? `list-none` : `list-disc list-inside indent-[-23px]`} section-subtitle text-left lg:text-lg mb-4 max-w-[622px] mx-auto`}>
+                                    {text.split("@")}
+                              </li>
                             )
                         })
                     }
@@ -47,5 +41,7 @@ const InvestmentInfo = ({ invType }) => {
 };
 
 export default InvestmentInfo;
+
+// {text.split('\n').map(str => <p>{str}</p>)}
 
 

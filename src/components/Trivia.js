@@ -19,7 +19,7 @@ const Trivia = ({ invType }) => {
               return item.title === "Trivia" ? (
                 <div
                   key={item.id}
-                  className={`mb-0 pt-10 max-w-[622px] mx-auto p-2 p-6 border-2 border-darkblue bg-white rounded-xl ring ring-indigo-400 ring-offset-2 ring-offset-darkblue`}
+                  className={`mb-0 pt-10 max-w-[622px] mx-auto p-6 pl-12 border-2 border-darkblue bg-white rounded-xl ring ring-indigo-400 ring-offset-2 ring-offset-darkblue`}
                 >
                   <h2
                     className={`section-title text-xl text-center lg:text-2xl text-indigo-600`}
@@ -28,12 +28,13 @@ const Trivia = ({ invType }) => {
                   </h2>
                   {item.text.map((text, idx) => {
                     return (
-                      <p
+                      <li
                         key={idx}
-                        className={`section-subtitle px-3 md:px-8 text-justify lg:text-lg mb-4 max-w-[622px] mx-auto text-darkblue`}
+                        className={`section-subtitle px-3 md:px-8 text-left lg:text-[18px] mb-4 max-w-[622px] mx-auto text-darkblue
+                        list-disc list-inside indent-[-23px] lg:indent-[-24px]`} //24px indent if font ix 18px 
                       >
                         {text}
-                      </p>
+                      </li>
                     );
                   })}
                 </div>
