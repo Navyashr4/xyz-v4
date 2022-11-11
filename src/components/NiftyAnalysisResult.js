@@ -10,16 +10,16 @@ const ResultDeclaration = ({ principal, loss, invType, invObjective }) => {
   }
   return (
     principal > 0 ? (<div className="text-center">
-      <div className="text-indigo-600 font-medium text-md md:text-lg mb-2">
-      OPPORTUNITY {word}: {invType.toUpperCase()} vs NIFTY50
+      <div className={`text-indigo-600 font-medium text-md md:text-lg mb-2`}>
+      OPPORTUNITY {word}: NIFTY50 vs {invType.toUpperCase()}  
       {/* ESTIMATED {word} FROM THIS INVESTMENT: */}
       </div>
-      <div className="text-[24px] font-bold mb-5 border-2 w-fit mx-auto px-4 rounded-lg border-indigo-600">{toIndianCurrency(loss * multiplier)}</div>
+      <div className={`${loss > 0 ? `text-red-600 border-red-600` : `text-darkblue border-indigo-600`} text-[24px] font-bold mb-5 border-2 w-fit mx-auto px-4 rounded-lg `}>{toIndianCurrency(loss * multiplier)}</div>
       {loss !== 0 ? (
         loss > 0 ? (
           <div className="text-gray-500 px-10 text-centre tracking-[1%]">
-            As the supporting data below shows, NIFTY 50 return rates have been
-            much higher than {invType.toLowerCase()} interest rates
+            NIFTY 50 return rates have been
+            much higher than {invType} interest rates
             historically.
           </div>
         ) : (
@@ -127,7 +127,7 @@ const Parameters = ({
       <div className="text-md mb-4">
         { principal > 0 ? (
         <div className="flex justify-between">
-          <div className="text-gray-400">Return:</div>
+          <div className="text-gray-400">Return % per annum:</div>
           <div className="border-2 border-indigo-600 px-2 rounded-md text-center">
             {interest}%
           </div>
