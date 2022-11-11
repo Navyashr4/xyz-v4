@@ -1,5 +1,8 @@
 import React from "react";
+import { Bubble } from "react-chartjs-2";
 import getInvInfo from "../Functions/getInvInfoSansTrivia";
+import lightbulb from '../assets/img/light-bulb.png';
+import question from '../assets/img/question.png';
 
 const InvestmentInfo = ({ invType }) => {
   const invInfo = getInvInfo(invType);
@@ -10,9 +13,11 @@ const InvestmentInfo = ({ invType }) => {
       <div className="container mx-auto">
         {/* text */}
         <div className="text-center">
-          <p className="section-title md:text-3xl text-indigo-400 section-title text-center mb-16 max-w-[622px] mx-auto">
-            Information to learn about {invType} investments
-          </p>
+          {/* <a href="https://www.flaticon.com/free-icons/think" title="think icons">Think icons created by Freepik - Flaticon</a> */}
+            <img src={question} alt="logo" className="h-[60px] lg:h-[80px] mx-auto mb-5"/>
+            <div className="section-title md:text-3xl text-indigo-400 section-title text-center mb-16 max-w-[622px] mx-auto">
+              Information to learn about {invType} investments
+            </div>
           <div>
             {invInfo.map((item, idx) => {
                 return(
@@ -43,5 +48,19 @@ const InvestmentInfo = ({ invType }) => {
 export default InvestmentInfo;
 
 // {text.split('\n').map(str => <p>{str}</p>)}
+
+//icons
+//<a href="https://www.flaticon.com/free-icons/idea" title="idea icons">Idea icons created by Good Ware - Flaticon</a>
+//<a href="https://www.flaticon.com/free-icons/think" title="think icons">Think icons created by Freepik - Flaticon</a>
+//<a href="https://www.flaticon.com/free-icons/think" title="think icons">Think icons created by Freepik - Flaticon</a>
+
+
+{/* <div className="flex justify-between max-w-[622px] mx-auto">
+<img src={lightbulb} alt="logo" className="h-[60px] px-8"/>
+<div className="section-title md:text-3xl text-indigo-400 section-title text-left mb-16 max-w-[622px]">
+  Information to learn about {invType} investments
+</div>
+</div> */}
+
 
 
