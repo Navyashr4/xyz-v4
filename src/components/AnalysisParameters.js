@@ -43,12 +43,12 @@ const AnalysisParameters = ({ invType }) => {
                     key={index}
                   >
                     <div className="flex flex-col">
-                      <div className="text-4xl font-bold py-4 px-4 rounded-full flex flex-col 
+                      <div className="text-4xl pr-10 font-bold py-4 px-4 rounded-full flex flex-col 
                       items-center mb-2">
                         <div className="text-lg font-normal">Score</div>
                         <div className={`${textColor}`}>{score} / 10</div>
                       </div>
-                      <div className="flex mb-4 items-center gap-x-2 mx-auto">
+                      <div className="flex mb-4 pr-6 items-center text-left gap-x-2 mx-auto">
                         <p className={`text-[24px] lg:text-[32px] font-bold`}>
                           {name}
                         </p>

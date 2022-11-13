@@ -22,7 +22,7 @@ const Trivia = ({ invType }) => {
                   className={`mb-0 pt-10 max-w-[622px] mx-auto p-6 pl-12 border-2 border-darkblue bg-white rounded-xl ring ring-indigo-400 ring-offset-2 ring-offset-darkblue`}
                 >
                   <h2
-                    className={`section-title text-xl text-center lg:text-2xl text-indigo-600`}
+                    className={`section-title text-xl text-center pr-6 lg:pr-0 lg:text-center lg:text-2xl text-indigo-600`}
                   >
                     {invType} Trivia
                   </h2>
