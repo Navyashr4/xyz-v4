@@ -37,18 +37,18 @@ const AnalysisParameters = ({ invType }) => {
               return (
                 <div>
                   <div
-                    className={`bg-white max-w-[600px] mx-auto pl-10
+                    className={`bg-white max-w-[600px] mx-auto 
                 w-full rounded-2xl py-12 px-6 shadow-primary cursor-pointer 
                 transition duration-300 border-8 ${borderColor} h-full`}
                     key={index}
                   >
                     <div className="flex flex-col">
-                      <div className="text-4xl pr-10 font-bold py-4 px-4 rounded-full flex flex-col 
+                      <div className="text-4xl font-bold py-4 px-4 rounded-full flex flex-col 
                       items-center mb-2">
                         <div className="text-lg font-normal">Score</div>
                         <div className={`${textColor}`}>{score} / 10</div>
                       </div>
-                      <div className="flex mb-4 pr-6 items-center text-left gap-x-2 mx-auto">
+                      <div className="flex mb-4 items-center text-left gap-x-2 mx-auto">
                         <p className={`text-[24px] lg:text-[32px] font-bold`}>
                           {name}
                         </p>
@@ -56,12 +56,14 @@ const AnalysisParameters = ({ invType }) => {
                       {content &&
                         item.content.map((content, idx) => {
                           return (
+                            <div className="pl-6 pr-2">
                             <li
                               className="mb-4 px-2 lg:px-12 md:px-6 text-left list-disc list-inside indent-[-21px]"
                               key={idx}
                             >
                               {content}
                             </li>
+                            </div>
                           );
                         })}
 

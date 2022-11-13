@@ -114,8 +114,7 @@ const InvCarousel = ({ slideToFirst, handleSlideToFirst, handleInvTypeApp, invTy
 
   return (
     <section
-    data-aos='fade-up'
-    data-aos-delay='400'>
+    data-aos='fade-up'> 
         <div className="container mx-auto mt-10 bg-darkblue p-10">
             <Carousel 
             responsive={responsive} 
