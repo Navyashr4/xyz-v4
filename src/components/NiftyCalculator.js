@@ -1,8 +1,7 @@
 import React, { useEffect, useState, useRef } from "react";
 import { calcFormPlaceholders } from "../data/calcFormPlaceholders";
 import NiftyAnalysisResult from "./NiftyAnalysisResult";
-import {GetInterestValue, GetNiftyInterestValue} from "../Functions/getInterestRate";
-
+import { GetInterestValue, GetNiftyInterestValue } from "../Functions/getInterestRate";
 const CalcForm = ({ slideToFirst, handleSlideToFirst, handleInvTypeApp, handleAnalyseApp, invTypeApp, resultsSection, scrollToResultsSection }) => {
 
   const [invType, setInvType] = useState("Bank Fixed Deposit");
@@ -18,7 +17,7 @@ const CalcForm = ({ slideToFirst, handleSlideToFirst, handleInvTypeApp, handleAn
 
   useEffect(() => {
     setInvType(invTypeApp);
-  },[invTypeApp])
+  }, [invTypeApp])
 
   const scrollToResults = (elementRef) => {
     if (analyse) {
@@ -100,7 +99,7 @@ const CalcForm = ({ slideToFirst, handleSlideToFirst, handleInvTypeApp, handleAn
     }
   }, [invType]);
 
-  const { amountPlaceholder, periodPlaceholder} =
+  const { amountPlaceholder, periodPlaceholder } =
     calcFormPlaceholders[placeholderIdx];
 
 
@@ -130,9 +129,9 @@ const CalcForm = ({ slideToFirst, handleSlideToFirst, handleInvTypeApp, handleAn
     } else if (interest === 0 || interest === undefined) {
       isValid = false;
       alert("Enter interest rate in %");
-    // } else if (invObjective === undefined) {
-    //   isValid = false;
-    //   alert("Choose investment objective");
+      // } else if (invObjective === undefined) {
+      //   isValid = false;
+      //   alert("Choose investment objective");
     } else {
       isValid = true;
     }
@@ -148,26 +147,63 @@ const CalcForm = ({ slideToFirst, handleSlideToFirst, handleInvTypeApp, handleAn
   };
 
   const formatToCurrency = (amount) => {
-    return (amount).toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,'); 
+    return (amount).toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,');
   }
+
+  const number = 10192289;
+  const formatted = (number) => new Intl.NumberFormat("en-IN").format(number);
+
+
 
   // console.log("Indian Rupees", toIndianCurrency(2972939273972))
 
-  const handlePeriod = (period) =>{
+  const handlePeriod = (period) => {
     setPeriod(period);
   }
 
-  useEffect(()=>{
-    let interestValueNum = GetInterestValue(invType,period);
+  useEffect(() => {
+    let interestValueNum = GetInterestValue(invType, period);
     setInterest(interestValueNum);
     setNiftyInterest(GetNiftyInterestValue(period));
-  },[period, invType])
+  }, [period, invType])
+
+  console.log("formatted principal", formatted(principal))
 
   // const updateInvType = () => {
   //   console.log("Updated Inv Type", invType);
   // }  
-  
-    return (
+
+  const onBlurFunction = () => {
+    document.getElementById("principalInput").type = "text";
+    document.getElementById("principalInput").value = formatted(principal);
+  }
+
+  const valueFunction = () => {
+    document.getElementById("principalInput").type = "text";
+    document.getElementById("principalInput").value = formatted(principal);
+  }
+
+  // function addGroupingSeperator(name, decimalSeperator, groupingSeperator) {
+  //   let nStr = document.getElementsByName("principalInput").value;
+  //   nStr = nStr.replace(/\,/g, '');
+
+  //   //alert(nStr);
+  //   nStr += '';
+  //   let x = nStr.split(decimalSeperator);
+  //   let x1 = x[0];
+  //   let x2 = x.length > 1 ? decimalSeperator + x[1] : '';
+  //   var rgx = /(\d+)(\d{3})/;
+  //   while (rgx.test(x1)) {
+  //     x1 = x1.replace(rgx, '$1' + groupingSeperator + '$2');
+  //   }
+  //   //alert(x1+x2);
+  //   document.getElementsByName(name)[0].value = x1 + x2;
+  //   return x1 + x2;
+  // }
+
+  // console.log("formatting fucntion trial", addGroupingSeperator("principalInput", '.', ','))
+
+  return (
     <div
       className="w-full bg-white max-w-[600px] mx-auto rounded-2xl text-darkblue
       px-6 py-12 lg:p-12 shadow-primary"
@@ -176,7 +212,7 @@ const CalcForm = ({ slideToFirst, handleSlideToFirst, handleInvTypeApp, handleAn
         <select
           className="select w-[90%] max-w-[300px] text-center text-[16px] 
           border-2 rounded-lg border-indigo-600 bg-white"
-          value= {invType}
+          value={invType}
           onChange={(e) => handleInvChange(e)}
         >
           <option value="default" disabled>
@@ -194,11 +230,14 @@ const CalcForm = ({ slideToFirst, handleSlideToFirst, handleInvTypeApp, handleAn
           <div className="text-center w-[90%] max-w-[300px] placeholder:text-darkblue placeholder:text-center">
             <label className="text-md text-indigo-600">Invested Amount (Rs.)</label>
             <input
-              id=""
+              name="principalInput"
               className="mt-1 input text-center text-[16px] lg:text-[16px] max-w-[200px]
               border-2 rounded-lg border-indigo-600 bg-white placeholder:text-[16px]"
               type="number"
               value={principal}
+              min={0}
+              // onBlur={onBlurFunction}
+              // onFocus={onFocusFunction}
               placeholder={amountPlaceholder}
               onChange={(e) => setPrincipal(e.target.value)}
             ></input>
@@ -285,7 +324,7 @@ const CalcForm = ({ slideToFirst, handleSlideToFirst, handleInvTypeApp, handleAn
       {/* analysis result */}
       {analyse && (
         <div
-        className="mt-24 py-6 rounded-2xl border-2 border-indigo-600">
+          className="mt-24 py-6 rounded-2xl border-2 border-indigo-600">
           <NiftyAnalysisResult
             principal={principal}
             interest={interest}
@@ -297,7 +336,7 @@ const CalcForm = ({ slideToFirst, handleSlideToFirst, handleInvTypeApp, handleAn
         </div>
       )}
 
-      
+
     </div>
   );
 };

@@ -52,8 +52,6 @@ const NiftyResultDeclaration = ({principal, period, niftyEarnings, niftyInterest
 };
 
 const formatToCurrency = (amount) => {
-  const string = "123455";
-  console.log("type of amount", typeof(amount))
   return (amount).toFixed(1).replace(/\d(?=(\d{3})+\.)/g, '$&,'); 
   // return (amount).toFixed(1).replace(/\d(?=(\d{3})+\.)/g, '$&,'); 
 }
@@ -68,13 +66,11 @@ const toIndianCurrency = (num) => {
   return curr;
 };
 
-console.log("format", formatToCurrency(2828738723))
-// console.log(toIndianCurrency(2828738723))
 
 //intl number format
 const number = 10192289;
 const formatted = (number) => new Intl.NumberFormat("en-IN").format(number);
-console.log("formatted number", formatted)
+// console.log("formatted number", formatted)
 
 const Parameters = ({
   invObjective,
@@ -108,7 +104,7 @@ const Parameters = ({
         {principal > 0 ? (
           <div className="flex justify-between items-center">
             <div className="text-gray-400 w-max">Invested amount:</div>
-            <div className="border-2 border-indigo-600 px-2 min-w-[110px] w-max rounded-md h-full text-center">
+            <div className="border-2 border-indigo-600 px-2 w-max rounded-md h-full text-center">
               {/* {toIndianCurrency(principal)} */}
               <span>&#8377;</span>{formatted(principal)}
             </div>
@@ -272,7 +268,7 @@ const NiftyAnalysisResult = ({
     niftyInterest
   );
 
-  console.log("within resultss", toIndianCurrency(principal))
+
 
   return (
     <div className="px-4">
