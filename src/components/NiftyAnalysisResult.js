@@ -52,7 +52,10 @@ const NiftyResultDeclaration = ({principal, period, niftyEarnings, niftyInterest
 };
 
 const formatToCurrency = (amount) => {
-  return (amount).toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,'); 
+  const string = "123455";
+  console.log("type of amount", typeof(amount))
+  return (amount).toFixed(1).replace(/\d(?=(\d{3})+\.)/g, '$&,'); 
+  // return (amount).toFixed(1).replace(/\d(?=(\d{3})+\.)/g, '$&,'); 
 }
 
 const toIndianCurrency = (num) => {
@@ -67,6 +70,11 @@ const toIndianCurrency = (num) => {
 
 console.log("format", formatToCurrency(2828738723))
 // console.log(toIndianCurrency(2828738723))
+
+//intl number format
+const number = 10192289;
+const formatted = (number) => new Intl.NumberFormat("en-IN").format(number);
+console.log("formatted number", formatted)
 
 const Parameters = ({
   invObjective,
@@ -91,7 +99,7 @@ const Parameters = ({
             </div>
           </div>
         ) : (
-          <div className="text-red-500">Please select investment type!</div>
+          <div className="text-red-500 text-center">Please select investment type!</div>
         )}
       </div>
 
@@ -99,27 +107,28 @@ const Parameters = ({
       <div className="text-md mb-4">
         {principal > 0 ? (
           <div className="flex justify-between items-center">
-            <div className="text-gray-400 w-full">Invested amount:</div>
-            <div className="border-2 border-indigo-600 px-2 min-w-[110px] rounded-md h-full text-center">
-              {toIndianCurrency(principal)}
+            <div className="text-gray-400 w-max">Invested amount:</div>
+            <div className="border-2 border-indigo-600 px-2 min-w-[110px] w-max rounded-md h-full text-center">
+              {/* {toIndianCurrency(principal)} */}
+              <span>&#8377;</span>{formatted(principal)}
             </div>
           </div>
         ) : (
-          <div className="text-red-500">Please enter invested amount!</div>
+          <div className="text-red-500 text-center">Please enter invested amount!</div>
         )}
       </div>
 
       {/* Investment Period */}
       <div className="text-md mb-4">
-        {period ? (
+        {invType && principal ? (
           <div className="flex justify-between">
             <div className="text-gray-400">Investment period:</div>
             <div className="border-2 border-indigo-600 px-1 rounded-md text-center">
               {period==1 ? `${period} year` : `${period} years`}
             </div>
           </div>
-        ) : (
-          <div className="text-red-500">Please select investment period!</div>
+        ) : ( <></>
+          // <div className="text-red-500">Please select investment period!</div>
         )}
       </div>
 
@@ -139,8 +148,8 @@ const Parameters = ({
       <div className="text-md mb-4">
         {(principal > 0 && invType) ? 
           (<div className="flex justify-between">
-            <div className="text-gray-400">Return Earned:</div>
-            <div className="border-2 border-indigo-600 px-2 rounded-md text-center">
+            <div className="text-gray-400 w-max">Return Earned:</div>
+            <div className="border-2 border-indigo-600 px-2 rounded-md text-center w-max">
               {toIndianCurrency(interestEarned)}
               {/* Rs. {toIndianCurrency(interestEarned)} */}
             </div>
@@ -152,8 +161,8 @@ const Parameters = ({
       <div className="text-md mb-4">
         {(principal > 0 && invType) ? (
           <div className="flex justify-between">
-            <div className="text-gray-400">Maturity Value:</div>
-            <div className="border-2 border-indigo-600 px-2 rounded-md text-center">
+            <div className="text-gray-400 w-max">Maturity Value:</div>
+            <div className="border-2 border-indigo-600 px-2 rounded-md text-center w-max">
               {toIndianCurrency(maturityValue)}
             </div>
           </div>
