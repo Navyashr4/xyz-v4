@@ -34,6 +34,14 @@ const getResources = (invType) => {
           text: `Nifty 50 historic data`,
           link : `https://www1.nseindia.com/products/content/equities/indices/historical_index_data.htm`
         },
+        {
+          text: `Gold Prices`,
+          link : `https://goldprice.org/`
+        },
+        {
+          text: `City-wise gold rates`,
+          link : `https://www.moneycontrol.com/news/gold-rates-today/bangalore/`
+        },
       ];
       break;
     }
@@ -53,8 +61,16 @@ const getResources = (invType) => {
           link: `https://dbie.rbi.org.in/DBIE/dbie.rbi?site=statistics`
         },
         {
-          text: `Housing Loan interest rate`,
-          link : `https://www.bankbazaar.com/home-loan.html`
+          text: `House Price Index`,
+          link: `https://www.housingpriceindex.in/`
+        },
+        {
+          text: `House Price Index Historic Data`,
+          link: `https://dbie.rbi.org.in/DBIE/dbie.rbi?site=statistics`
+        },
+        {
+          text: `State-wise stamp duty`,
+          link : `https://www.bankbazaar.com/tax/stamp-duty.html`
         },
         {
           text: `Real estate lucrative?`,

@@ -19,11 +19,11 @@ const Calculate = ({
         {/* text */}
         <div className="text-center px-6 lg:px-0">
           <h2 className="section-title md:text-3xl text-indigo-400">
-            Calculator
+            Return Calculator
           </h2>
           <p className="section-subtitle text-lg mb-16 max-w-[622px] mx-auto">
-            Evaluate your investment class in comparison to NIFTY50 returns
-            gained for the same principal and tenure
+          Let&#39;s evaluate your investment class in comparison to Equity Market (NIFTY50) returns
+gained for the same principal and tenure
           </p>
         </div>
         {/* form */}

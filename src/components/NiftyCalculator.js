@@ -2,7 +2,8 @@ import React, { useEffect, useState, useRef } from "react";
 import { calcFormPlaceholders } from "../data/calcFormPlaceholders";
 import NiftyAnalysisResult from "./NiftyAnalysisResult";
 import { GetInterestValue, GetNiftyInterestValue } from "../Functions/getInterestRate";
-const CalcForm = ({ slideToFirst, handleSlideToFirst, handleInvTypeApp, handleAnalyseApp, invTypeApp, resultsSection, scrollToResultsSection }) => {
+const CalcForm = ({ slideToFirst, handleSlideToFirst, handleInvTypeApp, handleAnalyseApp, invTypeApp, resultsSection, 
+  scrollToResultsSection }) => {
 
   const [invType, setInvType] = useState("Bank Fixed Deposit");
   const [placeholderIdx, setPlaceholderIdx] = useState(0);
@@ -230,14 +231,11 @@ const CalcForm = ({ slideToFirst, handleSlideToFirst, handleInvTypeApp, handleAn
           <div className="text-center w-[90%] max-w-[300px] placeholder:text-darkblue placeholder:text-center">
             <label className="text-md text-indigo-600">Invested Amount (Rs.)</label>
             <input
-              name="principalInput"
               className="mt-1 input text-center text-[16px] lg:text-[16px] max-w-[200px]
               border-2 rounded-lg border-indigo-600 bg-white placeholder:text-[16px]"
               type="number"
               value={principal}
               min={0}
-              // onBlur={onBlurFunction}
-              // onFocus={onFocusFunction}
               placeholder={amountPlaceholder}
               onChange={(e) => setPrincipal(e.target.value)}
             ></input>

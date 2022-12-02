@@ -14,7 +14,7 @@ const Hero = ({ calculator, scrollToCalculator }) => {
             data-aos="fade-down"
             data-aps-delay="800"
           >
-            Is your investment growing your wealth?
+            What&#39;s wrong with my Investment?
           </h1>
           {/* paragraph text */}
           <div
@@ -22,9 +22,8 @@ const Hero = ({ calculator, scrollToCalculator }) => {
             data-aos="fade-down"
             data-aps-delay="600"
           >
-            Our investment x-ray tool objectively analyses your investment and
-            evaluates on four parameters: 
-            <p className="text-indigo-400 font-semibold"> Growth against inflation | Liquidity | Safety | Taxation Benefits</p>
+           We evaluate your investment on 4 key parameters: 
+            <p className="text-indigo-400 font-semibold"> Returns | Liquidity | Safety | Tax</p>
           </div>
           {/* call to action button */}
           {/* <button

@@ -36,8 +36,9 @@ const getInvInfo = (invType) => {
                     text : [
                         `Around Rs 154 lac crore as at March 22 has been invested in fixed deposits at interest rate of 5.5%. At the same
                         time country's inflation is at 7%.`,
-                        `As per the SEBI survey, 95% of the Indian families prefer investing in bank FDs as they are not market-linked
-                        instruments & perceived to be safe.`,
+                        `As per the SEBI survey, 95% of the Indian families prefer investing in bank FDs as they are
+                        not market-linked instruments &amp; perceived to be safe. However, does this make Fixed
+                        Deposit a better investment. Check analysis section below to know more.`,
                         `Fixed deposit rates have been as high as around 13% during 1994 to 1999`,
                         `In the last 20 years’ FD rates in India, have had a downhill journey.`,
                         `In 2003-04, it fell to 5.25%, which was a historical low in the fixed deposit interest rates until then.`,
@@ -148,11 +149,13 @@ const getInvInfo = (invType) => {
                     text : [
                         `NITI Aayog expects that the Indian real estate sector will reach a market size of $1 trillion by 2030 and will account for 13 per cent
                         of India’s GDP by 2025.`,
-                        `The India real estate market is expected to exhibit a CAGR of 9.60% during 2022-2027.`,
+                        `As per IMARC group, the India real estate market size is expected to exhibit a CAGR of 9.60% during
+                        2022-2027.`,
                         `The rising cost of construction is likely to push up real estate prices which would thereby have an impact on existing EMIs which
                         will shoot up.`,
-                        `Home prices increased by 5 per cent Y-o-Y until December 2021, and continued to do so in January–February 2022.`,
-                        `Home loan rates which were at 6.50% in April 2022 which has now inched towards 7.60% in June 2022.`
+                        `Average home prices increased by 5 per cent between December 2020 to February 2022.`,
+                        `Home loan rates which were at 6.50% in April 2022 has now inched towards 7.50% to 8.5% by Nov
+                        2022.`
                     ]
                 }
             ]
@@ -252,7 +255,7 @@ const getInvInfo = (invType) => {
                     text : [
                         `1. Economic Scenario of India along with Global market conditions.`,
                         `2. Fund Manager of your portfolio – Volatility / Risk is dependent on the investment decisions taken by the Fund Managers.`,
-                        `3. List of charges associated to ULIP, which is deducted from your Fund Value. These are:-`,
+                        `3. List of charges associated to ULIP, which is deducted from your Fund Value. These are:`,
                         `a. fund management charge`,
                         `b. premium allocation charge`,                  
                         `c. mortality charge`,                    

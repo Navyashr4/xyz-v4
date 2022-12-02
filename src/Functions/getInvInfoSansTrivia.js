@@ -219,7 +219,7 @@ const getInvInfo = (invType) => {
                     text : [
                         `Economic Scenario of India along with Global market conditions.`,
                         `Fund Manager of your portfolio – Volatility / Risk is dependent on the investment decisions taken by the Fund Managers.`,
-                        `List of charges associated to ULIP, which is deducted from your Fund Value. These are:-`,
+                        `List of charges associated to ULIP, which is deducted from your Fund Value. These are:`,
                         `@a. fund management charge`,
                         `@b. premium allocation charge`,                  
                         `@c. mortality charge`,                    
