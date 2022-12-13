@@ -120,7 +120,7 @@ const App = () => {
       />
       {/* <BarChart chartData={userData} /> */}
       {/* <DummyCarousel /> */}
-      <ULIPTrivia />
+      {/* <ULIPTrivia /> */}
       <Trivia invType={invType} />
       {/* <div>
         <h1>{toIndianCurrency(500000)}</h1>
