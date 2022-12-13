@@ -30,10 +30,9 @@ const Trivia = ({ invType }) => {
                     return (
                       <li
                         key={idx}
-                        className={`section-subtitle px-3 md:px-8 text-left lg:text-[18px] mb-4 max-w-[622px] mx-auto text-darkblue
-                        list-disc list-inside indent-[-23px] lg:indent-[-24px]`} //24px indent if font ix 18px 
+                        className={`${text[0]==="@" ? `list-none ml-[20px] mt-1` : `list-disc list-inside indent-[-23px]`} section-subtitle px-3 md:px-8 text-left lg:text-[18px] mb-4 max-w-[622px] mx-auto text-darkblue list-disc list-inside indent-[-23px] lg:indent-[-24px]`} //24px indent if font ix 18px 
                       >
-                        {text}
+                        {text.split("@")}
                       </li>
                     );
                   })}
@@ -50,3 +49,7 @@ const Trivia = ({ invType }) => {
 };
 
 export default Trivia;
+
+// <li key={idx} className={`${text[0]==="@" ? `list-none` : `list-disc list-inside indent-[-23px]`} section-subtitle text-left lg:text-lg mb-4 max-w-[622px] mx-auto`}>
+// {text.split("@")}
+// </li>

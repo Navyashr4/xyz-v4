@@ -2,6 +2,7 @@ import React from "react";
 import getInvParameters from "../Functions/getInvParameters";
 import getBgBorderColors from "../Functions/getBgBorderColors";
 
+
 const AnalysisParameters = ({ invType }) => {
   // console.log("Inv Type from analysis parameters",invType)
   const invParameters = getInvParameters(invType);
@@ -58,10 +59,11 @@ const AnalysisParameters = ({ invType }) => {
                           return (
                             <div className="pl-6 pr-0 lg:pr-2">
                             <li
-                              className="mb-4 px-2 lg:px-12 md:px-6 text-left list-disc list-inside indent-[-21px]"
+                              className={`${content[0]==="@" ? `list-none font-semibold mb-1 ${textColor}` : content[0]==="*" ? `list-none ml-[20px] mt-[-10px]`:`list-disc list-inside indent-[-23px]`} mb-4 px-2 lg:px-12 md:px-6 text-left list-disc list-inside indent-[-21px]`}
                               key={idx}
                             >
-                              {content}
+                              {content[0]==="@" ? content.split("@") : content[0]==="*" ? content.split("*") : content}
+                              {/* {content.split("@")} */}
                             </li>
                             </div>
                           );
@@ -79,3 +81,8 @@ const AnalysisParameters = ({ invType }) => {
 };
 
 export default AnalysisParameters;
+
+
+// <li key={idx} className={`${text[0]==="@" ? `list-none` : `list-disc list-inside indent-[-23px]`} section-subtitle text-left lg:text-lg mb-4 max-w-[622px] mx-auto`}>
+// {text.split("@")}
+// </li>

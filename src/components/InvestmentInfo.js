@@ -1,7 +1,5 @@
 import React from "react";
-import { Bubble } from "react-chartjs-2";
 import getInvInfo from "../Functions/getInvInfoSansTrivia";
-import lightbulb from '../assets/img/light-bulb.png';
 import question from '../assets/img/question.png';
 
 const InvestmentInfo = ({ invType }) => {
@@ -11,9 +9,7 @@ const InvestmentInfo = ({ invType }) => {
     <section 
     className="section pb-2 mx-4 lg:mx-0 ">
       <div className="container mx-auto">
-        {/* text */}
         <div className="text-center">
-          {/* <a href="https://www.flaticon.com/free-icons/think" title="think icons">Think icons created by Freepik - Flaticon</a> */}
             <img src={question} alt="logo" className="h-[60px] lg:h-[80px] mx-auto mb-5"/>
             <div className="section-title md:text-3xl text-indigo-400 section-title text-center mb-16 max-w-[622px] mx-auto">
               Information to learn about {invType} investments

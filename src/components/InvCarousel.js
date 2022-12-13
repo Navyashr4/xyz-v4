@@ -45,8 +45,8 @@ const InvCarousel = ({ slideToFirst, handleSlideToFirst, handleInvTypeApp, invTy
             invName : "Gold",
             id: 2,
             return : 4,
-            liquidity : 6,
-            safety : 6,
+            liquidity : 8,
+            safety : 8,
             taxation : 6
         },
         {
@@ -54,7 +54,7 @@ const InvCarousel = ({ slideToFirst, handleSlideToFirst, handleInvTypeApp, invTy
             id: 3,
             return : 4,
             liquidity : 2,
-            safety : 10,
+            safety : 6,
             taxation : 6
         },
         // {
@@ -69,7 +69,7 @@ const InvCarousel = ({ slideToFirst, handleSlideToFirst, handleInvTypeApp, invTy
             id: 4,
             return : 6,
             liquidity : 2,
-            safety : 6,
+            safety : 8,
             taxation : 6
         },
         {

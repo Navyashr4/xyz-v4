@@ -1,15 +1,24 @@
-1. Commas in Invested amount
-<!-- 2. done: Don’t need the up/down arrow in Invested amount -->
-3. All bullet points as per PPT has to be shown in bullet form on the website too - where is this missing?
-4. 
+1. Commas in Invested amount -  I am unable to do this without messing with the calculator as puttin in the commas is turning it into a string but it needs to be processed as a number. 
+2. All bullet points as per PPT has to be shown in bullet form on the website too - where is this missing?
+4. Did not understand what needs to be done here
     1. Change sequence
     2. Gold was a medium of exchange and backed by the entire monetary system in various
     countries (Called the Gold Standard). - till what date (make the following points in
     continuation)
-5. ULIP charges: Put the table in the trivia
+5. ULIP charges: Put the table in the trivia - this will visually not fit in the mobile view. It also looks messy in the desktop to suddenly have a picture in a box otherwise full of text. Can I instead include it in the `Information to learn about ULIP investments` section? I also need a HD version of the image. Taking a snip of the PPT is not as clear '
 
 
 
+
+THINGS TO DO 13th Decenber 2022
+1. Subpoint of a subpoint has to be retained
+2. gold last 3 points need to be made into first three points
+3. change scores for parameters
+4. ULIP trivia has to be presented as a table
+5. Clean up everything in the code
+6. in Bank fixed deposit year 1 you lose money on nifty so I have to show that in green sine profit
+7. Conclusion for gold liquidity 
+8. Should Real Estate Safety still say high?
 
 
 

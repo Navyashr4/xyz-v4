@@ -87,14 +87,14 @@ const getInvInfo = (invType) => {
                     title: "Trivia",
                     id: 3,
                     text : [
+                        `In 2019, the World Gold Council estimated that Indian households owned over 25,000 tonnes of gold, making India the largest holder in the world. The value of this gold was estimated to be $1.1 trillion, which was over 40% of India’s GPD.`,
+                        `Middle income households buy 56% of India’s gold and hold around 11% of the world’s gold.`,
+                        `India has the 9th largest gold reserve in the world, sitting at 760 tonnes, followed by Japan, sitting at 846 tonnes & USA with 8,133 tonnes.`,
                         `Gold was a medium of exchange and backed by the entire monetary system in various countries (Called the Gold Standard).`,
                         `Currencies used to be backed by Gold in most countries around the world.`,
                         `Gold no longer plays a key role in the global monetary system.`,
                         `But, it is used as a symbol of wealth and investment since it is a key precious metal.`,
-                        `It is the scarcity premium that gives gold its value in the current times.`,
-                        `In 2019 the World Gold Council estimated that Indian households owned over 25,000 tonnes of gold, making India the largest holder in the world. The value of this gold was estimated to be $1.1 trillion, which was over 40% of India’s GPD.`,
-                        `Middle income households buy 56% of India’s gold and hold around 11% of the world’s gold.`,
-                        `India has the 9th largest gold reserve in the world, sitting at 760 tonnes, followed by Japan, sitting at 846 tonnes & USA with 8,133 tonnes.`
+                        `It is the scarcity premium that gives gold its value in the current times.`,                        
                     ]
                 }
             ]
@@ -212,11 +212,18 @@ const getInvInfo = (invType) => {
                     title : "Trivia",
                     id: 3,
                     text : [
-                        "PPF scheme was launched in 1968 by the Finance Ministry's National Savings Institute.",
-                        "Eligibility to invest in PPF: You can invest in PPF only if you are a Citizen of India. NRIs, Trust & HUF cannot invest in PPF.",
-                        "Only 1 PPF account can be opened under your name. No joint ownership of a PPF account allowed (unless a minor).",
-                        "You can open the account with (a) Any head post office or general post office (b) Private-sector banks: ICICI Bank, Axis Bank, etc. (c) Branches of nationalized banks: State Bank of India, Bank of Maharashtra, etc.",
-                        "One can avail loan via PPF account. Eligible between third financial year and sixth financial year of maintaining PPF account. Loan interest rate is 1% more than current PPF interest rate."
+                        `PPF scheme was launched in 1968 by the Finance Ministry's National Savings Institute.`,
+                        `Eligibility to invest in PPF:`,
+                        `@(a) You can invest in PPF only if you are a Citizen of India.`, 
+                        `@(b) NRIs, Trust & HUF cannot invest in PPF.`,
+                        `Only 1 PPF account can be opened under your name. No joint ownership of a PPF account allowed (unless a minor).`,
+                        `You can open the account with`,
+                        `@(a) Any head post office or general post office `,
+                        `@(b) Private-sector banks: ICICI Bank, Axis Bank, etc. `,
+                        `@(c) Branches of nationalized banks: State Bank of India, Bank of Maharashtra, etc.`,
+                        `One can avail loan via PPF account.`,
+                        `@(a) Eligible between third financial year and sixth financial year of maintaining PPF account.`, 
+                        `@(b) Loan interest rate is 1% more than current PPF interest rate.`
                     ]
                 }
             ]
