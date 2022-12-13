@@ -233,7 +233,7 @@ const getInvFacts = (invType) => {
           image: EthereumImg,
           content: [
             `@Score`,
-            `High`,
+            `Medium`,
             `@Features`,
             `Advantages`,
             `*(a) Legal Ownership: You own a tangible asset which is legally documented under your name.`,

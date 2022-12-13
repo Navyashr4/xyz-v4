@@ -22,7 +22,7 @@ const Hero = ({ calculator, scrollToCalculator }) => {
             data-aos="fade-down"
             data-aps-delay="600"
           >
-           We evaluate your investment on 4 key parameters and score it on a scale of 1 to 10git : 
+           We evaluate your investment on 4 key parameters and score it on a scale of 1 to 10: 
             <p className="text-indigo-400 font-semibold"> Returns | Liquidity | Safety | Tax</p>
           </div>
           {/* call to action button */}
