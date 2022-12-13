@@ -20,6 +20,7 @@ import InvestmentInfo from "./components/InvestmentInfo.js";
 import DomInvPills from "./components/DomInvPills.js";
 // import DummyCarousel from "./components/DummyCarousel";
 import Trivia from "./components/Trivia.js";
+import ULIPTrivia from "./components/ULIPTrivia.js"
 
 const App = () => {
   const [navMobile, setNavMobile] = useState(false);
@@ -119,6 +120,7 @@ const App = () => {
       />
       {/* <BarChart chartData={userData} /> */}
       {/* <DummyCarousel /> */}
+      <ULIPTrivia />
       <Trivia invType={invType} />
       {/* <div>
         <h1>{toIndianCurrency(500000)}</h1>

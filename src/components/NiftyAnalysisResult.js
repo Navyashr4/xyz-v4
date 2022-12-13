@@ -3,18 +3,22 @@ import getNiftyCalculatedValues from "../Functions/getNiftyCalculatedValues";
 
 const ResultDeclaration = ({ principal, loss, invType, invObjective }) => {
   let word = "LOSS";
+  let wordVerb = "LOST";
   let multiplier = 1;
   if (loss <= 0) {
     word = "PROFIT";
-    multiplier = -1;
+    wordVerb = "GAINED";
+    multiplier = 1;
   }
   return (
     principal > 0 ? (<div className="text-center">
       <div className={`text-indigo-600 font-medium text-md md:text-lg mb-2`}>
-      OPPORTUNITY {word}: NIFTY50 vs {invType.toUpperCase()}  
+      OPPORTUNITY {word}: NIFTY50 - {invType.toUpperCase()}  
+
+      {/* OPPORTUNITY {word}: NIFTY50 - {invType.toUpperCase()}   */}
       {/* ESTIMATED {word} FROM THIS INVESTMENT: */}
       </div>
-      <div className={`${loss > 0 ? `text-red-600 border-red-600` : `text-darkblue border-indigo-600`} text-[24px] font-bold mb-5 border-2 w-fit mx-auto px-4 rounded-lg `}>{toIndianCurrency(loss * multiplier)}</div>
+      <div className={`${loss > 0 ? `text-red-600 border-red-600` : `text-green-600 border-green-600`} text-[24px] font-bold mb-5 border-2 w-fit mx-auto px-4 rounded-lg `}>{toIndianCurrency(loss * multiplier)}</div>
       {loss !== 0 ? (
         loss > 0 ? (
           <div className="text-gray-500 px-10 text-centre tracking-[1%]">
@@ -24,7 +28,7 @@ const ResultDeclaration = ({ principal, loss, invType, invObjective }) => {
           </div>
         ) : (
           <div className="text-gray-500 px-10 text-centre tracking-[1%]">
-            You made a <span className="text-indigo-600">profit!</span> Great
+            You made a <span className="text-indigo-600">profit</span> with {invType}! Great
             investment!{" "}
           </div>
         )

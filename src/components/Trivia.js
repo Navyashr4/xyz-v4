@@ -6,14 +6,8 @@ const Trivia = ({ invType }) => {
 
   return (
     <section className="section pb-2 mx-4 lg:mx-0">
-      {/* data-aos='fade-in'
-    data-aos-delay='900' */}
       <div className="container mx-auto">
-        {/* text */}
         <div className="text-center ">
-          {/* <p className="section-title md:text-3xl text-left mb-16 max-w-[622px] mx-auto">
-            Information to learn about {invType.toLowerCase()} investments
-          </p> */}
           <div>
             {invInfo.map((item, idx) => {
               return item.title === "Trivia" ? (
