@@ -131,7 +131,7 @@ function ULIPTrivia() {
               <th className="border  border-indigo-600 px-1 md:px-4 md:py-1 font-normal">
                 How it is charged
               </th>
-              <th className="border  border-indigo-600 px-1 md:px-4 md:py-1 font-normal">
+              <th className="border  border-indigo-600 p-1 md:px-4 md:py-1 font-normal">
                 Frequency of deduction
               </th>
             </tr>
