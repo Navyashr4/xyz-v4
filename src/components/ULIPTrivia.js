@@ -122,6 +122,9 @@ function ULIPTrivia() {
         >
           ULIP Trivia
         </div>
+        <div className="section-subtitle px-3 md:px-8 text-center lg:text-[18px] mb-4 max-w-[622px] mx-auto text-darkblue">
+          How much do you end up spending on ULIPs?
+        </div>
         <table className="mx-auto table-auto border-separate border-spacing-1">
           <thead className={`${headerColor}`}>
             <tr>
@@ -228,9 +231,7 @@ function ULIPTrivia() {
           </tbody>
         </table>
 
-        <div className="section-subtitle px-3 md:px-8 text-center lg:text-[18px] mb-4 max-w-[622px] mx-auto text-darkblue">
-          How much do you end up spending on ULIPs?
-        </div>
+        
 
         <li className="section-subtitle px-12 md:px-8 text-left lg:text-[18px] mb-4 max-w-[622px] mx-auto text-darkblue list-disc list-inside indent-[-23px] lg:indent-[-24px]">
           Some more charges such as top-up charge & rider charges are also
