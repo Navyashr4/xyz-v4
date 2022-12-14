@@ -1,5 +1,4 @@
 import React from "react";
-import { IoIosArrowDroprightCircle } from "react-icons/io";
 
 const Hero = ({ calculator, scrollToCalculator }) => {
   console.log(calculator);
@@ -22,8 +21,9 @@ const Hero = ({ calculator, scrollToCalculator }) => {
             data-aos="fade-down"
             data-aps-delay="600"
           >
-           We evaluate your investment on 4 key parameters and score it on a scale of 1 to 10: 
-            <p className="text-indigo-400 font-semibold"> Returns | Liquidity | Safety | Tax</p>
+           We evaluate your investment on 4 key parameters and score it on a 
+           <p>scale of 1 to 10 </p>
+            <p className="text-indigo-400 font-semibold mt-2"> Returns | Liquidity | Safety | Tax</p>
           </div>
           {/* call to action button */}
           {/* <button
