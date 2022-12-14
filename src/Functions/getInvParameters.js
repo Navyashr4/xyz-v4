@@ -494,7 +494,7 @@ const getInvFacts = (invType) => {
             `Medium`,
             `@Features`,
             `Premium invested`,
-            `*() Premium paid for investing in ULIP is eligible of deduction from income in a financial year to extent of Rs 1.5lacs under 80C of Income Tax Act.`,
+            `*(a) Premium paid for investing in ULIP is eligible of deduction from income in a financial year to extent of Rs 1.5lacs under 80C of Income Tax Act.`,
             `ULIP follows conditional taxation on redemption/ withdrawal for policies issued after 1-Feb-2021 as detailed below`,
             `*1. When total ULIP premium is more than Rs 2.5 lacs (“High Premium”) in any of the financial year [no matter how many ULIPs you hold]:`,
             `*(a)  The capital gains on consideration received towards maturity or partial withdrawal obtained is taxable like equity or debt instruments based on holding period [short term or long term]. Refer link of Taxmann in reference section to read about taxability.`,
