@@ -102,7 +102,6 @@ const App = () => {
 
       <Hero calculator={calculator} scrollToCalculator={scrollToCalculator} />
       <DomInvPills
-        slideToFirst={slideToFirst}
         handleSlideToFirst={handleSlideToFirst}
         handleInvTypeApp={handleInvTypeApp}
         invType={invType}

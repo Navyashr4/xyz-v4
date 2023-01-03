@@ -19,6 +19,7 @@ const ButtonGroup = ({ invType, next, previous, goToSlide, ...rest }) => {
         else if(invType == "Real Estate") goToSlide(2);
         else if(invType == "ULIP") goToSlide(3);
         else if(invType == "Public Provident Fund") goToSlide(4);
+        else if(invType == "Equity") goToSlide(5);
         else goToSlide(0);
     }, [invType])
 
@@ -79,6 +80,14 @@ const InvCarousel = ({ slideToFirst, handleSlideToFirst, handleInvTypeApp, invTy
             liquidity : 2,
             safety : 10,
             taxation : 10
+        },
+        {
+            invName : "Equity",
+            id: 6,
+            return : 10,
+            liquidity : 8,
+            safety : 10,
+            taxation : 6
         },
     ]
 

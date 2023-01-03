@@ -1,5 +1,4 @@
 import React from "react";
-import CalcForm from "./CalcForm";
 import NiftyCalculator from "./NiftyCalculator";
 
 const Calculate = ({
@@ -13,10 +12,7 @@ const Calculate = ({
 }) => {
   return (
     <section className="section">
-      {/* data-aos='fade-in'
-    data-aos-delay='900' */}
       <div className="container mx-auto mt-16">
-        {/* text */}
         <div className="text-center px-6 lg:px-0">
           <h2 className="section-title md:text-3xl text-indigo-400">
             Return Calculator
