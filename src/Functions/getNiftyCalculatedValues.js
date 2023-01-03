@@ -63,6 +63,15 @@ const getNiftyCalculatedValues = (principal, period, interest, invType, niftyInt
             break;
         }
 
+        case "Equity": {
+            reportObj.maturityValue = Math.round(principal * (Math.pow((1 + (interest / 100)), (period))));
+            reportObj.interestEarned = Math.round(reportObj.maturityValue - principal);
+            reportObj.niftyEarnings = Math.round(principal * (Math.pow((1 + (niftyInterest / 100)), (period))));
+            reportObj.loss = Math.round(reportObj.niftyEarnings - reportObj.maturityValue);
+            reportObj.principal = principal;
+            break;
+        }
+
         default : {
             reportObj.interestEarned = 0;
             reportObj.maturityValue = 0;

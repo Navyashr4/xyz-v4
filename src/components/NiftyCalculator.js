@@ -1,5 +1,4 @@
 import React, { useEffect, useState, useRef } from "react";
-import { calcFormPlaceholders } from "../data/calcFormPlaceholders";
 import NiftyAnalysisResult from "./NiftyAnalysisResult";
 import { GetInterestValue, GetNiftyInterestValue } from "../Functions/getInterestRate";
 const CalcForm = ({ slideToFirst, handleSlideToFirst, handleInvTypeApp, handleAnalyseApp, invTypeApp, resultsSection, 
@@ -36,14 +35,11 @@ const CalcForm = ({ slideToFirst, handleSlideToFirst, handleInvTypeApp, handleAn
     handleInvTypeApp(e.target.value);
   };
 
-  // console.log(resultsSection.current.offsetTop)
-
   //handling submission of form and calculating results by setting analysis section to show up
   const handleSubmit = (event) => {
     event.preventDefault();
     if (isValid()) {
       setAnalyse(true);
-      // if(analyse) scrollToResultsSection(resultsSection);
       scrollToResults(analysisResults);
     }
   };
@@ -58,60 +54,13 @@ const CalcForm = ({ slideToFirst, handleSlideToFirst, handleInvTypeApp, handleAn
     scrollToResults(analysisResults);
   }, [analyse]);
 
-  //!!!!!GET RID OF THIS
-  // customising placeholder text based on inv type chosen
-  useEffect(() => {
-    switch (invType) {
-      case "Bank Fixed Deposit": {
-        setPlaceholderIdx(1);
-        // setShowInputs(true);
-        break;
-      }
-      case "Gold": {
-        setPlaceholderIdx(2);
-        // setShowInputs(true);
-        break;
-      }
-      case "Real Estate": {
-        setPlaceholderIdx(3);
-        // setShowInputs(true);
-        break;
-      }
-      case "Guaranteed Income Plan": {
-        setPlaceholderIdx(4);
-        break;
-      }
-      case "Public Provident Fund": {
-        setPlaceholderIdx(5);
-        break;
-      }
-      case "ULIP": {
-        setPlaceholderIdx(5);
-        break;
-      }
-      default: {
-        setPlaceholderIdx(0);
-        setAnalyse(false);
-        setPrincipal(amountPlaceholder);
-        setPeriod(periodPlaceholder);
-        setInterest(6);
-        setInvObjective();
-      }
-    }
-  }, [invType]);
-
-  const { amountPlaceholder, periodPlaceholder } =
-    calcFormPlaceholders[placeholderIdx];
-
-
-
   //handling resetting all the fields in the form
   const resetState = (event) => {
     event.preventDefault();
     setAnalyse(false);
     setInvType("default");
-    setPrincipal(amountPlaceholder);
-    setPeriod(periodPlaceholder);
+    setPrincipal("");
+    setPeriod(3);
     setInterest(6);
     setInvObjective("default");
   };
@@ -130,9 +79,6 @@ const CalcForm = ({ slideToFirst, handleSlideToFirst, handleInvTypeApp, handleAn
     } else if (interest === 0 || interest === undefined) {
       isValid = false;
       alert("Enter interest rate in %");
-      // } else if (invObjective === undefined) {
-      //   isValid = false;
-      //   alert("Choose investment objective");
     } else {
       isValid = true;
     }
@@ -170,10 +116,6 @@ const CalcForm = ({ slideToFirst, handleSlideToFirst, handleInvTypeApp, handleAn
 
   console.log("formatted principal", formatted(principal))
 
-  // const updateInvType = () => {
-  //   console.log("Updated Inv Type", invType);
-  // }  
-
   const onBlurFunction = () => {
     document.getElementById("principalInput").type = "text";
     document.getElementById("principalInput").value = formatted(principal);
@@ -183,26 +125,6 @@ const CalcForm = ({ slideToFirst, handleSlideToFirst, handleInvTypeApp, handleAn
     document.getElementById("principalInput").type = "text";
     document.getElementById("principalInput").value = formatted(principal);
   }
-
-  // function addGroupingSeperator(name, decimalSeperator, groupingSeperator) {
-  //   let nStr = document.getElementsByName("principalInput").value;
-  //   nStr = nStr.replace(/\,/g, '');
-
-  //   //alert(nStr);
-  //   nStr += '';
-  //   let x = nStr.split(decimalSeperator);
-  //   let x1 = x[0];
-  //   let x2 = x.length > 1 ? decimalSeperator + x[1] : '';
-  //   var rgx = /(\d+)(\d{3})/;
-  //   while (rgx.test(x1)) {
-  //     x1 = x1.replace(rgx, '$1' + groupingSeperator + '$2');
-  //   }
-  //   //alert(x1+x2);
-  //   document.getElementsByName(name)[0].value = x1 + x2;
-  //   return x1 + x2;
-  // }
-
-  // console.log("formatting fucntion trial", addGroupingSeperator("principalInput", '.', ','))
 
   return (
     <div
@@ -222,9 +144,9 @@ const CalcForm = ({ slideToFirst, handleSlideToFirst, handleInvTypeApp, handleAn
           <option value="Bank Fixed Deposit">Bank Fixed Deposit</option>
           <option value="Gold">Gold</option>
           <option value="Real Estate">Real estate</option>
-          {/* <option value="Guaranteed Income Plan">Guaranteed Income Plan</option> */}
           <option value="ULIP">ULIP</option>
           <option value="Public Provident Fund">Public Provident Fund</option>
+          <option value="Equity">Equity</option>
         </select>
 
         {
@@ -236,7 +158,7 @@ const CalcForm = ({ slideToFirst, handleSlideToFirst, handleInvTypeApp, handleAn
               type="number"
               value={principal}
               min={0}
-              placeholder={amountPlaceholder}
+              placeholder={""}
               onChange={(e) => setPrincipal(e.target.value)}
             ></input>
           </div>
@@ -270,29 +192,10 @@ const CalcForm = ({ slideToFirst, handleSlideToFirst, handleInvTypeApp, handleAn
               border-2 rounded-lg border-indigo-600 bg-white max-w-[150px]"
               type="number"
               value={interest}
-              placeholder={6}
               onChange={(e) => setInterest(e.target.value)}
             ></input>
           </div>
         }
-
-        {/* {
-          <select
-            className="select w-[90%] max-w-[300px] text-center text-[16px] lg:text-md"
-            value={invObjective}
-            onChange={(e) => setInvObjective(e.target.value)}
-          >
-            <option value="default" disabled>
-              Investment objective
-            </option>
-            <option value="saving for retirement">Saving for retirement</option>
-            <option value="saving for your kids' education">
-              My kids education
-            </option>
-            <option value="saving to buy house">Saving to buy a house</option>
-            <option value="saving to buy a car">Saving to buy a car</option>
-          </select>
-        } */}
 
         {
           <button

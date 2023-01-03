@@ -124,6 +124,30 @@ export const GetInterestValue = (invType, period) => {
       break;
     }
 
+    case "Equity": {
+      switch (period) {
+        case "1": {
+          interestVal = -6;
+          break;
+        }
+        case "3": {
+          interestVal = 7.97;
+          break;
+        }
+        case "5": {
+          interestVal = 9.76;
+          break;
+        }
+        case "10": {
+          interestVal = 3.8;
+          break;
+        }
+        default:
+          interestVal = 7.97;
+      }
+      break;
+    }
+
     default:
       interestVal = 6;
   }
