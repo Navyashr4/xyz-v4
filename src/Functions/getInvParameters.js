@@ -108,7 +108,7 @@ const getInvFacts = (invType) => {
             `Optimal price discovery is not wide spread.
             Unorganized jewelers might not provide the right value for Physical
             gold.`,
-            `General perception about Gold is:`, 
+            `General perception about Gold is:`,
             `*(a) when equity stock markets rise, the price of Gold declines`,
             `*(b) when equity stock markets declines, the price of Gold rises`,
             `Over the last 3, 5, 7 and 10 Years, Gold returns have been mediocre. In the last 10 years, Gold has given 4.7% compounded annual return.`,
@@ -449,10 +449,10 @@ const getInvFacts = (invType) => {
             `@Score`,
             `Low`,
             `@Features`,
-            `First 5 years:`, 
+            `First 5 years:`,
             `*(a) No withdrawals of your investment (net asset value).`,
             `*(b) Even if you surrender your ULIP within 5 years, withdrawal would have to wait until the lock-in period is over.`,
-            `Post 5 years:`, 
+            `Post 5 years:`,
             `*(a) Partial Withdrawals allowed to extent of 10% - 20% of Premium paid till date (varied between insurers).`,
             `On Surrender:`,
             `*(a) On policy surrender within 5 years of lock-in, surrender value (NAV less all expenses till date) can only be withdrawn after end of 5 years lock in.`,
@@ -504,6 +504,92 @@ const getInvFacts = (invType) => {
             `*(a) Capital Gains is tax free`,
             `@Conclusion`,
             `Expenses + Lock-in + Lower Return & Now Taxability has made ULIP even more less attractive.`,
+          ],
+        },
+      ];
+      break;
+    }
+
+    case "Equity": {
+      content = [
+        {
+          name: "Return",
+          color: "text-green-800",
+          bgColor: "bg-green-50",
+          score: 10,
+
+          image: LitecoinImg,
+          content: [
+            `@Score`,
+            `High`,
+            `@Features`,
+            `Equity mutual funds can be active funds or passive funds.`,
+            `*(a) Passive Funds try to mirror market returns, i.e., they follow an index like the Nifty 50 to match its returns.`,
+            `*(b) Active Funds try to beat the index returns. However, the fees for active funds are significantly higher, since the fund is being actively managed by a fund manager.`,
+            `When it comes to active funds, Large Cap funds generate 14 to 18% returns per annum, Mid cap funds generate 15 to 32% returns per annum and small cap funds generate 15 to 38% returns.`,
+            `When it comes to passive funds, Large Cap funds generate around 16% returns per annum, Mid cap funds generate around 25% returns per annum and small cap funds generate around 30% returns.`,
+            `While active funds have the potential to beat passive funds, active funds tend to underperform as the tenure of the investment increases. Furthermore, past returns aren’t an indicator of future returns.`,
+            `While mutual funds give good returns, individual stocks can generate even better returns, provided the investor is experienced. But this comes at price, this superior return is associated with a very high risk.`,
+            `Nifty hasn’t given negative returns in the last 7 calendar years.`,
+            `@Conclusion`,
+            `Needs to be provided`,
+          ],
+        },
+        {
+          name: "Liquidity",
+          color: "text-yellow-400",
+          bgColor: "bg-yellow-50",
+          score: 8,
+
+          image: BitconImg,
+          content: [
+            `@Score`,
+            `High`,
+            `@Features`,
+            `First 5 years:`,
+            `Liquidity of Equity is higher when compared to other asset classes.`,
+            `Equity fund redemption takes a maximum of 3-4 working days.`,
+            `Having upto 6 months of expenses in the bank is recommended, beyond that, investing in equity is a great
+            idea since your money wouldn’t rot away in the bank, being eroded by inflation.`,
+            `@Conclusion`,
+            `Liquidity is high with equity instruments.`,
+          ],
+        },
+        {
+          name: "Safety",
+          color: "text-red-800",
+          bgColor: "bg-red-50",
+          score: 10,
+
+          image: EthereumImg,
+          content: [
+            `@Score`,
+            `High`,
+            `@Features`,
+            `When it comes to individual stocks, they are held in dematerialized form in the investor’s DEMAT account.`,
+            `While a DEMAT account isn’t required to invest in mutual funds, investors can opt to hold mutual fund
+            units in dematerialized form in their DEMAT accounts.`,
+            `Since the assets are dematerialized, there is no risk of tampering by a 3rd party.`,
+            `@Conclusion`,
+            `Equity instruments are very safe to buy, hold and sell.`,
+          ],
+        },
+        {
+          name: "Taxation",
+          color: "text-red-800",
+          bgColor: "bg-red-50",
+          score: 6,
+
+          image: EthereumImg,
+          content: [
+            `@Score`,
+            `High`,
+            `@Features`,
+            `Short term capital gains (if the units are sold before 1 year) in equity funds are taxed at the rate of 15% plus 4% cess.`,
+            `Long term capital gains tax in equity funds is 10% + 4% cess provided the gain in a financial year is over Rs 1 Lakh. Long
+            term capital gains upto Rs 1 Lakh is totally tax free.`,
+            `@Conclusion`,
+            `Equity investments are incredibly tax efficient.`,
           ],
         },
       ];

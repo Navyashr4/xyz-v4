@@ -235,6 +235,35 @@ const getInvInfo = (invType) => {
             break;
         }
 
+        case "Equity": {
+            content = [
+                {
+                    title : "Definitions",
+                    text : [
+                        `An equity market is a market in which shares of companies are issued and traded, either through exchanges or over-the-counter markets. It gives companies access to
+                        capital to grow their business, and investors a piece of ownership in a company with the potential to realize gains in their investment based on the company's future
+                        performance.`,
+                        `@Gold investment can be done in various forms:`,
+                        `Listed Shares – Shares which are listed on an exchange (like NSE or BSE). It has benefits of trading into a company’s share with more frequency & liquidity.`,
+                        `ETFs and Mutual Funds – Mutual Funds are run by professional fund managers. It is recommended for those investors who have less time and/or knowledge to invest in
+                        individual shares. It is still a high risk & high return avenue but has a wider risk diversification.`,
+                        `Futures and Options - F&O investors speculate the share price movements of the underlying asset to realize gain.`,
+                        `Unlisted Shares – Shares which are no listed on an exchange & are generally over the counter arrangement. Generally referred to as Pre-IPO market, the shares are
+                        traded less frequently and thereby lower liquidity.`,
+                    ]
+                },
+                {
+                    title : "Why do people invest in equity?",
+                    text : [
+                        `Historically, India has had high inflation and Equity has consecutively beaten inflation and generated higher returns.`,
+                        `Unlike most investments, equity investments are highly liquid.`,
+                        `Equity investments are not subject to any tenure / term. Thereby, an investor can hold shares for as long as he/she wants depending on their goals or company’s existence.`,
+                    ]
+                },
+            ]
+            break;
+        }
+
         default : content = [];
     }
 

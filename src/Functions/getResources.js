@@ -131,6 +131,29 @@ const getResources = (invType) => {
       break;
     }
 
+    case "Equity": {
+      links = [
+        {
+          text: `How does ULIP Work (ICICI Prudential Life Insurance) & benefits`, 
+          link: `https://www.iciciprulife.com/ulip-plans/how-ulip-works.html`
+        },
+        {
+          text: `Taxes on ULIP after Finance Budget 2021`,
+          link : `https://www.taxmann.com/post/blog/taxation-of-unit-linked-insurance-plans-ulips-the-complete-picture-is-
+          out/#:~:text=An%20investment%20made%20by%20an,by%20bonus%20on%20such%20policy.`
+        },
+        {
+          text: `Top myths & facts about ULIP`,
+          link: `https://www.myinsuranceclub.com/articles/top-7-myths-and-facts-about-ulip`
+        },
+        {
+          text: `ULIP Calculator`,
+          link : `https://www.bajajallianzlife.com/life-insurance-calculator/ulip-calculator.html`
+        }
+      ];
+      break;
+    }
+
     default: {
       links = [];
     }
