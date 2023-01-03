@@ -278,6 +278,52 @@ const getInvInfo = (invType) => {
             break;
         }
 
+        case "Equity": {
+            content = [
+                {
+                    title : "Definitions",
+                    id: 0,
+                    text : [
+                        "A long term investment instrument (How long – 15 years, due to lock-in features) with guaranteed interest % at the time of investment.",
+                        "PPF is a Central government-backed scheme, and the investment is also not market-linked. Due to this, it offers guaranteed returns to protect the investment needs of many people."
+                    ]
+                },
+                {
+                    title : "Why do people invest in public provident funds?",
+                    id: 1,
+                    text : [
+                        "1. Retirement Corpus",
+                        "2. Savings cum Tax saving investment. (Benefit of deduction under Section 80C of Income Tax Act)",
+                        "3. Risk appetite is low"
+                    ]
+                },
+                {
+                    title : "What impacts the rates on public provident funds?",
+                    id: 2,
+                    text : [
+                        "1. PPF scheme was started by Government in 1968 with rate of interest being 4.8%. PPF rates have seen many up and downs such as in 1999-2000 where rates went upto 12%.",
+                        "2. PPF returns are fixed by the Central Government. They are set every quarter according to prevailing interest rates on Government Bonds.",
+                        "3. Government bonds are influenced by RBI’s policies based on prevailing economic conditions. While bonds rate have been range bound in last 20-25 years, PPF interest rate has been less range bound. Check historical PPF interest rates from 1968 to 2022."
+                    ]
+                },
+                {
+                    title : "Trivia",
+                    id: 3,
+                    text : [
+                        `The first stock exchange in India flourished on Dalal Street in 1854. That place is now known as the Bombay Stock Exchange (BSE). It was also the first stock exchange in Asia.`,
+                        `Less than 2.5% population of India invest in the Equity market (as of Oct 2021).`,
+                        `The base value of Nifty was 1,000 in 1995. Recently Nifty crossed the 18k mark, which is a 1700% increase. This means that had you invested Rs. 10 Lakh in 1995, its value today would be Rs. 1.7 Crore.`, 
+                        `When shares were traded in physical form in the 1980s, the settlement of stock trades could take more than a month. Now the process only takes two days.`,
+                        `The number of demat accounts crossed the 10 crore mark for the first time in August 2022.`,
+                        `Reliance Industries Ltd (Rs 17 lac crores) & Tata Consultancy Services (12 lac crores) are the companies that have market capitalization higher than the combined market capitalization of the Karachi Stock Exchange (KSE).`,
+                        `MRF is the most expensive stock in India, with a record high price of Rs. 96,000.`,
+                        `The most expensive stock in the world is Warren Buffet’s Berkshire Hathaway, with a record high price of $544,000, which is almost Rs 4.5 Crore.`,
+                    ]
+                }
+            ]
+            break;
+        }
+
         default : content = [];
     }
 
